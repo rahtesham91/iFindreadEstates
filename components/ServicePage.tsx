@@ -1,0 +1,82 @@
+import Link from "next/link";
+import PageHero from "./PageHero";
+import Placeholder from "./Placeholder";
+import SectionHeading from "./SectionHeading";
+import CtaBand from "./CtaBand";
+import { steps, whatsappLink } from "@/lib/site";
+
+type Props = {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  imageLabel: string;
+  sectionTitle: string;
+  sectionText: string;
+  offers: { title: string; text: string }[];
+  closing?: { title: string; text: string };
+};
+
+export default function ServicePage({ eyebrow, title, intro, imageLabel, sectionTitle, sectionText, offers, closing }: Props) {
+  return (
+    <>
+      <PageHero eyebrow={eyebrow} title={title} text={intro} imageLabel={imageLabel} />
+
+      <section className="py-24 sm:py-32">
+        <div className="container-page grid gap-16 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+          <div>
+            <SectionHeading eyebrow="What we do" title={sectionTitle} text={sectionText} />
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <Link href="/contact" className="btn-gold">Enquire Now</Link>
+              <a href={whatsappLink(`Hello iFind, I would like to know more about ${title}.`)} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+          <Placeholder label={`${title}: feature image`} size="1200 x 900" className="aspect-[4/3]" />
+        </div>
+      </section>
+
+      <section className="border-y border-line bg-char py-24 sm:py-28">
+        <div className="container-page">
+          <SectionHeading eyebrow="Our service" title="How we help" align="center" />
+          <div className="mt-16 grid gap-px border border-line bg-line md:grid-cols-2 lg:grid-cols-3">
+            {offers.map((o) => (
+              <article key={o.title} className="bg-char p-9 transition-colors hover:bg-panel">
+                <div className="mb-6 h-px w-10 bg-gold-500" />
+                <h3 className="font-serif text-2xl text-ivory">{o.title}</h3>
+                <p className="mt-4 text-[0.95rem] leading-relaxed text-mute">{o.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {closing && (
+        <section className="py-24 sm:py-28">
+          <div className="container-page max-w-3xl text-center">
+            <h2 className="h-display text-4xl sm:text-5xl">{closing.title}</h2>
+            <div className="gold-rule mx-auto mt-6" />
+            <p className="mt-6 text-lg leading-relaxed text-mute">{closing.text}</p>
+          </div>
+        </section>
+      )}
+
+      <section className="border-t border-line py-24 sm:py-28">
+        <div className="container-page">
+          <SectionHeading eyebrow="Process" title="From first call to closing" align="center" />
+          <ol className="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+            {steps.map((s, i) => (
+              <li key={s.title} className="border-t border-gold-500/60 pt-6">
+                <span className="font-serif text-5xl text-gold-500/80">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="mt-3 font-serif text-2xl">{s.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-mute">{s.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <CtaBand />
+    </>
+  );
+}
