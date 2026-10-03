@@ -16,23 +16,23 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative isolate flex min-h-[100svh] items-end overflow-hidden pt-20 sm:items-center">
+      <section className="relative isolate flex items-center overflow-hidden pt-20 sm:min-h-[100svh]">
         <Placeholder label="Hero: Dubai skyline at dusk" size="2400 x 1400" className="absolute inset-0 -z-20 !border-0" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/70 to-ink/40 sm:bg-gradient-to-r sm:from-ink sm:via-ink/80 sm:to-ink/20" />
-        <div className="container-page pb-20 pt-32 sm:py-32">
-          <p className="eyebrow mb-6">Dubai, United Arab Emirates</p>
-          <h1 className="h-display max-w-4xl text-[3.4rem] sm:text-7xl lg:text-[6.5rem]">
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/75 to-ink/40 sm:bg-gradient-to-r sm:from-ink sm:via-ink/80 sm:to-ink/20" />
+        <div className="container-page pb-14 pt-12 sm:py-32">
+          <p className="eyebrow mb-4 sm:mb-6">Dubai, United Arab Emirates</p>
+          <h1 className="h-display max-w-4xl text-[3.1rem] leading-[1.02] sm:text-7xl lg:text-[6.5rem]">
             {first}.
             <br />
             <span className="text-gold-400">{second}</span>
           </h1>
-          <div className="gold-rule mt-10" />
-          <p className="mt-8 max-w-xl text-sm uppercase tracking-[0.2em] text-ivory/75">
+          <div className="gold-rule mt-6 sm:mt-10" />
+          <p className="mt-5 max-w-xl text-[0.72rem] uppercase leading-relaxed tracking-[0.16em] text-ivory/75 sm:mt-8 sm:text-sm sm:tracking-[0.2em]">
             Off-Plan &middot; Ready &middot; Luxury &middot; Rentals &middot; Land &middot; Buildings &middot; Hotels
           </p>
-          <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-            <Link href="/contact" className="btn-gold">Enquire Now</Link>
-            <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-ghost">WhatsApp Us</a>
+          <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-12 sm:flex sm:gap-4">
+            <Link href="/contact" className="btn-gold !px-3 sm:!px-7">Enquire Now</Link>
+            <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-ghost !px-3 sm:!px-7">WhatsApp Us</a>
           </div>
         </div>
       </section>

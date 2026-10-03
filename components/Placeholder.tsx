@@ -22,7 +22,7 @@ export default function Placeholder({ label, size, className = "" }: Props) {
             "repeating-linear-gradient(135deg, #D2AF63 0, #D2AF63 1px, transparent 1px, transparent 14px)",
         }}
       />
-      <div className={`relative ${background ? "text-right" : "px-6 text-center"}`}>
+      <div className={`relative ${background ? "hidden text-right sm:block" : "px-6 text-center"}`}>
         <svg viewBox="0 0 24 24" className={`mb-3 h-7 w-7 text-gold-500 ${background ? "ml-auto" : "mx-auto"}`} fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true">
           <rect x="3" y="4" width="18" height="16" rx="1" />
           <circle cx="9" cy="10" r="1.6" />
