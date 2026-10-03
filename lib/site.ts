@@ -65,19 +65,20 @@ export const nav = [
   { label: "Our Team", href: "/team" },
 ];
 
+// Developer list as published on the company's previous website.
 export const developers = [
-  "Emaar",
-  "DAMAC",
-  "Nakheel",
-  "Sobha Realty",
-  "Meraas",
   "Dubai Properties",
-  "Aldar",
+  "Emaar",
+  "Damac",
+  "Sobha",
+  "Nshama",
+  "Azizi Developers",
+  "Reportage Developers",
+  "BNW Developers",
+  "Fakhr-al-Din Properties",
+  "Danube Properties",
+  "BT Properties",
   "Binghatti",
-  "Danube",
-  "Azizi",
-  "Ellington",
-  "Omniyat",
 ];
 
 export const steps = [
@@ -97,23 +98,111 @@ export const interests = [
   "Something Else",
 ];
 
-export const team = [
-  { name: "Team Member Name", role: "Senior Property Consultant", brn: "00000", languages: "English, Arabic" },
-  { name: "Team Member Name", role: "Property Consultant", brn: "00000", languages: "English, Hindi, Urdu" },
-  { name: "Team Member Name", role: "Property Consultant", brn: "00000", languages: "English, Russian" },
-  { name: "Team Member Name", role: "Leasing Consultant", brn: "00000", languages: "English, Arabic" },
+export type TeamMember = {
+  slug: string;
+  name: string;
+  role: string;
+  bio: string;
+  photo: string;
+  languages?: string[];
+  brn?: string; // shown only when provided
+};
+
+// Team details and photos taken from the company's previous website (about page).
+export const team: TeamMember[] = [
+  {
+    slug: "abid-khan",
+    name: "Abid Khan",
+    role: "Managing Director",
+    photo: "/team/abid-khan.webp",
+    bio: "Abid Khan has 12+ years of sales experience, including 8 in Dubai real estate. With a BBA and hospitality background, he leads iFind Real Estate LLC with a focus on client satisfaction, smart investments, and trusted service.",
+  },
+  {
+    slug: "farwa-khan",
+    name: "Farwa Khan",
+    role: "Associate Director",
+    photo: "/team/farwa-khan.webp",
+    languages: ["English", "Urdu", "Hindi"],
+    bio: "Farwa Khan brings extensive expertise in both real estate sales and operations, specializing in both off-plan and secondary market sales. With a focus on client satisfaction and smooth transactions, she is dedicated to helping clients find the right properties while driving business growth.",
+  },
+  {
+    slug: "muzamal-hameed",
+    name: "Muzamal Hameed",
+    role: "Sales Manager",
+    photo: "/team/muzamal-hameed.webp",
+    bio: "Muzamal Hameed is a skilled Sales Manager dedicated to helping clients find the perfect property. With strong market knowledge and a client-focused approach, he ensures smooth and successful real estate transactions.",
+  },
+  {
+    slug: "fahad-ahmed",
+    name: "Fahad Ahmed",
+    role: "Marketing Director",
+    photo: "/team/fahad-ahmed.webp",
+    bio: "Fahad drives our marketing efforts with creativity and precision, connecting clients to Dubai's best real estate opportunities.",
+  },
+  {
+    slug: "meher-ahmed",
+    name: "Meher Ahmed",
+    role: "Luxury Properties Specialist",
+    photo: "/team/meher-ahmed.webp",
+    bio: "Meher Ahmed brings expertise and dedication to Dubai's luxury real estate market. She is passionate about helping clients find exceptional homes and premium investments, offering personalized service with a focus on excellence.",
+  },
+  {
+    slug: "waqar-shah",
+    name: "Waqar Shah",
+    role: "Real Estate Expert",
+    photo: "/team/waqar-shah.webp",
+    languages: ["English", "Urdu", "Pashtu", "Punjabi"],
+    bio: "Waqar Shah is a real estate expert in Dubai's off-plan market, with 2 years of experience and an IT background since 2014. He offers smart, tech-driven investment guidance. Known for integrity and clear communication, he supports a diverse clientele. Whether you're a buyer or investor, Waqar helps you unlock top opportunities.",
+  },
+  {
+    slug: "ekaterina",
+    name: "Ekaterina",
+    role: "Real Estate Expert",
+    photo: "/team/ekaterina.webp",
+    languages: ["Russian", "Spanish", "English"],
+    bio: "Originally a professional figure skater with 9 years of experience and participation in national championships in Russia, Ekaterina brings the same discipline, precision, and drive to her career in Dubai real estate. She now helps clients navigate the Dubai property market with the dedication of a true athlete.",
+  },
+  {
+    slug: "essam-nabil",
+    name: "Essam Nabil",
+    role: "Real Estate Expert",
+    photo: "/team/essam-nabil.webp",
+    languages: ["Arabic", "English"],
+    bio: "Property Consultant with a strong hospitality background, specialized in guiding clients through every step of the real estate journey, whether buying, selling, or investing. He provides strategic advice, transparent communication, and tailored property solutions to meet each client's unique needs.",
+  },
+  {
+    slug: "nyi-linn-htet",
+    name: "Nyi Linn Htet",
+    role: "Real Estate Expert",
+    photo: "/team/nyi-linn-htet.webp",
+    bio: "Experienced real estate professional specializing in luxury properties in Dubai, with a strong background in market analysis, client relations, and property sales. Provides tailored solutions to help clients buy, sell, and invest in prime real estate, and is committed to delivering exceptional service and results.",
+  },
+  {
+    slug: "umar-bin-masood",
+    name: "Umar Bin Masood",
+    role: "Admin & Accounts",
+    photo: "/team/umar-bin-masood.webp",
+    bio: "Umar Bin Masood is an experienced professional with over 10 years in administration and accounts, including one year in Dubai's real estate sector. He holds a BBA degree and handles administrative and financial operations at iFind Real Estate LLC, ensuring efficiency and accuracy in daily business functions.",
+  },
 ];
 
-// About page content. DRAFT copy: to be approved or replaced by the company.
+// Founder & CEO: wording from the company's previous website, with the company name updated.
 export const ceo = {
-  name: "CEO Name", // TODO(client): real name
-  title: "Chief Executive Officer",
-  message: [
-    "At iFind, our name says what we do. We find value for the people who trust us, whether that is a first apartment, a well-located plot or a large commercial asset.",
-    "A property decision is one of the biggest anyone makes. So we start by listening, we tell you honestly what we see in the market, and we stay with you until the deal is complete.",
-    "Trust is not something we claim. It is something we earn, one conversation and one client at a time. Thank you for considering iFind.",
-  ],
+  name: "Avaid Lateef",
+  honorific: "Mr.",
+  title: "Founder & CEO",
+  photo: "/team/avaid-lateef.webp",
+  message:
+    "With over 8 years of real estate experience in Dubai and internationally, Mr. Avaid Lateef leads iFind Real Estate LLC with a clear vision: to deliver personalized, high-value property solutions with excellence and integrity. His global perspective, deep market knowledge, and client-first approach have established the company as a trusted name in Dubai's real estate sector.",
 };
+
+// Company introduction: from the previous website's About page, lightly trimmed.
+export const aboutIntro = [
+  "At iFind Real Estate LLC, we are passionate about helping you find the perfect property and investment opportunities in the vibrant city of Dubai. Specializing in mid-range to luxury properties, our multinational team brings a global perspective and deep local expertise to every transaction.",
+  "Founded by real estate expert Mr. Avaid Lateef, with over 8 years of industry experience, we have built a reputation for integrity, excellence, and personalized service. Whether you are buying your dream home, selling a prime property, or looking for sound investment opportunities, we are committed to making your real estate journey smooth, rewarding, and hassle-free.",
+  "Our services span residential sales, commercial property brokerage, investment advisory, and prime land sourcing. With access to the city's most prestigious locations, we help you unlock the best opportunities in one of the world's safest and fastest-growing markets.",
+  "At iFind, your success is our priority. We don't just find you a property. We help you build a prosperous future.",
+];
 
 export const vision =
   "To be the real estate advisor people in the UAE and beyond trust first, known for honest advice and lasting relationships.";

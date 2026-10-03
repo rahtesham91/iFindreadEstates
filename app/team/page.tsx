@@ -1,44 +1,63 @@
 import type { Metadata } from "next";
-import PageHero from "@/components/PageHero";
-import Placeholder from "@/components/Placeholder";
-import SectionHeading from "@/components/SectionHeading";
 import CtaBand from "@/components/CtaBand";
-import { team, whatsappLink } from "@/lib/site";
+import TeamCard from "@/components/TeamCard";
+import { team } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Our Team",
-  description: "Meet the registered brokers of iFind Real Estate LLC, Dubai.",
+  description:
+    "Meet the iFind Real Estate LLC team in Dubai: our Managing Director, directors, managers and property specialists.",
 };
+
+const leadership = team.slice(0, 4);
+const specialists = team.slice(4);
 
 export default function Page() {
   return (
     <>
-      <PageHero
-        eyebrow="Our Team"
-        title="Meet Our Brokers"
-        text="Every consultant at iFind is a registered broker. Speak to the right person for your requirement."
-        imageLabel="Team hero: team or office"
-      />
+      <section className="border-b border-line pt-20">
+        <div className="container-page py-14 sm:py-24">
+          <p className="eyebrow mb-5">Our Team</p>
+          <h1 className="h-display max-w-3xl text-5xl sm:text-6xl lg:text-7xl">The people behind iFind</h1>
+          <div className="gold-rule mt-8" />
+          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-mute">
+            A multinational team with a global perspective and deep local expertise, committed to personalised, honest service on every deal.
+          </p>
+        </div>
+      </section>
 
-      <section className="border-t border-line bg-char py-24 sm:py-32">
+      <section className="py-16 sm:py-24">
         <div className="container-page">
-          <SectionHeading eyebrow="Our Team" title="Registered brokers" text="Each of our consultants holds a valid Broker Registration Number (BRN)." />
-          <ul className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((m, i) => (
-              <li key={i} className="group">
-                <Placeholder label="Broker portrait" size="800 x 1000" className="aspect-[4/5]" />
-                <h3 className="mt-5 font-serif text-2xl">{m.name}</h3>
-                <p className="mt-1 text-sm text-mute">{m.role}</p>
-                <p className="mt-3 text-xs uppercase tracking-[0.14em] text-gold-400">BRN {m.brn}</p>
-                <p className="mt-1 text-xs text-mute/80">{m.languages}</p>
-                <a href={whatsappLink(`Hello, I would like to speak with ${m.name}.`)} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-xs font-semibold uppercase tracking-[0.16em] text-ivory transition-colors hover:text-gold-300">
-                  WhatsApp &rarr;
-                </a>
+          <div className="mb-10 flex items-end gap-6 sm:mb-14">
+            <h2 className="font-serif text-3xl sm:text-4xl">Leadership</h2>
+            <div className="mb-2 h-px flex-1 bg-line" />
+          </div>
+          <ul className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
+            {leadership.map((m, i) => (
+              <li key={m.slug}>
+                <TeamCard member={m} priority={i < 2} />
               </li>
             ))}
           </ul>
         </div>
       </section>
+
+      <section className="border-t border-line bg-char py-16 sm:py-24">
+        <div className="container-page">
+          <div className="mb-10 flex items-end gap-6 sm:mb-14">
+            <h2 className="font-serif text-3xl sm:text-4xl">Specialists &amp; Support</h2>
+            <div className="mb-2 h-px flex-1 bg-line" />
+          </div>
+          <ul className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+            {specialists.map((m) => (
+              <li key={m.slug}>
+                <TeamCard member={m} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       <CtaBand />
     </>
   );

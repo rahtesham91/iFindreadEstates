@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Placeholder from "@/components/Placeholder";
+import TeamCard from "@/components/TeamCard";
 import SectionHeading from "@/components/SectionHeading";
 import CtaBand from "@/components/CtaBand";
 import { developers, steps, services, site, team, whatsappLink } from "@/lib/site";
@@ -130,16 +131,13 @@ export default function Home() {
       </section>
 
       {/* Team preview */}
-      <section className="border-t border-line bg-char py-24 sm:py-32">
+      <section className="border-t border-line bg-char py-16 sm:py-28">
         <div className="container-page">
-          <SectionHeading eyebrow="Our Team" title="Registered brokers you can trust" />
-          <ul className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((m, i) => (
-              <li key={i}>
-                <Placeholder label="Broker portrait" size="800 x 1000" className="aspect-[4/5]" />
-                <h3 className="mt-5 font-serif text-2xl">{m.name}</h3>
-                <p className="mt-1 text-sm text-mute">{m.role}</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.14em] text-gold-400">BRN {m.brn}</p>
+          <SectionHeading eyebrow="Our Team" title="The people behind iFind" />
+          <ul className="mt-12 grid grid-cols-2 gap-x-4 gap-y-10 sm:mt-16 sm:gap-x-8 lg:grid-cols-4">
+            {team.slice(0, 4).map((m) => (
+              <li key={m.slug}>
+                <TeamCard member={m} compact />
               </li>
             ))}
           </ul>
