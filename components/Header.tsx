@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
 import ThemeToggle from "./ThemeToggle";
-import { nav } from "@/lib/site";
+import { nav, site, whatsappLink } from "@/lib/site";
 
 export default function Header() {
   const pathname = usePathname();
@@ -108,34 +108,67 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav className="fixed inset-x-0 top-20 bottom-0 overflow-y-auto bg-ink px-5 pb-10 pt-6 lg:hidden" aria-label="Mobile">
-          <ul className="space-y-1">
-            {nav.map((item) => (
-              <li key={item.label}>
-                {item.children ? (
-                  <>
-                    <p className="eyebrow px-1 pb-2 pt-4">{item.label}</p>
-                    <ul className="border-l border-line">
-                      {item.children.map((c) => (
-                        <li key={c.href}>
-                          <Link href={c.href} className="block px-5 py-3 font-serif text-2xl text-ivory hover:text-gold-300">
-                            {c.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </>
-                ) : (
-                  <Link href={item.href} className="block border-t border-line px-1 py-4 font-serif text-3xl text-ivory hover:text-gold-300">
-                    {item.label}
+        <nav
+          className="fixed inset-x-0 bottom-0 top-20 flex flex-col overflow-y-auto bg-ink px-6 pb-8 pt-2 lg:hidden"
+          aria-label="Mobile"
+        >
+          {(() => {
+            let n = 0;
+            const row = (label: string, href: string) => {
+              n += 1;
+              return (
+                <li key={href} className="menu-item" style={{ "--i": n } as React.CSSProperties}>
+                  <Link
+                    href={href}
+                    className={`group flex items-center border-b border-line py-[1.1rem] font-serif text-[1.65rem] leading-none transition-colors hover:text-gold-300 ${
+                      active(href) ? "text-gold-400" : "text-ivory"
+                    }`}
+                  >
+                    <span className="w-10 font-sans text-[0.7rem] font-medium tracking-luxe text-gold-500">
+                      {String(n).padStart(2, "0")}
+                    </span>
+                    <span className="flex-1">{label}</span>
+                    <svg viewBox="0 0 24 8" className="h-2 w-6 text-gold-500 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" aria-hidden="true">
+                      <path d="M0 4h22M18 1l4 3-4 3" />
+                    </svg>
                   </Link>
+                </li>
+              );
+            };
+            return (
+              <>
+                {nav.map((item) =>
+                  item.children ? (
+                    <div key={item.label} className="mt-5">
+                      <p className="eyebrow pb-1">{item.label}</p>
+                      <ul>{item.children.map((c) => row(c.label, c.href))}</ul>
+                    </div>
+                  ) : null
                 )}
-              </li>
-            ))}
-          </ul>
-          <Link href="/contact" className="btn-gold mt-8 w-full">
-            Contact Us
-          </Link>
+                <div className="mt-8">
+                  <p className="eyebrow pb-1">Explore</p>
+                  <ul>
+                    {nav.filter((i) => !i.children).map((i) => row(i.label, i.href))}
+                  </ul>
+                </div>
+              </>
+            );
+          })()}
+
+          <div className="menu-item mt-auto pt-10" style={{ "--i": 9 } as React.CSSProperties}>
+            <Link href="/contact" className="btn-gold w-full">
+              Contact Us
+            </Link>
+            <div className="mt-3 grid grid-cols-2 gap-3">
+              <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="btn-ghost !px-3 !py-3.5">
+                Call Us
+              </a>
+              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-ghost !px-3 !py-3.5">
+                WhatsApp
+              </a>
+            </div>
+            <p className="mt-8 text-center text-[0.7rem] uppercase tracking-luxe text-gold-500">{site.tagline}</p>
+          </div>
         </nav>
       )}
     </header>
