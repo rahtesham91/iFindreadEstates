@@ -22,8 +22,12 @@ export default function Page() {
 
           <dl className="mt-12 space-y-7 text-sm">
             <div>
-              <dt className="eyebrow mb-2">Phone</dt>
+              <dt className="eyebrow mb-2">Mobile / WhatsApp</dt>
               <dd><a href={`tel:${site.phone.replace(/\s/g, "")}`} className="text-lg hover:text-gold-300">{site.phone}</a></dd>
+            </div>
+            <div>
+              <dt className="eyebrow mb-2">Office Landline</dt>
+              <dd><a href={`tel:${site.landline.replace(/\s/g, "")}`} className="text-lg hover:text-gold-300">{site.landline}</a></dd>
             </div>
             <div>
               <dt className="eyebrow mb-2">WhatsApp</dt>

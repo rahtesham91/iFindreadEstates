@@ -54,6 +54,11 @@ export default function Footer() {
               </a>
             </li>
             <li>
+              <a href={`tel:${site.landline.replace(/\s/g, "")}`} className="transition-colors hover:text-gold-300">
+                {site.landline} <span className="text-mute/60">(Office)</span>
+              </a>
+            </li>
+            <li>
               <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-gold-300">
                 WhatsApp
               </a>

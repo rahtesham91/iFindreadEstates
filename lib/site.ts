@@ -6,11 +6,11 @@ export const site = {
   legalName: "iFind Real Estate LLC",
   tagline: "Finding Value. Building Trust.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://ifind.example",
-  // TODO(client): real contact details
-  phone: "+971 00 000 0000",
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "971000000000",
-  email: "info@example.com",
-  address: "Dubai, United Arab Emirates",
+  phone: "+971 50 984 3209",
+  landline: "+971 4 835 1268",
+  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "971509843209",
+  email: "info@ifindrealestates.com",
+  address: "Office 1810, Churchill Tower, Business Bay, Dubai, UAE",
   // TODO(client): trade licence / ORN number for the footer
   orn: "ORN: 00000",
   social: [

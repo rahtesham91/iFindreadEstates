@@ -40,6 +40,22 @@ export const viewport: Viewport = {
   themeColor: "#0A0A0A",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  name: site.legalName,
+  slogan: site.tagline,
+  url: site.url,
+  telephone: [site.phone, site.landline],
+  email: site.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Office 1810, Churchill Tower, Business Bay",
+    addressLocality: "Dubai",
+    addressCountry: "AE",
+  },
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${serif.variable} ${sans.variable}`}>
@@ -50,6 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Skip to content
         </a>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <Header />
         <main id="main">{children}</main>
         <Footer />
