@@ -1,21 +1,22 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: ["selector", '[data-theme="dark"]'],
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./lib/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        ink: "#0A0A0A",
-        char: "#121212",
-        panel: "#181818",
-        line: "#2B2B2B",
-        ivory: "#F3EEE4",
-        mute: "#A8A29A",
+        ink: "rgb(var(--c-ink) / <alpha-value>)",
+        char: "rgb(var(--c-char) / <alpha-value>)",
+        panel: "rgb(var(--c-panel) / <alpha-value>)",
+        line: "rgb(var(--c-line) / <alpha-value>)",
+        ivory: "rgb(var(--c-ivory) / <alpha-value>)",
+        mute: "rgb(var(--c-mute) / <alpha-value>)",
         gold: {
-          300: "#E3CB8E",
-          400: "#D2AF63",
-          500: "#B98F3F",
-          600: "#A9782B",
+          300: "rgb(var(--c-gold-300) / <alpha-value>)",
+          400: "rgb(var(--c-gold-400) / <alpha-value>)",
+          500: "rgb(var(--c-gold-500) / <alpha-value>)",
+          600: "rgb(var(--c-gold-600) / <alpha-value>)",
         },
       },
       fontFamily: {

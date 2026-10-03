@@ -2,8 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+:root,
+:root[data-theme="dark"] {
   color-scheme: dark;
+  --c-ink: 10 10 10;
+  --c-char: 18 18 18;
+  --c-panel: 24 24 24;
+  --c-line: 43 43 43;
+  --c-ivory: 243 238 228; /* main text: white in dark mode */
+  --c-mute: 168 162 154;
+  --c-gold-300: 227 203 142;
+  --c-gold-400: 210 175 99;
+  --c-gold-500: 185 143 63;
+  --c-gold-600: 169 120 43;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --c-ink: 250 247 242;
+  --c-char: 241 236 227;
+  --c-panel: 255 255 255;
+  --c-line: 221 213 199;
+  --c-ivory: 20 20 20; /* main text: black in light mode */
+  --c-mute: 94 87 77;
+  --c-gold-300: 126 88 23;
+  --c-gold-400: 154 107 34;
+  --c-gold-500: 169 120 43;
+  --c-gold-600: 169 120 43;
 }
 
 html {
@@ -12,6 +37,7 @@ html {
 
 body {
   @apply bg-ink text-ivory font-sans antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 /* Cormorant defaults to old-style numerals, which read like letters ("OI") */
@@ -21,12 +47,12 @@ body {
 }
 
 ::selection {
-  background: #d2af63;
-  color: #0a0a0a;
+  background: rgb(var(--c-gold-400));
+  color: rgb(var(--c-ink));
 }
 
 :focus-visible {
-  outline: 2px solid #d2af63;
+  outline: 2px solid rgb(var(--c-gold-400));
   outline-offset: 3px;
 }
 

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
+import ThemeToggle from "./ThemeToggle";
 import { nav } from "@/lib/site";
 
 export default function Header() {
@@ -84,14 +85,17 @@ export default function Header() {
               </Link>
             )
           )}
+          <ThemeToggle />
           <Link href="/contact" className="btn-gold !px-6 !py-3">
             Contact Us
           </Link>
         </nav>
 
+        <div className="flex items-center gap-1 lg:hidden">
+        <ThemeToggle className="!border-0" />
         <button
           type="button"
-          className="flex h-11 w-11 items-center justify-center text-ivory lg:hidden"
+          className="flex h-11 w-11 items-center justify-center text-ivory"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -100,6 +104,7 @@ export default function Header() {
             {open ? <path d="M5 5l14 14M19 5L5 19" /> : <path d="M3 7h18M3 12h18M3 17h18" />}
           </svg>
         </button>
+        </div>
       </div>
 
       {open && (
