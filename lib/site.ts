@@ -11,8 +11,7 @@ export const site = {
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "971509843209",
   email: "info@ifindrealestates.com",
   address: "Office 1810, Churchill Tower, Business Bay, Dubai, UAE",
-  // TODO(client): trade licence / ORN number for the footer
-  orn: "ORN: 00000",
+  orn: "ORN: 45937",
   social: [
     { label: "Instagram", href: "#" },
     { label: "LinkedIn", href: "#" },
