@@ -3,10 +3,10 @@ import PageHero from "@/components/PageHero";
 import Placeholder from "@/components/Placeholder";
 import SectionHeading from "@/components/SectionHeading";
 import CtaBand from "@/components/CtaBand";
-import { site, team, whatsappLink } from "@/lib/site";
+import { team, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About & Our Team",
+  title: "Our Team",
   description: "Meet the registered brokers of iFind Real Estate LLC, Dubai.",
 };
 
@@ -14,29 +14,11 @@ export default function Page() {
   return (
     <>
       <PageHero
-        eyebrow="About iFind"
-        title="Who We Are"
-        text="iFind Real Estate LLC is a Dubai brokerage that helps clients buy, sell and lease property across the UAE."
-        imageLabel="About hero: team or office"
+        eyebrow="Our Team"
+        title="Meet Our Brokers"
+        text="Every consultant at iFind is a registered broker. Speak to the right person for your requirement."
+        imageLabel="Team hero: team or office"
       />
-
-      <section className="py-24 sm:py-32">
-        <div className="container-page grid gap-16 lg:grid-cols-2 lg:items-center">
-          <div>
-            <SectionHeading eyebrow="Our Story" title={site.tagline} />
-            <div className="mt-8 space-y-5 text-lg leading-relaxed text-mute">
-              {/* TODO(client): replace with the real company story */}
-              <p>
-                We are a full-service brokerage. We work on off-plan and ready properties, luxury and everyday homes, rentals, land, buildings and hotels.
-              </p>
-              <p>
-                Our approach is simple: understand what you need, find real value, and be honest at every step. That is how we build trust, one client at a time.
-              </p>
-            </div>
-          </div>
-          <Placeholder label="Company or office photo" size="1200 x 1000" className="aspect-[6/5]" />
-        </div>
-      </section>
 
       <section className="border-t border-line bg-char py-24 sm:py-32">
         <div className="container-page">

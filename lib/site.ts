@@ -61,6 +61,7 @@ export const nav = [
   { label: "Services", href: "/off-plan", children: services.map((s) => ({ label: s.title, href: s.href })) },
   { label: "Developers", href: "/developers" },
   { label: "Investors", href: "/investor-services" },
+  { label: "About Us", href: "/about" },
   { label: "Our Team", href: "/team" },
 ];
 
@@ -101,4 +102,29 @@ export const team = [
   { name: "Team Member Name", role: "Property Consultant", brn: "00000", languages: "English, Hindi, Urdu" },
   { name: "Team Member Name", role: "Property Consultant", brn: "00000", languages: "English, Russian" },
   { name: "Team Member Name", role: "Leasing Consultant", brn: "00000", languages: "English, Arabic" },
+];
+
+// About page content. DRAFT copy: to be approved or replaced by the company.
+export const ceo = {
+  name: "CEO Name", // TODO(client): real name
+  title: "Chief Executive Officer",
+  message: [
+    "At iFind, our name says what we do. We find value for the people who trust us, whether that is a first apartment, a well-located plot or a large commercial asset.",
+    "A property decision is one of the biggest anyone makes. So we start by listening, we tell you honestly what we see in the market, and we stay with you until the deal is complete.",
+    "Trust is not something we claim. It is something we earn, one conversation and one client at a time. Thank you for considering iFind.",
+  ],
+};
+
+export const vision =
+  "To be the real estate advisor people in the UAE and beyond trust first, known for honest advice and lasting relationships.";
+
+export const mission =
+  "To help our clients buy, sell and lease property with clarity, integrity and expert guidance, from the first consultation to the day the deal closes.";
+
+export const values = [
+  { title: "Integrity", text: "We say what is true, even when it is not what you hoped to hear." },
+  { title: "Value", text: "Every recommendation is measured against what it is genuinely worth to you." },
+  { title: "Clarity", text: "Prices, fees and terms laid out plainly, with no surprises later." },
+  { title: "Service", text: "Responsive, respectful and available when you need us." },
+  { title: "Expertise", text: "Registered brokers with real knowledge of the Dubai and UAE market." },
 ];
