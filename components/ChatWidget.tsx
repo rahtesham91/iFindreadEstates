@@ -12,27 +12,39 @@ const SEEN_KEY = "ifind-chat-seen";
 
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
+  const [teaser, setTeaser] = useState(false);
   const [step, setStep] = useState<Step>("interest");
   const [msgs, setMsgs] = useState<Msg[]>([{ from: "bot", text: GREETING }]);
   const [input, setInput] = useState("");
   const lead = useRef({ interest: "", name: "", phone: "" });
   const endRef = useRef<HTMLDivElement>(null);
 
-  // Open automatically once per browser session, shortly after the page loads.
+  // Greet with a small bubble (not the whole panel, which covers the page, especially on phones).
   useEffect(() => {
     let seen = false;
     try {
       seen = sessionStorage.getItem(SEEN_KEY) === "1";
     } catch {}
     if (seen) return;
-    const t = setTimeout(() => {
-      setOpen(true);
-      try {
-        sessionStorage.setItem(SEEN_KEY, "1");
-      } catch {}
-    }, 4000);
-    return () => clearTimeout(t);
+    const show = setTimeout(() => setTeaser(true), 4000);
+    const hide = setTimeout(() => setTeaser(false), 22000);
+    return () => {
+      clearTimeout(show);
+      clearTimeout(hide);
+    };
   }, []);
+
+  function dismissTeaser() {
+    setTeaser(false);
+    try {
+      sessionStorage.setItem(SEEN_KEY, "1");
+    } catch {}
+  }
+
+  function openChat() {
+    setOpen(true);
+    dismissTeaser();
+  }
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
@@ -164,6 +176,29 @@ export default function ChatWidget() {
           </section>
         )}
 
+        {teaser && !open && (
+          <div className="relative max-w-[16.5rem] animate-[menu-in_0.5s_ease_both]">
+            <button
+              type="button"
+              onClick={openChat}
+              className="block w-full border border-gold-500/60 bg-ink px-4 py-3.5 pr-9 text-left shadow-2xl transition-colors hover:border-gold-300"
+            >
+              <span className="block text-sm leading-snug text-ivory">Hello! How may I assist you today?</span>
+              <span className="mt-1 block text-[0.66rem] font-medium uppercase tracking-luxe text-gold-400">Chat with us</span>
+            </button>
+            <button
+              type="button"
+              onClick={dismissTeaser}
+              aria-label="Dismiss"
+              className="absolute right-1.5 top-1.5 p-1 text-mute transition-colors hover:text-gold-300"
+            >
+              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                <path d="M6 6l12 12M18 6L6 18" />
+              </svg>
+            </button>
+          </div>
+        )}
+
         <div className="flex items-center gap-3">
           <a
             href={whatsappLink()}
@@ -178,7 +213,7 @@ export default function ChatWidget() {
           </a>
           <button
             type="button"
-            onClick={() => setOpen((v) => !v)}
+            onClick={() => (open ? setOpen(false) : openChat())}
             aria-label={open ? "Close chat" : "Open chat"}
             aria-expanded={open}
             className="flex h-14 w-14 items-center justify-center bg-gold-400 text-ink shadow-xl transition-colors hover:bg-gold-300"
