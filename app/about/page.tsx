@@ -47,6 +47,7 @@ export default function Page() {
                 alt={`${ceo.honorific} ${ceo.name}, ${ceo.title}`}
                 fill
                 priority
+                quality={92}
                 sizes="(min-width: 1024px) 40vw, 90vw"
                 className="object-cover object-top"
               />
