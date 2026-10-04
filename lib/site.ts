@@ -20,8 +20,8 @@ export const site = {
   ],
 };
 
-export const whatsappLink = (text = "Hello iFind, I would like to make an enquiry.") =>
-  `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(text)}`;
+export const whatsappLink = (text = "Hello iFind, I would like to make an enquiry.", number: string = site.whatsapp) =>
+  `https://wa.me/${number.replace(/\D/g, "")}?text=${encodeURIComponent(text)}`;
 
 export type Service = {
   slug: string;
@@ -106,6 +106,18 @@ export type TeamMember = {
   photo: string;
   languages?: string[];
   brn?: string; // shown only when provided
+  // Personal numbers, international format (e.g. "+971 50 123 4567"). Until provided, the company number is used.
+  phone?: string;
+  whatsapp?: string;
+};
+
+export const memberContact = (m: TeamMember) => {
+  const call = m.phone ?? site.phone;
+  const wa = m.whatsapp ?? m.phone ?? site.whatsapp;
+  return {
+    tel: `tel:${call.replace(/[^\d+]/g, "")}`,
+    wa: whatsappLink(`Hello, I would like to speak with ${m.name}.`, wa),
+  };
 };
 
 // Team details and photos taken from the company's previous website (about page).
