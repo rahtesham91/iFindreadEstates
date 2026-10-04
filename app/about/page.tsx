@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CtaBand from "@/components/CtaBand";
 import Ornament from "@/components/Ornament";
+import LuxuryFrame from "@/components/LuxuryFrame";
 import PortraitFrame from "@/components/PortraitFrame";
 import Reveal from "@/components/Reveal";
 import { aboutIntro, ceo, developers, mission, services, site, team, values, vision } from "@/lib/site";
@@ -15,6 +16,8 @@ export const metadata: Metadata = {
 
 const md = team[0];
 const goldText = "bg-gradient-to-b from-gold-300 via-gold-400 to-gold-500 bg-clip-text text-transparent";
+// Italic glyphs overhang their box, so pad the right edge or the last letter is clipped by the gradient.
+const goldItalic = `italic pr-[0.14em] ${goldText}`;
 
 const stats = [
   { value: "8+", label: "Years of founder experience in Dubai and international real estate" },
@@ -40,7 +43,7 @@ export default function Page() {
           <Ornament className="mb-8" />
           <p className="eyebrow mb-6">iFind Real Estate LLC &middot; Dubai</p>
           <h1 className="h-display text-[3.6rem] leading-[0.95] sm:text-8xl lg:text-[9rem]">
-            About <span className={`italic ${goldText}`}>Us</span>
+            About <span className={`${goldItalic}`}>Us</span>
           </h1>
           <p className="mt-9 max-w-2xl font-serif text-2xl leading-snug text-ivory/90 sm:mt-12 sm:text-[2rem] sm:leading-snug">
             Specializing in mid-range to luxury properties, our multinational team brings a global perspective and deep local expertise to every transaction.
@@ -54,7 +57,7 @@ export default function Page() {
         <span aria-hidden="true" className="pointer-events-none absolute -left-4 top-4 -z-10 select-none font-serif text-[9rem] leading-none text-gold-500/[0.05] sm:text-[18rem]">CEO</span>
         <div className="container-page grid items-center gap-14 lg:grid-cols-[6fr_6fr] lg:gap-24">
           <Reveal className="mx-auto w-full max-w-md lg:max-w-none">
-            <PortraitFrame src={ceo.photo} alt={`${ceo.honorific} ${ceo.name}, ${ceo.title}`} priority />
+            <LuxuryFrame src={ceo.photo} alt={`${ceo.honorific} ${ceo.name}, ${ceo.title}`} priority />
           </Reveal>
 
           <Reveal delay={150}>
@@ -65,7 +68,7 @@ export default function Page() {
                   <span className="eyebrow">{ceo.title}</span>
                 </div>
                 <h2 className="h-display text-[3.4rem] leading-[0.98] sm:text-7xl lg:text-[5.5rem]">
-                  Avaid <span className={`italic ${goldText}`}>Lateef</span>
+                  Avaid <span className={`${goldItalic}`}>Lateef</span>
                 </h2>
               </figcaption>
               <svg viewBox="0 0 48 36" className="mb-5 mt-10 h-8 w-11 text-gold-500/80 sm:mt-12" fill="currentColor" aria-hidden="true">
@@ -138,7 +141,7 @@ export default function Page() {
               <span className="eyebrow">{md.role}</span>
             </div>
             <h2 className="h-display text-[3.2rem] leading-[0.98] sm:text-7xl">
-              {md.name.split(" ")[0]} <span className={`italic ${goldText}`}>{md.name.split(" ").slice(1).join(" ")}</span>
+              {md.name.split(" ")[0]} <span className={`${goldItalic}`}>{md.name.split(" ").slice(1).join(" ")}</span>
             </h2>
             <p className="mt-9 font-serif text-xl italic leading-[1.6] text-ivory/95 sm:text-[1.65rem] sm:leading-[1.6]">{md.bio}</p>
             <Link href="/team" className="btn-ghost mt-10">Meet the Full Team</Link>
