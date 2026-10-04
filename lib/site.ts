@@ -120,7 +120,8 @@ export const memberContact = (m: TeamMember) => {
   };
 };
 
-// Team details and photos taken from the company's previous website (about page).
+// Team names and photos from the company's previous website. The bios and languages are kept here for later use but are not
+// shown on the cards. Some designations below (Waqar, Ekaterina, Essam, Nyi Linn) are placeholders until the company confirms them.
 export const team: TeamMember[] = [
   {
     slug: "abid-khan",
@@ -161,7 +162,7 @@ export const team: TeamMember[] = [
   {
     slug: "waqar-shah",
     name: "Waqar Shah",
-    role: "Real Estate Expert",
+    role: "Sales Consultant",
     photo: "/team/waqar-shah.webp",
     languages: ["English", "Urdu", "Pashtu", "Punjabi"],
     bio: "Waqar Shah is a real estate expert in Dubai's off-plan market, with 2 years of experience and an IT background since 2014. He offers smart, tech-driven investment guidance. Known for integrity and clear communication, he supports a diverse clientele. Whether you're a buyer or investor, Waqar helps you unlock top opportunities.",
@@ -169,7 +170,7 @@ export const team: TeamMember[] = [
   {
     slug: "ekaterina",
     name: "Ekaterina",
-    role: "Real Estate Expert",
+    role: "Property Consultant",
     photo: "/team/ekaterina.webp",
     languages: ["Russian", "Spanish", "English"],
     bio: "Originally a professional figure skater with 9 years of experience and participation in national championships in Russia, Ekaterina brings the same discipline, precision, and drive to her career in Dubai real estate. She now helps clients navigate the Dubai property market with the dedication of a true athlete.",
@@ -177,7 +178,7 @@ export const team: TeamMember[] = [
   {
     slug: "essam-nabil",
     name: "Essam Nabil",
-    role: "Real Estate Expert",
+    role: "Senior Sales Executive",
     photo: "/team/essam-nabil.webp",
     languages: ["Arabic", "English"],
     bio: "Property Consultant with a strong hospitality background, specialized in guiding clients through every step of the real estate journey, whether buying, selling, or investing. He provides strategic advice, transparent communication, and tailored property solutions to meet each client's unique needs.",
@@ -185,7 +186,7 @@ export const team: TeamMember[] = [
   {
     slug: "nyi-linn-htet",
     name: "Nyi Linn Htet",
-    role: "Real Estate Expert",
+    role: "Sales Executive",
     photo: "/team/nyi-linn-htet.webp",
     bio: "Experienced real estate professional specializing in luxury properties in Dubai, with a strong background in market analysis, client relations, and property sales. Provides tailored solutions to help clients buy, sell, and invest in prime real estate, and is committed to delivering exceptional service and results.",
   },

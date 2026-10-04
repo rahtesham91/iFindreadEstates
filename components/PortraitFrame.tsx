@@ -18,7 +18,6 @@ export default function PortraitFrame({ src, alt, priority = false, quality = 92
       <div className="relative aspect-[4/5] overflow-hidden bg-panel shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
         <Image src={src} alt={alt} fill priority={priority} quality={quality} sizes={sizes} className={`object-cover ${position}`} />
         <div aria-hidden="true" className="pointer-events-none absolute inset-3 border border-gold-300/25 sm:inset-4" />
-        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink/55 to-transparent" />
       </div>
       {/* corner marks */}
       <span aria-hidden="true" className="absolute left-[-0.4rem] top-[-0.4rem] h-6 w-6 border-l-2 border-t-2 border-gold-400 sm:h-8 sm:w-8" />

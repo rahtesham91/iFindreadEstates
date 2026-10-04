@@ -26,7 +26,6 @@ export default function LuxuryFrame({ src, alt, priority = false, quality = 92, 
           <div className="relative aspect-[4/5] overflow-hidden bg-panel">
             <Image src={src} alt={alt} fill priority={priority} quality={quality} sizes={sizes} className={`object-cover ${position}`} />
             <div aria-hidden="true" className="pointer-events-none absolute inset-2 border border-gold-300/30 sm:inset-3" />
-            <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink/55 to-transparent" />
             <span aria-hidden="true" className="frame-shine pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-transparent via-white/25 to-transparent" />
           </div>
         </div>

@@ -1,12 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 import { TeamMember, memberContact } from "@/lib/site";
 
 type Props = { member: TeamMember; compact?: boolean; priority?: boolean };
-
-const LONG_BIO = 110; // every bio over this is clamped to 4 lines with a "Read more"
 
 function PhoneIcon() {
   return (
@@ -25,9 +22,7 @@ function WhatsAppIcon() {
 }
 
 export default function TeamCard({ member, compact = false, priority = false }: Props) {
-  const [open, setOpen] = useState(false);
   const { tel, wa } = memberContact(member);
-  const longBio = member.bio.length > LONG_BIO;
 
   return (
     <article className="group flex h-full flex-col border border-line bg-char transition-all duration-500 hover:-translate-y-1 hover:border-gold-500/70 hover:shadow-[0_25px_60px_-25px_rgb(var(--c-gold-500)/0.45)]">
@@ -42,7 +37,6 @@ export default function TeamCard({ member, compact = false, priority = false }: 
           sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 50vw"
           className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
         />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-char via-char/50 to-transparent" />
         <div className="pointer-events-none absolute inset-0 border-b-2 border-gold-500/0 transition-colors duration-500 group-hover:border-gold-400/80" />
       </div>
 
@@ -50,45 +44,10 @@ export default function TeamCard({ member, compact = false, priority = false }: 
       <div className={`flex flex-1 flex-col ${compact ? "px-4 pb-4 pt-3 sm:px-5 sm:pb-5" : "px-6 pb-6 pt-4"}`}>
         <h3 className={`font-serif leading-tight ${compact ? "text-xl sm:text-2xl" : "text-[1.7rem]"}`}>{member.name}</h3>
         <p className={`mt-2 font-medium uppercase text-gold-400 ${compact ? "text-[0.62rem] tracking-[0.16em] sm:text-[0.68rem] sm:tracking-luxe" : "text-[0.7rem] tracking-luxe"}`}>{member.role}</p>
-        <div className="my-4 h-px w-full bg-gradient-to-r from-gold-500/70 via-line to-transparent" />
-
-        {!compact && (
-          <>
-            <div>
-              <p className={`text-[0.92rem] leading-[1.75] text-mute ${open ? "" : longBio ? "line-clamp-4" : ""}`}>{member.bio}</p>
-              {longBio && (
-                <button
-                  type="button"
-                  onClick={() => setOpen((v) => !v)}
-                  aria-expanded={open}
-                  className="mt-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-gold-400 transition-colors hover:text-gold-300"
-                >
-                  {open ? "Show less" : "Read more"}
-                </button>
-              )}
-            </div>
-
-            {(member.languages || member.brn) && (
-              <dl className="mt-4 space-y-3 border-t border-line pt-4">
-                {member.languages && (
-                  <div>
-                    <dt className="text-[0.62rem] font-medium uppercase tracking-luxe text-gold-500">Languages</dt>
-                    <dd className="mt-1 text-[0.78rem] tracking-[0.04em] text-ivory/85">{member.languages.join("  ·  ")}</dd>
-                  </div>
-                )}
-                {member.brn && (
-                  <div>
-                    <dt className="text-[0.62rem] font-medium uppercase tracking-luxe text-gold-500">BRN</dt>
-                    <dd className="mt-1 text-[0.78rem] tracking-[0.04em] text-ivory/85">{member.brn}</dd>
-                  </div>
-                )}
-              </dl>
-            )}
-          </>
-        )}
+        <div className="mt-4 h-px w-full bg-gradient-to-r from-gold-500/70 via-line to-transparent" />
 
         {/* Contact buttons: always pinned to the bottom of the card */}
-        <div className={`mt-auto grid grid-cols-2 gap-2 ${compact ? "pt-4" : "pt-6"}`}>
+        <div className={`mt-auto grid grid-cols-2 gap-2 ${compact ? "pt-4" : "pt-5"}`}>
           <a
             href={tel}
             aria-label={`Call ${member.name}`}
