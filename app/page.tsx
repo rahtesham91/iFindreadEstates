@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Placeholder from "@/components/Placeholder";
 import TeamCard from "@/components/TeamCard";
+import DeveloperGrid from "@/components/DeveloperGrid";
 import SectionHeading from "@/components/SectionHeading";
 import CtaBand from "@/components/CtaBand";
-import { developers, steps, services, site, team, whatsappLink } from "@/lib/site";
+import { steps, services, site, team, whatsappLink } from "@/lib/site";
 
 const why = [
   { title: "Licensed Brokers", text: "Every consultant is a registered broker, with their BRN shown openly on our Team page." },
@@ -86,13 +87,9 @@ export default function Home() {
       <section className="py-24 sm:py-32">
         <div className="container-page">
           <SectionHeading eyebrow="Developers" title="Registered with Dubai's leading developers" align="center" />
-          <ul className="mt-16 grid grid-cols-2 gap-px border border-line bg-line sm:grid-cols-3 lg:grid-cols-6">
-            {developers.map((d) => (
-              <li key={d} className="flex h-28 items-center justify-center bg-ink px-4 text-center font-serif text-xl tracking-wide text-mute transition-colors hover:bg-panel hover:text-gold-300">
-                {d}
-              </li>
-            ))}
-          </ul>
+          <div className="mt-12 sm:mt-16">
+            <DeveloperGrid />
+          </div>
           <div className="mt-10 text-center">
             <Link href="/developers" className="btn-ghost">View All Developers</Link>
           </div>

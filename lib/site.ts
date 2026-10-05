@@ -65,20 +65,22 @@ export const nav = [
   { label: "Our Team", href: "/team" },
 ];
 
-// Developer list as published on the company's previous website.
-export const developers = [
-  "Dubai Properties",
-  "Emaar",
-  "Damac",
-  "Sobha",
-  "Nshama",
-  "Azizi Developers",
-  "Reportage Developers",
-  "BNW Developers",
-  "Fakhr-al-Din Properties",
-  "Danube Properties",
-  "BT Properties",
-  "Binghatti",
+// Developer partners (names from the company's previous website; logos supplied by the company, traced to clean SVG in /public/developers).
+// ratio = logo width / height, used to size each logo evenly.
+export type Developer = { slug: string; name: string; ratio: number };
+export const developers: Developer[] = [
+  { slug: "emaar", name: "Emaar", ratio: 3.83 },
+  { slug: "damac", name: "Damac", ratio: 5.96 },
+  { slug: "sobha", name: "Sobha", ratio: 4.07 },
+  { slug: "dubai-properties", name: "Dubai Properties", ratio: 1.55 },
+  { slug: "azizi", name: "Azizi", ratio: 3.94 },
+  { slug: "binghatti", name: "Binghatti", ratio: 3.88 },
+  { slug: "danube", name: "Danube Properties", ratio: 3.61 },
+  { slug: "nshama", name: "Nshama", ratio: 6.87 },
+  { slug: "fakhruddin", name: "Fakhruddin Properties", ratio: 4.11 },
+  { slug: "bt-properties", name: "BT Properties", ratio: 3.39 },
+  { slug: "bnw", name: "BNW Developments", ratio: 1.09 },
+  { slug: "reportage", name: "Reportage", ratio: 0.89 },
 ];
 
 export const steps = [
