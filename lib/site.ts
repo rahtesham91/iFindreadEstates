@@ -168,7 +168,7 @@ export const team: TeamMember[] = [
     photo: "/team/dario-linus-v4.webp",
     brn: "100955",
     email: "dario@ifindrealestates.com",
-    // phone: awaiting from the company
+    phone: "+971 58 517 1717",
   },
   {
     slug: "ishtiaq-ahmed",
