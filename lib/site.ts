@@ -133,6 +133,7 @@ export const team: TeamMember[] = [
     role: "Managing Director",
     photo: "/team/abid-khan-v3.webp",
     email: "abid@ifindrealestates.com",
+    phone: "+971 54 798 9893",
     bio: "Abid Khan has 12+ years of sales experience, including 8 in Dubai real estate. With a BBA and hospitality background, he leads iFind Real Estate LLC with a focus on client satisfaction, smart investments, and trusted service.",
   },
   {
@@ -152,6 +153,7 @@ export const team: TeamMember[] = [
     role: "Sales Manager",
     photo: "/team/muzamal-hameed-v3.webp",
     email: "muzamal@ifindrealestates.com",
+    phone: "+971 52 173 9547",
     bio: "Muzamal Hameed is a skilled Sales Manager dedicated to helping clients find the perfect property. With strong market knowledge and a client-focused approach, he ensures smooth and successful real estate transactions.",
   },
   {
@@ -163,10 +165,10 @@ export const team: TeamMember[] = [
     photo: "/team/ehtesham-nazir-v4.webp",
   },
   {
-    slug: "dario-linus",
-    name: "Dario Linus",
+    slug: "dario-ceglia",
+    name: "Dario Ceglia",
     role: "Property Consultant", // placeholder designation until confirmed
-    photo: "/team/dario-linus-v4.webp",
+    photo: "/team/dario-ceglia-v5.webp",
     brn: "100955",
     email: "dario@ifindrealestates.com",
     phone: "+971 58 517 1717",
@@ -187,6 +189,7 @@ export const team: TeamMember[] = [
     photo: "/team/waqar-shah-v3.webp",
     languages: ["English", "Urdu", "Pashtu", "Punjabi"],
     email: "waqar@ifindrealestates.com",
+    phone: "+971 58 543 3007",
     bio: "Waqar Shah is a real estate expert in Dubai's off-plan market, with 2 years of experience and an IT background since 2014. He offers smart, tech-driven investment guidance. Known for integrity and clear communication, he supports a diverse clientele. Whether you're a buyer or investor, Waqar helps you unlock top opportunities.",
   },
   {
@@ -204,6 +207,7 @@ export const team: TeamMember[] = [
     photo: "/team/essam-nabil-v3.webp",
     languages: ["Arabic", "English"],
     email: "essam@ifindrealestates.com",
+    phone: "+971 58 578 4659",
     bio: "Property Consultant with a strong hospitality background, specialized in guiding clients through every step of the real estate journey, whether buying, selling, or investing. He provides strategic advice, transparent communication, and tailored property solutions to meet each client's unique needs.",
   },
 ];

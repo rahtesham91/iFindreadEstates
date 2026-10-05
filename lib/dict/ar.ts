@@ -143,7 +143,7 @@ export const ar: Dict = {
     "farwa-khan": { name: "فروة خان", role: "مديرة المبيعات التجارية" },
     "muzamal-hameed": { name: "مزمل حميد", role: "مدير المبيعات" },
     "ehtesham-nazir": { name: "احتشام نذير", role: "مدير التسويق الرقمي" },
-    "dario-linus": { name: "داريو لينوس", role: "مستشار عقاري" },
+    "dario-ceglia": { name: "داريو تشيليا", role: "مستشار عقاري" },
     "ishtiaq-ahmed": { name: "اشتياق أحمد", role: "مستشار عقاري – السوق الثانوي" },
     "waqar-shah": { name: "وقار شاه", role: "مستشار مبيعات" },
     "fayyaz-khan": { name: "فياض خان", role: "مسؤول العلاقات العامة (PRO)" },

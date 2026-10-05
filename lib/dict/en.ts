@@ -144,7 +144,7 @@ export const en = {
     "farwa-khan": { name: "Farwa Khan", role: "Commercial Sales Manager" },
     "muzamal-hameed": { name: "Muzamal Hameed", role: "Sales Manager" },
     "ehtesham-nazir": { name: "Ehtesham Nazir", role: "Digital Marketing Manager" },
-    "dario-linus": { name: "Dario Linus", role: "Property Consultant" },
+    "dario-ceglia": { name: "Dario Ceglia", role: "Property Consultant" },
     "ishtiaq-ahmed": { name: "Ishtiaq Ahmed", role: "Property Consultant – Secondary Market" },
     "waqar-shah": { name: "Waqar Shah", role: "Sales Consultant" },
     "fayyaz-khan": { name: "Fayyaz Khan", role: "Public Relations Officer (PRO)" },
