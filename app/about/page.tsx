@@ -81,6 +81,7 @@ export default function Page() {
                 <span className="h-px flex-1 bg-gradient-to-r from-gold-500/50 to-transparent" />
               </div>
               <p className="mt-2 text-[0.7rem] uppercase tracking-luxe text-mute">{ceo.title}, {site.legalName}</p>
+              <a href={`mailto:${ceo.email}`} className="mt-3 inline-block text-sm text-mute transition-colors hover:text-gold-400">{ceo.email}</a>
             </figure>
           </Reveal>
         </div>

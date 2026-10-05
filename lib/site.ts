@@ -131,6 +131,7 @@ export const team: TeamMember[] = [
     name: "Abid Khan",
     role: "Managing Director",
     photo: "/team/abid-khan-v3.webp",
+    email: "abid@ifindrealestates.com",
     bio: "Abid Khan has 12+ years of sales experience, including 8 in Dubai real estate. With a BBA and hospitality background, he leads iFind Real Estate LLC with a focus on client satisfaction, smart investments, and trusted service.",
   },
   {
@@ -140,7 +141,7 @@ export const team: TeamMember[] = [
     photo: "/team/farwa-khan-v3.webp",
     languages: ["English", "Urdu", "Hindi"],
     brn: "93124",
-    email: "Farwa@ifindrealestates.com",
+    email: "farwa@ifindrealestates.com",
     phone: "+971 50 882 8241",
     bio: "Farwa Khan brings extensive expertise in both real estate sales and operations, specializing in both off-plan and secondary market sales. With a focus on client satisfaction and smooth transactions, she is dedicated to helping clients find the right properties while driving business growth.",
   },
@@ -149,6 +150,7 @@ export const team: TeamMember[] = [
     name: "Muzamal Hameed",
     role: "Sales Manager",
     photo: "/team/muzamal-hameed-v3.webp",
+    email: "muzamal@ifindrealestates.com",
     bio: "Muzamal Hameed is a skilled Sales Manager dedicated to helping clients find the perfect property. With strong market knowledge and a client-focused approach, he ensures smooth and successful real estate transactions.",
   },
   {
@@ -171,7 +173,7 @@ export const team: TeamMember[] = [
     role: "Property Consultant – Secondary Market",
     photo: "/team/ishtiaq-ahmed-v3.webp",
     languages: ["English", "Hindi", "Urdu", "Punjabi"],
-    email: "Ishtiaq@ifindrealestates.com",
+    email: "ishtiaq@ifindrealestates.com",
     phone: "+971 56 550 4547",
   },
   {
@@ -180,6 +182,7 @@ export const team: TeamMember[] = [
     role: "Sales Consultant",
     photo: "/team/waqar-shah-v3.webp",
     languages: ["English", "Urdu", "Pashtu", "Punjabi"],
+    email: "waqar@ifindrealestates.com",
     bio: "Waqar Shah is a real estate expert in Dubai's off-plan market, with 2 years of experience and an IT background since 2014. He offers smart, tech-driven investment guidance. Known for integrity and clear communication, he supports a diverse clientele. Whether you're a buyer or investor, Waqar helps you unlock top opportunities.",
   },
   {
@@ -196,6 +199,7 @@ export const team: TeamMember[] = [
     role: "Senior Sales Executive",
     photo: "/team/essam-nabil-v3.webp",
     languages: ["Arabic", "English"],
+    email: "essam@ifindrealestates.com",
     bio: "Property Consultant with a strong hospitality background, specialized in guiding clients through every step of the real estate journey, whether buying, selling, or investing. He provides strategic advice, transparent communication, and tailored property solutions to meet each client's unique needs.",
   },
   {
@@ -210,6 +214,7 @@ export const team: TeamMember[] = [
     name: "Umar Bin Masood",
     role: "Admin & Accounts",
     photo: "/team/umar-bin-masood-v3.webp",
+    email: "accounts@ifindrealestates.com",
     bio: "Umar Bin Masood is an experienced professional with over 10 years in administration and accounts, including one year in Dubai's real estate sector. He holds a BBA degree and handles administrative and financial operations at iFind Real Estate LLC, ensuring efficiency and accuracy in daily business functions.",
   },
 ];
@@ -219,6 +224,7 @@ export const ceo = {
   name: "Avaid Lateef",
   honorific: "Mr.",
   title: "Founder & CEO",
+  email: "avaid@ifindrealestates.com",
   photo: "/team/avaid-lateef-v3.webp",
   message: [
     "With over 8 years of real estate experience in Dubai and internationally, Mr. Avaid Lateef leads iFind Real Estate LLC with a clear vision: to deliver personalized, high-value property solutions with excellence and integrity.",
@@ -247,3 +253,11 @@ export const values = [
   { title: "Service", text: "Responsive, respectful and available when you need us." },
   { title: "Expertise", text: "Registered brokers with real knowledge of the Dubai and UAE market." },
 ];
+
+// Other company mailboxes supplied by the company, not yet placed on the site.
+// dario@ and fayaz@ belong to people who are not on the Team page yet.
+export const otherEmails = {
+  hr: "hr@ifindrealestates.com",
+  dario: "dario@ifindrealestates.com",
+  fayaz: "fayaz@ifindrealestates.com",
+};
