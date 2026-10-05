@@ -27,16 +27,24 @@ export default function TeamCard({ member, compact = false, priority = false }: 
   return (
     <article className="group flex h-full flex-col border border-line bg-char transition-all duration-500 hover:-translate-y-1 hover:border-gold-500/70 hover:shadow-[0_25px_60px_-25px_rgb(var(--c-gold-500)/0.45)]">
       {/* Photo */}
-      <div className="relative aspect-[4/5] overflow-hidden bg-panel">
-        <Image
-          src={member.photo}
-          alt={`${member.name}, ${member.role}`}
-          fill
-          priority={priority}
-          quality={90}
-          sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 50vw"
-          className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-        />
+      <div className="relative aspect-[4/5] overflow-hidden bg-white">
+        {member.photo ? (
+          <Image
+            src={member.photo}
+            alt={`${member.name}, ${member.role}`}
+            fill
+            priority={priority}
+            quality={90}
+            sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 50vw"
+            className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+          />
+        ) : (
+          <div role="img" aria-label={member.name} className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-b from-white to-char">
+            <span className="flex h-28 w-28 items-center justify-center rounded-full border border-gold-500/60 font-serif text-4xl text-gold-500 sm:h-32 sm:w-32 sm:text-5xl">
+              {member.name.split(" ").map((w) => w[0]).slice(0, 2).join("")}
+            </span>
+          </div>
+        )}
         <div className="pointer-events-none absolute inset-0 border-b-2 border-gold-500/0 transition-colors duration-500 group-hover:border-gold-400/80" />
       </div>
 

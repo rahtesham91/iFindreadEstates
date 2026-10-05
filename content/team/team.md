@@ -17,10 +17,6 @@ Muzamal Hameed is a skilled Sales Manager dedicated to helping clients find the 
 
 Waqar Shah is a real estate expert in Dubai’s off-plan market, with 2 years of experience and an IT background since 2014. He offers smart, tech-driven investment guidance. Known for integrity and clear communication, he supports a diverse clientele in English, Urdu, Pashtu, and Punjabi. Whether you're a buyer or investor, Waqar helps you unlock top opportunities.
 
-## Meher Ahmed
-**Luxury Properties Specialist**
-
-Meher Ahmed brings expertise and dedication to Dubai’s luxury real estate market. She is passionate about helping clients find exceptional homes and premium investments, offering personalized service with a focus on excellence.
 
 ## FARWA KHAN
 **Associate Director**
@@ -37,20 +33,6 @@ Originally a professional figure skater with 9 years of experience and participa
 
 Property Consultant with a strong hospitality background, specialized in guiding clients through every step of the real estate journey whether buying, selling, or investing. He is Fluent in Arabic and English, provide strategic advice, transparent communication, and tailored property solutions to meet each client's unique needs.
 
-## Nyi Linn Htet
-**Realestate Expert**
-
-Experienced real estate professional specializing in luxury properties in Dubai. With a strong background in market analysis, client relations, and property sales, I provide tailored solutions to help clients buy, sell, and invest in prime real estate. Committed to delivering exceptional service and results.
-
-## Umar Bin Masood
-**Admin & Accounts**
-
-Umar Bin Masood is an experienced professional with over 10 years in administration and accounts, including one year in Dubai’s real estate sector. He holds a BBA degree and currently manages administrative and financial operations at I Find Real Estate LLC, ensuring efficiency and accuracy in daily business functions.
-
-## Fahad Ahmed
-**Marketing Director**
-
-Fahad drives our marketing efforts with creativity and precision, connecting clients to Dubai’s best real estate opportunities.
 
 
 ## Agent profile pages (bios only)
@@ -67,13 +49,4 @@ Property Consultant with a strong hospitality background, specialized in guiding
 
 Profile page: https://ifindrealestates.com/agent/vincent-fuller/
 
-### Nyi Linn Htet
-Experienced real estate professional specializing in luxury properties in Dubai. With a strong background in market analysis, client relations, and property sales, I provide tailored solutions to help clients buy, sell, and invest in prime real estate. Committed to delivering exceptional service and results.
-
-Profile page: https://ifindrealestates.com/agent/samuel-palmer/
-
-### Waqar Shah
-Waqar Shah is a real estate expert in Dubai’s off-plan market, with 2 years of experience and an IT background since 2014. He offers smart, tech-driven investment guidance. Known for integrity and clear communication, he supports a diverse clientele in English, Urdu, Pashtu, and Punjabi. Whether you’re a buyer or investor, Waqar helps you unlock top opportunities.
-
-Profile page: https://ifindrealestates.com/agent/michelle-ramirez/
-
+#

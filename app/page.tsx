@@ -4,7 +4,7 @@ import TeamCard from "@/components/TeamCard";
 import DeveloperGrid from "@/components/DeveloperGrid";
 import SectionHeading from "@/components/SectionHeading";
 import CtaBand from "@/components/CtaBand";
-import { steps, services, site, team, whatsappLink } from "@/lib/site";
+import { leadership, steps, services, site, whatsappLink } from "@/lib/site";
 
 const why = [
   { title: "Licensed Brokers", text: "Every consultant is a registered broker, with their BRN shown openly on our Team page." },
@@ -131,8 +131,8 @@ export default function Home() {
       <section className="border-t border-line bg-char py-16 sm:py-28">
         <div className="container-page">
           <SectionHeading eyebrow="Our Team" title="The people behind iFind" />
-          <ul className="mt-12 grid grid-cols-2 gap-x-4 gap-y-10 sm:mt-16 sm:gap-x-8 lg:grid-cols-4">
-            {team.slice(0, 4).map((m) => (
+          <ul className="mt-12 grid grid-cols-2 gap-x-4 gap-y-10 sm:mt-16 sm:gap-x-8 lg:grid-cols-3">
+            {leadership.map((m) => (
               <li key={m.slug}>
                 <TeamCard member={m} compact />
               </li>

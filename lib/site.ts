@@ -105,7 +105,7 @@ export type TeamMember = {
   name: string;
   role: string;
   bio?: string;
-  photo: string;
+  photo?: string; // a monogram is shown until a photo is supplied
   languages?: string[];
   brn?: string; // shown only when provided
   email?: string; // shown only when provided
@@ -124,7 +124,7 @@ export const memberContact = (m: TeamMember) => {
 };
 
 // Team names and photos from the company's previous website. The bios and languages are kept here for later use but are not
-// shown on the cards. Some designations below (Waqar, Ekaterina, Essam, Nyi Linn) are placeholders until the company confirms them.
+// shown on the cards. Some designations below (Waqar, Ekaterina, Essam, Dario) are placeholders until the company confirms them.
 export const team: TeamMember[] = [
   {
     slug: "abid-khan",
@@ -154,18 +154,11 @@ export const team: TeamMember[] = [
     bio: "Muzamal Hameed is a skilled Sales Manager dedicated to helping clients find the perfect property. With strong market knowledge and a client-focused approach, he ensures smooth and successful real estate transactions.",
   },
   {
-    slug: "fahad-ahmed",
-    name: "Fahad Ahmed",
-    role: "Marketing Director",
-    photo: "/team/fahad-ahmed-v3.webp",
-    bio: "Fahad drives our marketing efforts with creativity and precision, connecting clients to Dubai's best real estate opportunities.",
-  },
-  {
-    slug: "meher-ahmed",
-    name: "Meher Ahmed",
-    role: "Luxury Properties Specialist",
-    photo: "/team/meher-ahmed-v3.webp",
-    bio: "Meher Ahmed brings expertise and dedication to Dubai's luxury real estate market. She is passionate about helping clients find exceptional homes and premium investments, offering personalized service with a focus on excellence.",
+    slug: "dario-linus",
+    name: "Dario Linus",
+    role: "Property Consultant", // placeholder designation until confirmed
+    email: "dario@ifindrealestates.com",
+    // photo: to be added when supplied
   },
   {
     slug: "ishtiaq-ahmed",
@@ -202,21 +195,9 @@ export const team: TeamMember[] = [
     email: "essam@ifindrealestates.com",
     bio: "Property Consultant with a strong hospitality background, specialized in guiding clients through every step of the real estate journey, whether buying, selling, or investing. He provides strategic advice, transparent communication, and tailored property solutions to meet each client's unique needs.",
   },
-  {
-    slug: "nyi-linn-htet",
-    name: "Nyi Linn Htet",
-    role: "Sales Executive",
-    photo: "/team/nyi-linn-htet-v3.webp",
-    bio: "Experienced real estate professional specializing in luxury properties in Dubai, with a strong background in market analysis, client relations, and property sales. Provides tailored solutions to help clients buy, sell, and invest in prime real estate, and is committed to delivering exceptional service and results.",
-  },
-  {
-    slug: "umar-bin-masood",
-    name: "Umar Bin Masood",
-    role: "Admin & Accounts",
-    photo: "/team/umar-bin-masood-v3.webp",
-    bio: "Umar Bin Masood is an experienced professional with over 10 years in administration and accounts, including one year in Dubai's real estate sector. He holds a BBA degree and handles administrative and financial operations at iFind Real Estate LLC, ensuring efficiency and accuracy in daily business functions.",
-  },
 ];
+
+export const leadership = team.slice(0, 3);
 
 // Founder & CEO: wording from the company's previous website, with the company name updated.
 export const ceo = {
@@ -254,10 +235,9 @@ export const values = [
 ];
 
 // Other company mailboxes supplied by the company, not yet placed on the site.
-// accounts@ and hr@ are department mailboxes; dario@ and fayaz@ belong to people who are not on the Team page yet.
+// accounts@ and hr@ are department mailboxes; fayaz@ belongs to a person who is not on the Team page yet.
 export const otherEmails = {
   accounts: "accounts@ifindrealestates.com",
   hr: "hr@ifindrealestates.com",
-  dario: "dario@ifindrealestates.com",
   fayaz: "fayaz@ifindrealestates.com",
 };

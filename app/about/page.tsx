@@ -146,7 +146,7 @@ export default function Page() {
             <Link href="/team" className="btn-ghost mt-10">Meet the Full Team</Link>
           </Reveal>
           <Reveal delay={150} className="order-1 mx-auto w-full max-w-sm lg:order-2 lg:max-w-none">
-            <PortraitFrame src={md.photo} alt={`${md.name}, ${md.role}`} />
+            {md.photo && <PortraitFrame src={md.photo} alt={`${md.name}, ${md.role}`} />}
           </Reveal>
         </div>
       </section>
