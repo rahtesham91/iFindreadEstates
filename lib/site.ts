@@ -12,12 +12,13 @@ export const site = {
   email: "info@ifindrealestates.com",
   address: "Office No. 1810, Churchill Tower, Business Bay, Dubai, UAE",
   orn: "ORN: 45937",
+  // Taken from the company's own previous website.
   social: [
-    { label: "Instagram", href: "#" },
-    { label: "LinkedIn", href: "#" },
-    { label: "Facebook", href: "#" },
-    { label: "YouTube", href: "#" },
+    { label: "Instagram", href: "https://www.instagram.com/ifindrealestates" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/company/ifindrealestates/" },
+    { label: "Facebook", href: "https://www.facebook.com/ifindrealestates" },
   ],
+
 };
 
 export const whatsappLink = (text = "Hello iFind, I would like to make an enquiry.", number: string = site.whatsapp) =>

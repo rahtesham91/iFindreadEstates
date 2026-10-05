@@ -76,7 +76,7 @@ export default function Footer() {
           <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs uppercase tracking-[0.14em] text-mute">
             {site.social.map((s) => (
               <li key={s.label}>
-                <a href={s.href} className="transition-colors hover:text-gold-300">
+                <a href={s.href} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-gold-300">
                   {s.label}
                 </a>
               </li>
