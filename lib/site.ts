@@ -165,8 +165,10 @@ export const team: TeamMember[] = [
     slug: "dario-linus",
     name: "Dario Linus",
     role: "Property Consultant", // placeholder designation until confirmed
+    photo: "/team/dario-linus-v4.webp",
+    brn: "100955",
     email: "dario@ifindrealestates.com",
-    // photo: to be added when supplied
+    // phone: awaiting from the company
   },
   {
     slug: "ishtiaq-ahmed",
