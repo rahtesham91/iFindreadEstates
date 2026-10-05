@@ -267,6 +267,8 @@ export const en = {
     email: "Email",
     office: "Office",
     formTitle: "Send an enquiry",
+    mapTitle: "iFind Real Estate office location on Google Maps",
+    openMap: "Open in Google Maps",
   },
   servicePage: {
     whatWeDo: "What we do",

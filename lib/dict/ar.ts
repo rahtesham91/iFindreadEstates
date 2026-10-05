@@ -265,6 +265,8 @@ export const ar: Dict = {
     email: "البريد الإلكتروني",
     office: "المكتب",
     formTitle: "أرسل استفساراً",
+    mapTitle: "موقع مكتب آي فايند للعقارات على خرائط جوجل",
+    openMap: "فتح في خرائط جوجل",
   },
   servicePage: {
     whatWeDo: "ما نقدمه",

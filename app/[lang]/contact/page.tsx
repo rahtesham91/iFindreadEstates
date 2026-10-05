@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import InquiryForm from "@/components/InquiryForm";
-import Placeholder from "@/components/Placeholder";
+import OfficeMap from "@/components/OfficeMap";
 import { site, whatsappLink } from "@/lib/site";
 import { getDict } from "@/lib/dict";
 import { isLang, type Lang } from "@/lib/i18n";
@@ -50,7 +50,7 @@ export default async function Page({ params }: P) {
             </div>
           </dl>
 
-          <Placeholder label={d.placeholder.contactMap} size="1000 x 600" className="mt-12 aspect-[5/3]" />
+          <OfficeMap className="mt-12" />
         </div>
 
         <div className="border border-line bg-char p-7 sm:p-10">
