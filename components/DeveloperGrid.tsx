@@ -13,6 +13,13 @@ export default function DeveloperGrid({ list = developers }: { list?: Developer[
     <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4">
       {list.map((d) => (
         <li key={d.slug}>
+          <a
+            href={d.url}
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            aria-label={fill(dict.developers.visit, { name: nm(d) })}
+            className="block"
+          >
           <figure className="overflow-hidden border border-gold-500/50 bg-white transition-colors duration-300 hover:border-gold-500">
             <Image
               src={`/developers/${d.slug}.webp`}
@@ -27,6 +34,7 @@ export default function DeveloperGrid({ list = developers }: { list?: Developer[
               {nm(d)}
             </figcaption>
           </figure>
+          </a>
         </li>
       ))}
     </ul>

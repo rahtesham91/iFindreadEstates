@@ -166,6 +166,7 @@ export const en = {
       reportage: "Reportage",
     } as Record<string, string>,
     logo: "{name} logo",
+    visit: "Visit the official {name} website",
     pageTitle: "Our Developer Partners",
     pageDescription: "iFind Real Estate is registered with Dubai's major developers, including Emaar, Damac, Sobha, Dubai Properties, Azizi, Binghatti and Danube.",
     eyebrow: "Developers",
