@@ -192,7 +192,7 @@ export const team: TeamMember[] = [
     slug: "fayyaz-khan",
     name: "Fayyaz Khan",
     role: "Public Relations Officer (PRO)",
-    photo: "/team/fayyaz-khan-v4.webp",
+    photo: "/team/fayyaz-khan-v5.webp",
     email: "fayaz@ifindrealestates.com",
     phone: "+971 55 744 7287",
   },
