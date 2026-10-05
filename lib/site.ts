@@ -214,7 +214,6 @@ export const team: TeamMember[] = [
     name: "Umar Bin Masood",
     role: "Admin & Accounts",
     photo: "/team/umar-bin-masood-v3.webp",
-    email: "accounts@ifindrealestates.com",
     bio: "Umar Bin Masood is an experienced professional with over 10 years in administration and accounts, including one year in Dubai's real estate sector. He holds a BBA degree and handles administrative and financial operations at iFind Real Estate LLC, ensuring efficiency and accuracy in daily business functions.",
   },
 ];
@@ -255,8 +254,9 @@ export const values = [
 ];
 
 // Other company mailboxes supplied by the company, not yet placed on the site.
-// dario@ and fayaz@ belong to people who are not on the Team page yet.
+// accounts@ and hr@ are department mailboxes; dario@ and fayaz@ belong to people who are not on the Team page yet.
 export const otherEmails = {
+  accounts: "accounts@ifindrealestates.com",
   hr: "hr@ifindrealestates.com",
   dario: "dario@ifindrealestates.com",
   fayaz: "fayaz@ifindrealestates.com",
