@@ -1,6 +1,7 @@
 "use client";
 
 import Logo from "./Logo";
+import SocialIcon from "./SocialIcons";
 import { services, site, whatsappLink } from "@/lib/site";
 import { LocLink, useI18n } from "./I18nProvider";
 
@@ -73,11 +74,18 @@ export default function Footer() {
             </li>
             <li>{dict.address}</li>
           </ul>
-          <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs uppercase tracking-[0.14em] text-mute">
+          <ul className="mt-6 flex gap-3">
             {site.social.map((s) => (
               <li key={s.label}>
-                <a href={s.href} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-gold-300">
-                  {s.label}
+                <a
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  title={s.label}
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-gold-500/60 text-gold-400 transition-colors hover:border-gold-400 hover:bg-gold-400 hover:text-ink"
+                >
+                  <SocialIcon name={s.label} />
                 </a>
               </li>
             ))}
