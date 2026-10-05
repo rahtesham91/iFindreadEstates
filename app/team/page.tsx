@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import CtaBand from "@/components/CtaBand";
 import Link from "next/link";
 import Ornament from "@/components/Ornament";
-import LuxuryFrame from "@/components/LuxuryFrame";
+import PortraitFrame from "@/components/PortraitFrame";
 import TeamCard from "@/components/TeamCard";
 import { ceo, team } from "@/lib/site";
 
@@ -34,7 +34,7 @@ export default function Page() {
         <div aria-hidden="true" className="absolute inset-0 -z-10" style={{ background: "radial-gradient(44rem 30rem at 85% 50%, rgb(var(--c-gold-500) / 0.10), transparent 65%)" }} />
         <div className="container-page grid items-center gap-12 lg:grid-cols-[5fr_7fr] lg:gap-20">
           <div className="mx-auto w-full max-w-sm lg:max-w-none">
-            <LuxuryFrame src={ceo.photo} alt={`${ceo.honorific} ${ceo.name}, ${ceo.title}`} priority sizes="(min-width: 1024px) 38vw, 90vw" />
+            <PortraitFrame src={ceo.photo} alt={`${ceo.honorific} ${ceo.name}, ${ceo.title}`} priority sizes="(min-width: 1024px) 38vw, 90vw" />
           </div>
           <div>
             <Ornament className="mb-6" />

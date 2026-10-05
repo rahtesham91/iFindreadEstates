@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import CtaBand from "@/components/CtaBand";
 import Ornament from "@/components/Ornament";
-import LuxuryFrame from "@/components/LuxuryFrame";
 import PortraitFrame from "@/components/PortraitFrame";
 import Reveal from "@/components/Reveal";
 import { aboutIntro, ceo, developers, mission, services, site, team, values, vision } from "@/lib/site";
@@ -56,7 +55,7 @@ export default function Page() {
         <span aria-hidden="true" className="pointer-events-none absolute -left-4 top-4 -z-10 select-none font-serif text-[9rem] leading-none text-gold-500/[0.05] sm:text-[18rem]">CEO</span>
         <div className="container-page grid items-center gap-14 lg:grid-cols-[6fr_6fr] lg:gap-24">
           <Reveal className="mx-auto w-full max-w-md lg:max-w-none">
-            <LuxuryFrame src={ceo.photo} alt={`${ceo.honorific} ${ceo.name}, ${ceo.title}`} priority />
+            <PortraitFrame src={ceo.photo} alt={`${ceo.honorific} ${ceo.name}, ${ceo.title}`} priority />
           </Reveal>
 
           <Reveal delay={150}>
