@@ -1,11 +1,14 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { interests, whatsappLink } from "@/lib/site";
+import { whatsappLink } from "@/lib/site";
+import { useI18n } from "./I18nProvider";
 
 type Status = "idle" | "sending" | "done" | "error";
 
 export default function InquiryForm({ defaultInterest = "" }: { defaultInterest?: string }) {
+  const { lang, dict } = useI18n();
+  const f = dict.form;
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
 
@@ -19,14 +22,14 @@ export default function InquiryForm({ defaultInterest = "" }: { defaultInterest?
       const res = await fetch("/api/inquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, source: "form" }),
+        body: JSON.stringify({ ...data, source: "form", lang }),
       });
       const json = (await res.json()) as { ok: boolean; error?: string };
-      if (!res.ok || !json.ok) throw new Error(json.error ?? "Something went wrong.");
+      if (!res.ok || !json.ok) throw new Error(json.error ?? f.error);
       setStatus("done");
       form.reset();
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong. Please try WhatsApp.");
+      setError(err instanceof Error ? err.message : f.error);
       setStatus("error");
     }
   }
@@ -34,12 +37,12 @@ export default function InquiryForm({ defaultInterest = "" }: { defaultInterest?
   if (status === "done") {
     return (
       <div className="border border-gold-500/60 bg-char p-10 text-center" role="status">
-        <p className="h-display text-3xl text-gold-300">Thank you.</p>
+        <p className="h-display text-3xl text-gold-300">{f.thankTitle}</p>
         <p className="mx-auto mt-4 max-w-sm text-mute">
-          We have received your enquiry and one of our consultants will contact you shortly.
+          {f.thankText}
         </p>
-        <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-ghost mt-8">
-          Continue on WhatsApp
+        <a href={whatsappLink(dict.wa.general)} target="_blank" rel="noopener noreferrer" className="btn-ghost mt-8">
+          {f.continueWhatsApp}
         </a>
       </div>
     );
@@ -49,30 +52,30 @@ export default function InquiryForm({ defaultInterest = "" }: { defaultInterest?
     <form onSubmit={onSubmit} className="space-y-4" noValidate>
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="sr-only">Full name</label>
-          <input id="name" name="name" required autoComplete="name" placeholder="Full name *" className="field" />
+          <label htmlFor="name" className="sr-only">{f.fullName}</label>
+          <input id="name" name="name" required autoComplete="name" placeholder={f.fullName} className="field" />
         </div>
         <div>
-          <label htmlFor="phone" className="sr-only">Phone or WhatsApp</label>
-          <input id="phone" name="phone" type="tel" required autoComplete="tel" placeholder="Phone / WhatsApp *" className="field" />
+          <label htmlFor="phone" className="sr-only">{f.phone}</label>
+          <input id="phone" name="phone" type="tel" required autoComplete="tel" placeholder={f.phone} dir="ltr" className="field rtl:text-right" />
         </div>
       </div>
       <div>
-        <label htmlFor="email" className="sr-only">Email</label>
-        <input id="email" name="email" type="email" autoComplete="email" placeholder="Email (optional)" className="field" />
+        <label htmlFor="email" className="sr-only">{f.email}</label>
+        <input id="email" name="email" type="email" autoComplete="email" placeholder={f.email} dir="ltr" className="field rtl:text-right" />
       </div>
       <div>
-        <label htmlFor="interest" className="sr-only">I am interested in</label>
+        <label htmlFor="interest" className="sr-only">{f.interest}</label>
         <select id="interest" name="interest" defaultValue={defaultInterest} className="field">
-          <option value="">I am interested in...</option>
-          {interests.map((i) => (
-            <option key={i} value={i}>{i}</option>
+          <option value="">{f.interest}</option>
+          {dict.interests.map((i) => (
+            <option key={i.value} value={i.value}>{i.label}</option>
           ))}
         </select>
       </div>
       <div>
-        <label htmlFor="message" className="sr-only">Message</label>
-        <textarea id="message" name="message" rows={5} placeholder="Tell us briefly what you are looking for" className="field resize-y" />
+        <label htmlFor="message" className="sr-only">{f.message}</label>
+        <textarea id="message" name="message" rows={5} placeholder={f.message} className="field resize-y" />
       </div>
       {/* honeypot */}
       <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
@@ -82,10 +85,10 @@ export default function InquiryForm({ defaultInterest = "" }: { defaultInterest?
       )}
 
       <button type="submit" disabled={status === "sending"} className="btn-gold w-full disabled:opacity-60">
-        {status === "sending" ? "Sending..." : "Send Enquiry"}
+        {status === "sending" ? f.sending : f.send}
       </button>
       <p className="text-xs text-mute/70">
-        By sending this form you agree to be contacted about your enquiry.
+        {f.note}
       </p>
     </form>
   );

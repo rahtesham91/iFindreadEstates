@@ -14,6 +14,33 @@
   --c-gold-400: 154 107 34;
   --c-gold-500: 169 120 43;
   --c-gold-600: 169 120 43;
+  --font-serif: var(--font-serif-en);
+  --font-sans: var(--font-sans-en);
+}
+
+html[lang="ar"] {
+  --font-serif: var(--font-serif-ar);
+  --font-sans: var(--font-sans-ar);
+}
+
+/* Arabic is a connected script: no tracking, no capitals. No italics anywhere. */
+html[lang="ar"] * {
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+html[lang="ar"] .h-display {
+  line-height: 1.35;
+}
+* {
+  font-style: normal !important;
+}
+.ltr-text {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
+[dir="rtl"] .flip-rtl {
+  transform: scaleX(-1);
 }
 
 html {

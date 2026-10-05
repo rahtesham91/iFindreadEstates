@@ -114,12 +114,12 @@ export type TeamMember = {
   whatsapp?: string;
 };
 
-export const memberContact = (m: TeamMember) => {
+export const memberContact = (m: TeamMember, waText: string) => {
   const call = m.phone ?? site.phone;
   const wa = m.whatsapp ?? m.phone ?? site.whatsapp;
   return {
     tel: `tel:${call.replace(/[^\d+]/g, "")}`,
-    wa: whatsappLink(`Hello, I would like to speak with ${m.name}.`, wa),
+    wa: whatsappLink(waText, wa),
   };
 };
 

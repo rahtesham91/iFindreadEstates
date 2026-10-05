@@ -1,13 +1,36 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
-import { nav, site, whatsappLink } from "@/lib/site";
+import { services, site, whatsappLink } from "@/lib/site";
+import { LocLink, useI18n } from "./I18nProvider";
+import { switchPath } from "@/lib/i18n";
 
 export default function Header() {
-  const pathname = usePathname();
+  const rawPath = usePathname();
+  const { lang, dict } = useI18n();
+  const pathname = rawPath.replace(/^\/en(?=\/|$)/, "") || "/";
+  const other = lang === "ar" ? "en" : "ar";
+  const switchHref = switchPath(lang, pathname);
+  const nav = [
+    { label: dict.nav.services, href: "/off-plan", children: services.map((s, i) => ({ label: dict.services[i].title, href: s.href })) },
+    { label: dict.nav.developers, href: "/developers" },
+    { label: dict.nav.investors, href: "/investor-services" },
+    { label: dict.nav.about, href: "/about" },
+    { label: dict.nav.team, href: "/team" },
+  ] as { label: string; href: string; children?: { label: string; href: string }[] }[];
+  const langButton = (
+    <a
+      href={switchHref}
+      hrefLang={other}
+      lang={other}
+      aria-label={dict.nav.switchAria}
+      className="inline-flex h-10 items-center border border-gold-500/70 px-4 text-[0.8rem] font-semibold text-ivory transition-colors hover:border-gold-300 hover:text-gold-300"
+    >
+      {dict.nav.switchLabel}
+    </a>
+  );
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -39,11 +62,11 @@ export default function Header() {
         }`}
       />
       <div className="container-page relative flex h-20 items-center justify-between">
-        <Link href="/" aria-label="iFind home">
+        <LocLink href="/" aria-label={dict.nav.home}>
           <Logo priority />
-        </Link>
+        </LocLink>
 
-        <nav className="hidden items-center gap-9 lg:flex" aria-label="Main">
+        <nav className="hidden items-center gap-9 lg:flex" aria-label={dict.nav.main}>
           {nav.map((item) =>
             item.children ? (
               <div key={item.label} className="group relative">
@@ -57,10 +80,10 @@ export default function Header() {
                     <path d="M2 4l4 4 4-4" />
                   </svg>
                 </button>
-                <div className="invisible absolute left-1/2 top-full w-64 -translate-x-1/2 translate-y-1 border border-line bg-ink opacity-0 shadow-2xl transition-all duration-200 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                <div className="invisible absolute start-1/2 top-full w-64 -translate-x-1/2 rtl:translate-x-1/2 translate-y-1 border border-line bg-ink opacity-0 shadow-2xl transition-all duration-200 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                   <div className="h-px bg-gold-500" />
                   {item.children.map((c) => (
-                    <Link
+                    <LocLink
                       key={c.href}
                       href={c.href}
                       className={`block px-6 py-3.5 text-sm transition-colors hover:bg-panel hover:text-gold-300 ${
@@ -68,12 +91,12 @@ export default function Header() {
                       }`}
                     >
                       {c.label}
-                    </Link>
+                    </LocLink>
                   ))}
                 </div>
               </div>
             ) : (
-              <Link
+              <LocLink
                 key={item.href}
                 href={item.href}
                 className={`text-[0.78rem] font-medium uppercase tracking-[0.16em] transition-colors hover:text-gold-300 ${
@@ -81,19 +104,21 @@ export default function Header() {
                 }`}
               >
                 {item.label}
-              </Link>
+              </LocLink>
             )
           )}
-          <Link href="/contact" className="btn-gold !px-6 !py-3">
-            Contact Us
-          </Link>
+          <LocLink href="/contact" className="btn-gold !px-6 !py-3">
+            {dict.nav.contact}
+          </LocLink>
+          {langButton}
         </nav>
 
-        <div className="flex items-center gap-1 lg:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
+        {langButton}
         <button
           type="button"
           className="flex h-11 w-11 items-center justify-center text-ivory"
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-label={open ? dict.nav.closeMenu : dict.nav.openMenu}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
@@ -107,7 +132,7 @@ export default function Header() {
       {open && (
         <nav
           className="fixed inset-x-0 bottom-0 top-20 flex flex-col overflow-y-auto bg-ink px-6 pb-8 pt-2 lg:hidden"
-          aria-label="Mobile"
+          aria-label={dict.nav.mobile}
         >
           {(() => {
             let n = 0;
@@ -115,20 +140,20 @@ export default function Header() {
               n += 1;
               return (
                 <li key={href} className="menu-item" style={{ "--i": n } as React.CSSProperties}>
-                  <Link
+                  <LocLink
                     href={href}
                     className={`group flex items-center border-b border-line py-[1.1rem] font-serif text-[1.65rem] leading-none transition-colors hover:text-gold-300 ${
                       active(href) ? "text-gold-400" : "text-ivory"
                     }`}
                   >
-                    <span className="w-10 font-sans text-[0.7rem] font-medium tracking-luxe text-gold-500">
+                    <span className="w-10 shrink-0 font-sans text-[0.7rem] font-medium tracking-luxe text-gold-500">
                       {String(n).padStart(2, "0")}
                     </span>
                     <span className="flex-1">{label}</span>
-                    <svg viewBox="0 0 24 8" className="h-2 w-6 text-gold-500 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" aria-hidden="true">
+                    <svg viewBox="0 0 24 8" className="h-2 w-6 text-gold-500 transition-transform group-hover:translate-x-1 rtl:-scale-x-100 rtl:group-hover:-translate-x-1" fill="none" stroke="currentColor" aria-hidden="true">
                       <path d="M0 4h22M18 1l4 3-4 3" />
                     </svg>
-                  </Link>
+                  </LocLink>
                 </li>
               );
             };
@@ -143,7 +168,7 @@ export default function Header() {
                   ) : null
                 )}
                 <div className="mt-8">
-                  <p className="eyebrow pb-1">Explore</p>
+                  <p className="eyebrow pb-1">{dict.nav.explore}</p>
                   <ul>
                     {nav.filter((i) => !i.children).map((i) => row(i.label, i.href))}
                   </ul>
@@ -153,18 +178,18 @@ export default function Header() {
           })()}
 
           <div className="menu-item mt-auto pt-10" style={{ "--i": 9 } as React.CSSProperties}>
-            <Link href="/contact" className="btn-gold w-full">
-              Contact Us
-            </Link>
+            <LocLink href="/contact" className="btn-gold w-full">
+              {dict.nav.contact}
+            </LocLink>
             <div className="mt-3 grid grid-cols-2 gap-3">
               <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="btn-ghost !px-3 !py-3.5">
-                Call Us
+                {dict.common.callUs}
               </a>
-              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-ghost !px-3 !py-3.5">
-                WhatsApp
+              <a href={whatsappLink(dict.wa.general)} target="_blank" rel="noopener noreferrer" className="btn-ghost !px-3 !py-3.5">
+                {dict.common.whatsapp}
               </a>
             </div>
-            <p className="mt-8 text-center text-[0.7rem] uppercase tracking-luxe text-gold-500">{site.tagline}</p>
+            <p className="mt-8 text-center text-[0.7rem] uppercase tracking-luxe text-gold-500">{dict.tagline}</p>
           </div>
         </nav>
       )}

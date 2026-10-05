@@ -1,9 +1,12 @@
-import Link from "next/link";
+"use client";
+
 import PageHero from "./PageHero";
 import Placeholder from "./Placeholder";
 import SectionHeading from "./SectionHeading";
 import CtaBand from "./CtaBand";
-import { steps, whatsappLink } from "@/lib/site";
+import { whatsappLink } from "@/lib/site";
+import { LocLink, useI18n } from "./I18nProvider";
+import { fill } from "@/lib/dict";
 
 type Props = {
   eyebrow: string;
@@ -17,6 +20,8 @@ type Props = {
 };
 
 export default function ServicePage({ eyebrow, title, intro, imageLabel, sectionTitle, sectionText, offers, closing }: Props) {
+  const { dict } = useI18n();
+  const sp = dict.servicePage;
   return (
     <>
       <PageHero eyebrow={eyebrow} title={title} text={intro} imageLabel={imageLabel} />
@@ -24,21 +29,21 @@ export default function ServicePage({ eyebrow, title, intro, imageLabel, section
       <section className="py-24 sm:py-32">
         <div className="container-page grid gap-16 lg:grid-cols-[1fr_1.1fr] lg:items-center">
           <div>
-            <SectionHeading eyebrow="What we do" title={sectionTitle} text={sectionText} />
+            <SectionHeading eyebrow={sp.whatWeDo} title={sectionTitle} text={sectionText} />
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Link href="/contact" className="btn-gold">Enquire Now</Link>
-              <a href={whatsappLink(`Hello iFind, I would like to know more about ${title}.`)} target="_blank" rel="noopener noreferrer" className="btn-ghost">
-                WhatsApp Us
+              <LocLink href="/contact" className="btn-gold">{dict.common.enquireNow}</LocLink>
+              <a href={whatsappLink(fill(dict.wa.service, { title }))} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+                {dict.common.whatsappUs}
               </a>
             </div>
           </div>
-          <Placeholder label={`${title}: feature image`} size="1200 x 900" className="aspect-[4/3]" />
+          <Placeholder label={fill(dict.placeholder.featureImage, { title })} size="1200 x 900" className="aspect-[4/3]" />
         </div>
       </section>
 
       <section className="border-y border-line bg-char py-24 sm:py-28">
         <div className="container-page">
-          <SectionHeading eyebrow="Our service" title="How we help" align="center" />
+          <SectionHeading eyebrow={sp.ourService} title={sp.howWeHelp} align="center" />
           <div className="mt-16 grid gap-px border border-line bg-line md:grid-cols-2 lg:grid-cols-3">
             {offers.map((o) => (
               <article key={o.title} className="bg-char p-9 transition-colors hover:bg-panel">
@@ -63,9 +68,9 @@ export default function ServicePage({ eyebrow, title, intro, imageLabel, section
 
       <section className="border-t border-line py-24 sm:py-28">
         <div className="container-page">
-          <SectionHeading eyebrow="Process" title="From first call to closing" align="center" />
+          <SectionHeading eyebrow={sp.process} title={sp.processTitle} align="center" />
           <ol className="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-            {steps.map((s, i) => (
+            {dict.steps.map((s, i) => (
               <li key={s.title} className="border-t border-gold-500/60 pt-6">
                 <span className="font-serif text-5xl text-gold-500/80">{String(i + 1).padStart(2, "0")}</span>
                 <h3 className="mt-3 font-serif text-2xl">{s.title}</h3>

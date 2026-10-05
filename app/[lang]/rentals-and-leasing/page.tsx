@@ -1,0 +1,18 @@
+import type { Metadata } from "next";
+import ServicePage from "@/components/ServicePage";
+import { getDict } from "@/lib/dict";
+import { isLang, type Lang } from "@/lib/i18n";
+
+type P = { params: Promise<{ lang: string }> };
+
+export async function generateMetadata({ params }: P): Promise<Metadata> {
+  const { lang } = await params;
+  const p = getDict(isLang(lang) ? lang : "en").servicePages.rentals;
+  return { title: p.metaTitle, description: p.metaDescription };
+}
+
+export default async function Page({ params }: P) {
+  const { lang } = await params;
+  const p = getDict(lang as Lang).servicePages.rentals;
+  return <ServicePage {...p} closing={p.closing ?? undefined} />;
+}

@@ -10,6 +10,7 @@ type Payload = {
   message?: unknown;
   source?: unknown;
   website?: unknown; // honeypot
+  lang?: unknown;
 };
 
 const clean = (v: unknown, max: number) => (typeof v === "string" ? v.trim().slice(0, max) : "");
@@ -22,6 +23,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: "Invalid request" }, { status: 400 });
   }
 
+  const ar = body.lang === "ar";
   // Bots fill the hidden field; pretend success.
   if (clean(body.website, 50)) return NextResponse.json({ ok: true });
 
@@ -32,17 +34,18 @@ export async function POST(req: Request) {
     interest: clean(body.interest, 80),
     message: clean(body.message, 2000),
     source: clean(body.source, 40) || "form",
+    language: ar ? "ar" : "en",
     receivedAt: new Date().toISOString(),
   };
 
   if (lead.name.length < 2) {
-    return NextResponse.json({ ok: false, error: "Please enter your name." }, { status: 400 });
+    return NextResponse.json({ ok: false, error: ar ? "يرجى إدخال اسمك." : "Please enter your name." }, { status: 400 });
   }
   if (lead.phone.replace(/\D/g, "").length < 7) {
-    return NextResponse.json({ ok: false, error: "Please enter a valid phone number." }, { status: 400 });
+    return NextResponse.json({ ok: false, error: ar ? "يرجى إدخال رقم هاتف صحيح." : "Please enter a valid phone number." }, { status: 400 });
   }
   if (lead.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(lead.email)) {
-    return NextResponse.json({ ok: false, error: "Please enter a valid email address." }, { status: 400 });
+    return NextResponse.json({ ok: false, error: ar ? "يرجى إدخال بريد إلكتروني صحيح." : "Please enter a valid email address." }, { status: 400 });
   }
 
   // Always log so no lead is lost (visible in Vercel runtime logs).
@@ -58,6 +61,7 @@ export async function POST(req: Request) {
       `Email: ${lead.email || "-"}`,
       `Interested in: ${lead.interest || "-"}`,
       `Source: ${lead.source}`,
+      `Language: ${lead.language}`,
       "",
       lead.message || "(no message)",
     ].join("\n");

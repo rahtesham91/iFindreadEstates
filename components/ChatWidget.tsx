@@ -1,20 +1,23 @@
 "use client";
 
 import { FormEvent, useEffect, useRef, useState } from "react";
-import { interests, whatsappLink } from "@/lib/site";
+import { whatsappLink } from "@/lib/site";
+import { useI18n } from "./I18nProvider";
+import { fill } from "@/lib/dict";
 
 type Msg = { from: "bot" | "me"; text: string };
 type Step = "interest" | "name" | "phone" | "sending" | "done";
 
-const GREETING = "Hello! How may I assist you today?";
-const QUICK = interests.slice(0, 5);
 const SEEN_KEY = "ifind-chat-seen";
 
 export default function ChatWidget() {
+  const { lang, dict } = useI18n();
+  const c = dict.chat;
+  const quick = dict.interests.slice(0, 5);
   const [open, setOpen] = useState(false);
   const [teaser, setTeaser] = useState(false);
   const [step, setStep] = useState<Step>("interest");
-  const [msgs, setMsgs] = useState<Msg[]>([{ from: "bot", text: GREETING }]);
+  const [msgs, setMsgs] = useState<Msg[]>([{ from: "bot", text: dict.chat.greeting }]);
   const [input, setInput] = useState("");
   const lead = useRef({ interest: "", name: "", phone: "" });
   const endRef = useRef<HTMLDivElement>(null);
@@ -52,10 +55,10 @@ export default function ChatWidget() {
 
   const say = (m: Msg) => setMsgs((prev) => [...prev, m]);
 
-  function pickInterest(value: string) {
+  function pickInterest(value: string, label: string) {
     lead.current.interest = value;
-    say({ from: "me", text: value });
-    say({ from: "bot", text: "Wonderful. May I have your name, please?" });
+    say({ from: "me", text: label });
+    say({ from: "bot", text: c.askName });
     setStep("name");
   }
 
@@ -68,7 +71,7 @@ export default function ChatWidget() {
     if (step === "name") {
       lead.current.name = value;
       say({ from: "me", text: value });
-      say({ from: "bot", text: `Thank you, ${value}. What is the best phone or WhatsApp number to reach you on?` });
+      say({ from: "bot", text: fill(c.askPhone, { name: value }) });
       setStep("phone");
       return;
     }
@@ -81,15 +84,15 @@ export default function ChatWidget() {
         const res = await fetch("/api/inquiry", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ ...lead.current, message: "Chat enquiry", source: "chat" }),
+          body: JSON.stringify({ ...lead.current, message: "Chat enquiry", source: "chat", lang }),
         });
         const json = (await res.json()) as { ok: boolean; error?: string };
         if (!res.ok || !json.ok) throw new Error(json.error ?? "failed");
-        say({ from: "bot", text: "Thank you. One of our consultants will contact you shortly." });
+        say({ from: "bot", text: c.thanks });
         setStep("done");
       } catch (err) {
         const reason = err instanceof Error && err.message !== "failed" ? err.message : "";
-        say({ from: "bot", text: reason || "Sorry, that did not go through. Please check the number or message us on WhatsApp." });
+        say({ from: "bot", text: reason || c.failed });
         setStep(reason ? "phone" : "done");
       }
     }
@@ -99,18 +102,18 @@ export default function ChatWidget() {
 
   return (
     <>
-      <div className="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-3">
+      <div className="fixed bottom-5 end-5 z-40 flex flex-col items-end gap-3">
         {open && (
           <section
-            aria-label="Chat with iFind"
+            aria-label={c.label}
             className="flex h-[min(30rem,calc(100dvh-8rem))] w-[calc(100vw-2.5rem)] max-w-sm flex-col border border-gold-500/50 bg-ink shadow-2xl"
           >
             <header className="flex items-center justify-between border-b border-line bg-char px-5 py-4">
               <div>
-                <p className="font-serif text-xl text-ivory">iFind</p>
-                <p className="text-[0.68rem] uppercase tracking-luxe text-gold-400">Finding Value. Building Trust.</p>
+                <p className="font-serif text-xl text-ivory">{dict.brand}</p>
+                <p className="text-[0.68rem] uppercase tracking-luxe text-gold-400">{dict.tagline}</p>
               </div>
-              <button type="button" onClick={() => setOpen(false)} aria-label="Close chat" className="p-1 text-mute hover:text-gold-300">
+              <button type="button" onClick={() => setOpen(false)} aria-label={c.closeChat} className="p-1 text-mute hover:text-gold-300">
                 <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
                   <path d="M6 6l12 12M18 6L6 18" />
                 </svg>
@@ -131,21 +134,21 @@ export default function ChatWidget() {
               ))}
               {step === "interest" && (
                 <div className="flex flex-wrap gap-2 pt-1">
-                  {QUICK.map((q) => (
+                  {quick.map((q) => (
                     <button
-                      key={q}
+                      key={q.value}
                       type="button"
-                      onClick={() => pickInterest(q)}
+                      onClick={() => pickInterest(q.value, q.label)}
                       className="border border-gold-500/60 px-3.5 py-2 text-xs text-ivory transition-colors hover:border-gold-300 hover:text-gold-300"
                     >
-                      {q}
+                      {q.label}
                     </button>
                   ))}
                 </div>
               )}
               {step === "done" && (
-                <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-ghost w-full !py-3">
-                  Chat on WhatsApp
+                <a href={whatsappLink(dict.wa.general)} target="_blank" rel="noopener noreferrer" className="btn-ghost w-full !py-3">
+                  {c.openWhatsApp}
                 </a>
               )}
               <div ref={endRef} />
@@ -154,7 +157,7 @@ export default function ChatWidget() {
             {inputStep && (
               <form onSubmit={submit} className="flex gap-2 border-t border-line p-3">
                 <label htmlFor="chat-input" className="sr-only">
-                  {step === "name" ? "Your name" : "Your phone number"}
+                  {step === "name" ? c.yourName : c.yourPhone}
                 </label>
                 <input
                   id="chat-input"
@@ -162,12 +165,12 @@ export default function ChatWidget() {
                   onChange={(e) => setInput(e.target.value)}
                   type={step === "phone" ? "tel" : "text"}
                   autoComplete={step === "phone" ? "tel" : "name"}
-                  placeholder={step === "name" ? "Your name" : "Phone / WhatsApp"}
-                  className="field !py-3"
+                  placeholder={step === "name" ? c.yourName : c.yourPhone}
+                  dir={step === "phone" ? "ltr" : undefined} className="field !py-3 rtl:text-right"
                   autoFocus
                 />
-                <button type="submit" className="btn-gold !px-4" aria-label="Send">
-                  <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <button type="submit" className="btn-gold !px-4" aria-label={c.send}>
+                  <svg viewBox="0 0 24 24" className="h-4 w-4 rtl:-scale-x-100" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                     <path d="M4 12h14M13 6l6 6-6 6" />
                   </svg>
                 </button>
@@ -181,16 +184,16 @@ export default function ChatWidget() {
             <button
               type="button"
               onClick={openChat}
-              className="block w-full border border-gold-500/60 bg-ink px-4 py-3.5 pr-9 text-left shadow-2xl transition-colors hover:border-gold-300"
+              className="block w-full border border-gold-500/60 bg-ink px-4 py-3.5 pe-9 text-start shadow-2xl transition-colors hover:border-gold-300"
             >
-              <span className="block text-sm leading-snug text-ivory">Hello! How may I assist you today?</span>
-              <span className="mt-1 block text-[0.66rem] font-medium uppercase tracking-luxe text-gold-400">Chat with us</span>
+              <span className="block text-sm leading-snug text-ivory">{c.greeting}</span>
+              <span className="mt-1 block text-[0.66rem] font-medium uppercase tracking-luxe text-gold-400">{c.chatWithUs}</span>
             </button>
             <button
               type="button"
               onClick={dismissTeaser}
-              aria-label="Dismiss"
-              className="absolute right-1.5 top-1.5 p-1 text-mute transition-colors hover:text-gold-300"
+              aria-label={c.dismiss}
+              className="absolute end-1.5 top-1.5 p-1 text-mute transition-colors hover:text-gold-300"
             >
               <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
                 <path d="M6 6l12 12M18 6L6 18" />
@@ -201,10 +204,10 @@ export default function ChatWidget() {
 
         <div className="flex items-center gap-3">
           <a
-            href={whatsappLink()}
+            href={whatsappLink(dict.wa.general)}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Chat on WhatsApp"
+            aria-label={c.openWhatsApp}
             className="flex h-14 w-14 items-center justify-center border border-gold-500/60 bg-ink text-gold-400 shadow-xl transition-colors hover:border-gold-300 hover:text-gold-300"
           >
             <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor" aria-hidden="true">
@@ -214,7 +217,7 @@ export default function ChatWidget() {
           <button
             type="button"
             onClick={() => (open ? setOpen(false) : openChat())}
-            aria-label={open ? "Close chat" : "Open chat"}
+            aria-label={open ? c.closeChat : c.openChat}
             aria-expanded={open}
             className="flex h-14 w-14 items-center justify-center bg-gold-400 text-ink shadow-xl transition-colors hover:bg-gold-300"
           >

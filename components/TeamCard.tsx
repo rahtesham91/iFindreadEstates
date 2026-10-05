@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { TeamMember, memberContact } from "@/lib/site";
+import { useI18n } from "./I18nProvider";
+import { fill } from "@/lib/dict";
 
 type Props = { member: TeamMember; compact?: boolean; priority?: boolean };
 
@@ -22,7 +24,9 @@ function WhatsAppIcon() {
 }
 
 export default function TeamCard({ member, compact = false, priority = false }: Props) {
-  const { tel, wa } = memberContact(member);
+  const { dict } = useI18n();
+  const person = dict.people[member.slug] ?? { name: member.name, role: member.role };
+  const { tel, wa } = memberContact(member, fill(dict.wa.person, { name: person.name }));
 
   return (
     <article className="group flex h-full flex-col border border-line bg-char transition-all duration-500 hover:-translate-y-1 hover:border-gold-500/70 hover:shadow-[0_25px_60px_-25px_rgb(var(--c-gold-500)/0.45)]">
@@ -31,7 +35,7 @@ export default function TeamCard({ member, compact = false, priority = false }: 
         {member.photo ? (
           <Image
             src={member.photo}
-            alt={`${member.name}, ${member.role}`}
+            alt={`${person.name}, ${person.role}`}
             fill
             priority={priority}
             quality={90}
@@ -39,7 +43,7 @@ export default function TeamCard({ member, compact = false, priority = false }: 
             className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
           />
         ) : (
-          <div role="img" aria-label={member.name} className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-b from-white to-char">
+          <div role="img" aria-label={person.name} className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-b from-white to-char">
             <span className="flex h-28 w-28 items-center justify-center rounded-full border border-gold-500/60 font-serif text-4xl text-gold-500 sm:h-32 sm:w-32 sm:text-5xl">
               {member.name.split(" ").map((w) => w[0]).slice(0, 2).join("")}
             </span>
@@ -50,23 +54,23 @@ export default function TeamCard({ member, compact = false, priority = false }: 
 
       {/* Details */}
       <div className={`flex flex-1 flex-col ${compact ? "px-4 pb-4 pt-3 sm:px-5 sm:pb-5" : "px-6 pb-6 pt-4"}`}>
-        <h3 className={`font-serif leading-tight ${compact ? "text-xl sm:text-2xl" : "text-[1.7rem]"}`}>{member.name}</h3>
-        <p className={`mt-2 font-medium uppercase text-gold-400 ${compact ? "" : "sm:min-h-[2.6rem]"} ${compact ? "text-[0.62rem] tracking-[0.16em] sm:text-[0.68rem] sm:tracking-luxe" : "text-[0.7rem] tracking-luxe"}`}>{member.role}</p>
-        <div className="mt-4 h-px w-full bg-gradient-to-r from-gold-500/70 via-line to-transparent" />
+        <h3 className={`font-serif leading-tight ${compact ? "text-xl sm:text-2xl" : "text-[1.7rem]"}`}>{person.name}</h3>
+        <p className={`mt-2 font-medium uppercase text-gold-400 ${compact ? "" : "sm:min-h-[2.6rem]"} ${compact ? "text-[0.62rem] tracking-[0.16em] sm:text-[0.68rem] sm:tracking-luxe" : "text-[0.7rem] tracking-luxe"}`}>{person.role}</p>
+        <div className="mt-4 h-px w-full bg-gradient-to-r rtl:bg-gradient-to-l from-gold-500/70 via-line to-transparent" />
 
         {!compact && (member.brn || member.email) && (
           <dl className="mt-4 space-y-1.5 text-[0.78rem] text-mute">
             {member.brn && (
               <div className="flex gap-2">
-                <dt className="font-medium uppercase tracking-[0.14em] text-gold-500">BRN</dt>
+                <dt className="font-medium uppercase tracking-[0.14em] text-gold-500">{dict.team.brn}</dt>
                 <dd>{member.brn}</dd>
               </div>
             )}
             {member.email && (
               <div>
-                <dt className="sr-only">Email</dt>
+                <dt className="sr-only">{dict.contact.email}</dt>
                 <dd>
-                  <a href={`mailto:${member.email}`} className="break-all transition-colors hover:text-gold-400">
+                  <a href={`mailto:${member.email}`} dir="ltr" className="ltr-text break-all transition-colors hover:text-gold-400">
                     {member.email}
                   </a>
                 </dd>
@@ -79,21 +83,21 @@ export default function TeamCard({ member, compact = false, priority = false }: 
         <div className={`mt-auto grid grid-cols-2 gap-2 ${compact ? "pt-4" : "pt-5"}`}>
           <a
             href={tel}
-            aria-label={`Call ${member.name}`}
+            aria-label={`${dict.common.call} ${person.name}`}
             className="inline-flex items-center justify-center gap-2 border border-gold-500/70 px-2 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ivory transition-colors hover:border-gold-300 hover:text-gold-300"
           >
             <PhoneIcon />
-            <span>Call</span>
+            <span>{dict.common.call}</span>
           </a>
           <a
             href={wa}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`WhatsApp ${member.name}`}
+            aria-label={`${dict.common.whatsapp} ${person.name}`}
             className="inline-flex items-center justify-center gap-2 bg-gold-400 px-2 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-ink transition-colors hover:bg-gold-300"
           >
             <WhatsAppIcon />
-            <span>{compact ? "Chat" : "WhatsApp"}</span>
+            <span>{compact ? dict.common.chat : dict.common.whatsapp}</span>
           </a>
         </div>
       </div>
