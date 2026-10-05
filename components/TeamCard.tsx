@@ -43,8 +43,29 @@ export default function TeamCard({ member, compact = false, priority = false }: 
       {/* Details */}
       <div className={`flex flex-1 flex-col ${compact ? "px-4 pb-4 pt-3 sm:px-5 sm:pb-5" : "px-6 pb-6 pt-4"}`}>
         <h3 className={`font-serif leading-tight ${compact ? "text-xl sm:text-2xl" : "text-[1.7rem]"}`}>{member.name}</h3>
-        <p className={`mt-2 font-medium uppercase text-gold-400 ${compact ? "text-[0.62rem] tracking-[0.16em] sm:text-[0.68rem] sm:tracking-luxe" : "text-[0.7rem] tracking-luxe"}`}>{member.role}</p>
+        <p className={`mt-2 font-medium uppercase text-gold-400 ${compact ? "" : "sm:min-h-[2.6rem]"} ${compact ? "text-[0.62rem] tracking-[0.16em] sm:text-[0.68rem] sm:tracking-luxe" : "text-[0.7rem] tracking-luxe"}`}>{member.role}</p>
         <div className="mt-4 h-px w-full bg-gradient-to-r from-gold-500/70 via-line to-transparent" />
+
+        {!compact && (member.brn || member.email) && (
+          <dl className="mt-4 space-y-1.5 text-[0.78rem] text-mute">
+            {member.brn && (
+              <div className="flex gap-2">
+                <dt className="font-medium uppercase tracking-[0.14em] text-gold-500">BRN</dt>
+                <dd>{member.brn}</dd>
+              </div>
+            )}
+            {member.email && (
+              <div>
+                <dt className="sr-only">Email</dt>
+                <dd>
+                  <a href={`mailto:${member.email}`} className="break-all transition-colors hover:text-gold-400">
+                    {member.email}
+                  </a>
+                </dd>
+              </div>
+            )}
+          </dl>
+        )}
 
         {/* Contact buttons: always pinned to the bottom of the card */}
         <div className={`mt-auto grid grid-cols-2 gap-2 ${compact ? "pt-4" : "pt-5"}`}>

@@ -104,10 +104,11 @@ export type TeamMember = {
   slug: string;
   name: string;
   role: string;
-  bio: string;
+  bio?: string;
   photo: string;
   languages?: string[];
   brn?: string; // shown only when provided
+  email?: string; // shown only when provided
   // Personal numbers, international format (e.g. "+971 50 123 4567"). Until provided, the company number is used.
   phone?: string;
   whatsapp?: string;
@@ -129,15 +130,18 @@ export const team: TeamMember[] = [
     slug: "abid-khan",
     name: "Abid Khan",
     role: "Managing Director",
-    photo: "/team/abid-khan.webp",
+    photo: "/team/abid-khan-v2.webp",
     bio: "Abid Khan has 12+ years of sales experience, including 8 in Dubai real estate. With a BBA and hospitality background, he leads iFind Real Estate LLC with a focus on client satisfaction, smart investments, and trusted service.",
   },
   {
     slug: "farwa-khan",
     name: "Farwa Khan",
-    role: "Associate Director",
-    photo: "/team/farwa-khan.webp",
+    role: "Commercial Sales Manager",
+    photo: "/team/farwa-khan-v2.webp",
     languages: ["English", "Urdu", "Hindi"],
+    brn: "93124",
+    email: "Farwa@ifindrealestates.com",
+    phone: "+971 50 882 8241",
     bio: "Farwa Khan brings extensive expertise in both real estate sales and operations, specializing in both off-plan and secondary market sales. With a focus on client satisfaction and smooth transactions, she is dedicated to helping clients find the right properties while driving business growth.",
   },
   {
@@ -160,6 +164,15 @@ export const team: TeamMember[] = [
     role: "Luxury Properties Specialist",
     photo: "/team/meher-ahmed.webp",
     bio: "Meher Ahmed brings expertise and dedication to Dubai's luxury real estate market. She is passionate about helping clients find exceptional homes and premium investments, offering personalized service with a focus on excellence.",
+  },
+  {
+    slug: "ishtiaq-ahmed",
+    name: "Ishtiaq Ahmed",
+    role: "Property Consultant – Secondary Market",
+    photo: "/team/ishtiaq-ahmed-v2.webp",
+    languages: ["English", "Hindi", "Urdu", "Punjabi"],
+    email: "Ishtiaq@ifindrealestate.com",
+    phone: "+971 56 550 4547",
   },
   {
     slug: "waqar-shah",
