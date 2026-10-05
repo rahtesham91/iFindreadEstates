@@ -65,22 +65,22 @@ export const nav = [
   { label: "Our Team", href: "/team" },
 ];
 
-// Developer partners (names from the company's previous website; logos supplied by the company, traced to clean SVG in /public/developers).
-// ratio = logo width / height, used to size each logo evenly.
-export type Developer = { slug: string; name: string; ratio: number };
+// Developer partners (names from the company's previous website). Each logo is an identical 800x480 card image
+// in /public/developers/<slug>.webp, edited from the logos supplied by the company.
+export type Developer = { slug: string; name: string };
 export const developers: Developer[] = [
-  { slug: "emaar", name: "Emaar", ratio: 3.83 },
-  { slug: "damac", name: "Damac", ratio: 5.96 },
-  { slug: "sobha", name: "Sobha", ratio: 4.07 },
-  { slug: "dubai-properties", name: "Dubai Properties", ratio: 1.55 },
-  { slug: "azizi", name: "Azizi", ratio: 3.94 },
-  { slug: "binghatti", name: "Binghatti", ratio: 3.88 },
-  { slug: "danube", name: "Danube Properties", ratio: 3.61 },
-  { slug: "nshama", name: "Nshama", ratio: 6.87 },
-  { slug: "fakhruddin", name: "Fakhruddin Properties", ratio: 4.11 },
-  { slug: "bt-properties", name: "BT Properties", ratio: 3.39 },
-  { slug: "bnw", name: "BNW Developments", ratio: 1.09 },
-  { slug: "reportage", name: "Reportage", ratio: 0.89 },
+  { slug: "emaar", name: "Emaar" },
+  { slug: "damac", name: "Damac" },
+  { slug: "sobha", name: "Sobha" },
+  { slug: "dubai-properties", name: "Dubai Properties" },
+  { slug: "azizi", name: "Azizi" },
+  { slug: "binghatti", name: "Binghatti" },
+  { slug: "danube", name: "Danube Properties" },
+  { slug: "nshama", name: "Nshama" },
+  { slug: "fakhruddin", name: "Fakhruddin Properties" },
+  { slug: "bt-properties", name: "BT Properties" },
+  { slug: "bnw", name: "BNW Developments" },
+  { slug: "reportage", name: "Reportage" },
 ];
 
 export const steps = [

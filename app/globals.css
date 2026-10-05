@@ -2,28 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root,
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --c-ink: 10 10 10;
-  --c-char: 18 18 18;
-  --c-panel: 24 24 24;
-  --c-line: 43 43 43;
-  --c-ivory: 243 238 228; /* main text: white in dark mode */
-  --c-mute: 168 162 154;
-  --c-gold-300: 227 203 142;
-  --c-gold-400: 210 175 99;
-  --c-gold-500: 185 143 63;
-  --c-gold-600: 169 120 43;
-}
-
-:root[data-theme="light"] {
+:root {
   color-scheme: light;
-  --c-ink: 250 247 242;
+  --c-ink: 250 247 242; /* page background (warm cream) */
   --c-char: 241 236 227;
   --c-panel: 255 255 255;
   --c-line: 221 213 199;
-  --c-ivory: 20 20 20; /* main text: black in light mode */
+  --c-ivory: 20 20 20; /* main text */
   --c-mute: 94 87 77;
   --c-gold-300: 126 88 23;
   --c-gold-400: 154 107 34;
@@ -137,7 +122,7 @@ body {
     from var(--frame-angle),
     rgb(var(--c-gold-600) / 0.45) 0deg,
     rgb(var(--c-gold-300)) 55deg,
-    rgb(255 246 222) 70deg,
+    rgb(238 202 112) 70deg,
     rgb(var(--c-gold-300)) 85deg,
     rgb(var(--c-gold-600) / 0.45) 140deg,
     rgb(var(--c-gold-600) / 0.45) 200deg,
@@ -146,7 +131,7 @@ body {
     rgb(var(--c-gold-600) / 0.45) 360deg
   );
   animation: frame-spin 7s linear infinite;
-  box-shadow: 0 0 60px -12px rgb(var(--c-gold-500) / 0.35), 0 30px 70px -25px rgb(0 0 0 / 0.6);
+  box-shadow: 0 0 60px -12px rgb(var(--c-gold-500) / 0.4), 0 30px 70px -25px rgb(60 40 10 / 0.35);
 }
 
 .gold-frame::before {

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
-import ThemeToggle from "./ThemeToggle";
 import { nav, site, whatsappLink } from "@/lib/site";
 
 export default function Header() {
@@ -85,14 +84,12 @@ export default function Header() {
               </Link>
             )
           )}
-          <ThemeToggle />
           <Link href="/contact" className="btn-gold !px-6 !py-3">
             Contact Us
           </Link>
         </nav>
 
         <div className="flex items-center gap-1 lg:hidden">
-        <ThemeToggle className="!border-0" />
         <button
           type="button"
           className="flex h-11 w-11 items-center justify-center text-ivory"

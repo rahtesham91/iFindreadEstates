@@ -6,8 +6,7 @@ type Props = {
   priority?: boolean;
 };
 
-// Traced vector logo. The "light" files have the grey parts switched to ivory so they read on black;
-// the "dark" files keep the original grey for light backgrounds. CSS shows the right one per theme.
+// Traced vector logo (original gold and grey colours, transparent background).
 function Pair({
   name,
   width,
@@ -23,12 +22,7 @@ function Pair({
   className: string;
   priority: boolean;
 }) {
-  return (
-    <>
-      <Image src={`/brand/${name}-light.svg`} alt={alt} width={width} height={height} priority={priority} unoptimized className={`hidden dark:block ${className}`} />
-      <Image src={`/brand/${name}-dark.svg`} alt={alt} width={width} height={height} priority={priority} unoptimized className={`dark:hidden ${className}`} />
-    </>
-  );
+  return <Image src={`/brand/${name}-dark.svg`} alt={alt} width={width} height={height} priority={priority} unoptimized className={className} />;
 }
 
 export default function Logo({ variant = "compact", className = "", priority = false }: Props) {

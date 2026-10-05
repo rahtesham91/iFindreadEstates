@@ -36,8 +36,7 @@ export default function Page() {
           style={{ background: "radial-gradient(60rem 28rem at 15% 0%, rgb(var(--c-gold-500) / 0.16), transparent 62%), radial-gradient(40rem 30rem at 100% 100%, rgb(var(--c-gold-500) / 0.08), transparent 60%)" }}
         />
         <div aria-hidden="true" className="pointer-events-none absolute -right-16 top-1/2 -z-10 w-[26rem] -translate-y-1/2 opacity-[0.08] sm:right-4 sm:w-[36rem]">
-          <Image src="/brand/logo-icon-light.svg" alt="" width={235} height={270} unoptimized className="hidden h-auto w-full dark:block" />
-          <Image src="/brand/logo-icon-dark.svg" alt="" width={235} height={270} unoptimized className="h-auto w-full dark:hidden" />
+          <Image src="/brand/logo-icon-dark.svg" alt="" width={235} height={270} unoptimized className="h-auto w-full" />
         </div>
         <div className="container-page py-16 sm:py-32">
           <Ornament className="mb-8" />
