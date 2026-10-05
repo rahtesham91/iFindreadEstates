@@ -198,6 +198,11 @@ export const en = {
     teamEyebrow: "Our Team",
     teamTitle: "The people behind iFind",
     teamButton: "Meet the Team",
+    alt: {
+      hero: "Luxury waterfront villa with a pool at sunset",
+      why: "Luxury interior with a glass and marble staircase",
+      investors: "Dubai skyline and the Burj Khalifa at sunset",
+    },
   },
   about: {
     pageTitle: "About Us",

@@ -1,7 +1,7 @@
 import { LocLink } from "@/components/I18nProvider";
 import { getDict } from "@/lib/dict";
 import type { Lang } from "@/lib/i18n";
-import Placeholder from "@/components/Placeholder";
+import Image from "next/image";
 import TeamCard from "@/components/TeamCard";
 import DeveloperGrid from "@/components/DeveloperGrid";
 import SectionHeading from "@/components/SectionHeading";
@@ -16,9 +16,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
   return (
     <>
       {/* Hero */}
-      <section className="relative isolate flex items-center overflow-hidden pt-20 sm:min-h-[100svh]">
-        <Placeholder label={d.placeholder.heroHome} size="2400 x 1400" className="absolute inset-0 -z-20 !border-0" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/75 to-ink/40 sm:bg-gradient-to-r sm:rtl:bg-gradient-to-l sm:from-ink sm:via-ink/80 sm:to-ink/20" />
+      <section className="relative isolate flex min-h-[38rem] items-end overflow-hidden pt-20 sm:min-h-[100svh] sm:items-center">
+        <Image src="/home/hero-villa.webp" alt={h.alt.hero} fill priority quality={85} sizes="100vw" className="-z-20 object-cover object-[35%_center] sm:object-center" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/85 via-[55%] to-transparent sm:bg-gradient-to-r sm:rtl:bg-gradient-to-l sm:from-ink/95 sm:via-ink/55 sm:to-transparent" />
         <div className="container-page pb-14 pt-12 sm:py-32">
           <p className="eyebrow mb-4 sm:mb-6">{h.eyebrow}</p>
           <h1 className="h-display max-w-4xl text-[3.1rem] leading-[1.02] sm:text-7xl lg:text-[6.5rem]">
@@ -66,7 +66,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       {/* Why */}
       <section className="border-y border-line bg-char py-24 sm:py-32">
         <div className="container-page grid gap-16 lg:grid-cols-[1fr_1.2fr] lg:items-center">
-          <Placeholder label={d.placeholder.whyHome} size="1200 x 1400" className="aspect-[4/5]" />
+          <div className="relative aspect-[4/5] overflow-hidden border border-gold-500/50"><Image src="/home/why-interior.webp" alt={h.alt.why} fill quality={85} sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" /></div>
           <div>
             <SectionHeading eyebrow={h.whyEyebrow} title={h.whyTitle} />
             <dl className="mt-12 grid gap-10 sm:grid-cols-2">
@@ -105,7 +105,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             />
             <LocLink href="/investor-services" className="btn-gold mt-10">{h.investorsButton}</LocLink>
           </div>
-          <Placeholder label={d.placeholder.investorsHome} size="1400 x 1000" className="aspect-[7/5]" />
+          <div className="relative aspect-[7/5] overflow-hidden border border-gold-500/50"><Image src="/home/investors-skyline.webp" alt={h.alt.investors} fill quality={85} sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" /></div>
         </div>
       </section>
 
