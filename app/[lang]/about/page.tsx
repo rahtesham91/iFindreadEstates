@@ -132,32 +132,46 @@ export default async function Page({ params }: P) {
         </div>
       </section>
 
-      {/* 6. Vision and mission */}
-      <section className="py-16 sm:py-24">
-        <div className="container-page">
-          <Reveal className="mb-10 max-w-2xl sm:mb-14">
+      {/* 6. Vision */}
+      <section id="vision" className="py-16 sm:py-24">
+        <div className="container-page grid gap-10 lg:grid-cols-[4fr_8fr] lg:gap-20">
+          <Reveal>
             <p className="eyebrow mb-4">{a.purposeEyebrow}</p>
-            <h2 className="t-h2">{a.purposeTitle}</h2>
+            <h2 className="t-h2">{a.visionLabel}</h2>
             <div className="gold-rule mt-6" />
           </Reveal>
-          <div className="grid gap-6 md:grid-cols-2">
-            {[
-              { label: a.visionLabel, text: a.vision },
-              { label: a.missionLabel, text: a.mission },
-            ].map((b, i) => (
-              <Reveal key={b.label} delay={i * 120}>
-                <article className="h-full border border-gold-500/40 bg-char p-8 sm:p-10">
-                  <h3 className="t-h3 text-gold-400">{b.label}</h3>
-                  <p className="t-body mt-4 !text-ivory/90">{b.text}</p>
-                </article>
-              </Reveal>
+          <Reveal delay={150} className="space-y-5">
+            {a.visionText.map((t, i) => (
+              <p key={i} className={i === 0 ? "t-lede !text-ivory" : i === a.visionText.length - 1 ? "t-body border-s-2 border-gold-500/70 ps-5 !text-ivory/90" : "t-body"}>
+                {t}
+              </p>
             ))}
-          </div>
+            <p className="pt-2 text-sm font-medium text-gold-400">{a.signoff}</p>
+          </Reveal>
         </div>
       </section>
 
-      {/* 7. Values */}
-      <section className="border-t border-line bg-char py-16 sm:py-24">
+      {/* 7. Mission */}
+      <section id="mission" className="border-y border-line bg-char py-16 sm:py-24">
+        <div className="container-page grid gap-10 lg:grid-cols-[4fr_8fr] lg:gap-20">
+          <Reveal>
+            <p className="eyebrow mb-4">{a.purposeEyebrow}</p>
+            <h2 className="t-h2">{a.missionLabel}</h2>
+            <div className="gold-rule mt-6" />
+          </Reveal>
+          <Reveal delay={150} className="space-y-5">
+            {a.missionText.map((t, i) => (
+              <p key={i} className={i === 0 ? "t-lede !text-ivory" : i === a.missionText.length - 1 ? "t-body border-s-2 border-gold-500/70 ps-5 !text-ivory/90" : "t-body"}>
+                {t}
+              </p>
+            ))}
+            <p className="pt-2 text-sm font-medium text-gold-400">{a.signoff}</p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 8. Values */}
+      <section className="py-16 sm:py-24">
         <div className="container-page">
           <Reveal className="max-w-2xl">
             <p className="eyebrow mb-4">{a.valuesEyebrow}</p>
@@ -178,7 +192,7 @@ export default async function Page({ params }: P) {
         </div>
       </section>
 
-      {/* 8. What we do */}
+      {/* 9. What we do */}
       <section className="py-16 sm:py-24">
         <div className="container-page">
           <Reveal className="max-w-2xl">
