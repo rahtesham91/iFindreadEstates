@@ -542,6 +542,121 @@ export const en = {
       closing: null as null | { title: string; text: string },
     },
   },
+  privacy: {
+    metaTitle: "Privacy Policy | iFind Real Estate LLC, Dubai",
+    metaDescription: "How iFind Real Estate LLC in Dubai collects, uses, shares and protects your personal data, and the rights you have under UAE data protection law.",
+    eyebrow: "Legal",
+    h1: "Privacy Policy",
+    lede: "Your trust matters to us. This policy explains in plain language how we handle your personal data.",
+    updated: "Last updated: October 2026",
+    onThisPage: "On this page",
+    contactCard: "Data enquiries",
+    sections: [
+      {
+        title: "Who we are",
+        body: [
+          "iFind Real Estate LLC (\u201ciFind\u201d, \u201cwe\u201d, \u201cus\u201d) is a real estate brokerage located at Office No. 1810, Churchill Tower, Business Bay, Dubai, United Arab Emirates (ORN: 45937). We are responsible for the personal data we collect through this website and through our communications with you.",
+          "This policy explains what personal data we collect, why we use it, who we share it with, how long we keep it and the rights you have. It is written to align with UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data and the other laws that apply to our business in Dubai.",
+        ],
+        list: [] as string[],
+      },
+      {
+        title: "Personal data we collect",
+        body: ["We collect only what we need, depending on how you deal with us:"],
+        list: [
+          "Enquiries: your name, phone or WhatsApp number, email address, the service you are interested in and any message you send through our contact form or chat.",
+          "Job applications: the details you enter in the careers form, such as nationality, current location, experience, visa status, languages and BRN, together with your CV and any documents you upload.",
+          "Communications: records of calls, WhatsApp messages and emails with our team, so that we can follow up on your request.",
+          "Technical data: information your browser sends automatically, such as IP address, device and browser type and the pages visited, which is recorded in our hosting provider's server logs for security and reliability.",
+        ],
+        after: "We do not ask for payment card details, passwords or Emirates ID copies through this website.",
+      },
+      {
+        title: "How and why we use your data",
+        body: [],
+        list: [
+          "To respond to your enquiries and contact you about the properties and services you asked about.",
+          "To provide our brokerage services, such as buying, selling and leasing, and to carry out the steps you ask us to take.",
+          "To assess job applications and contact applicants.",
+          "To meet legal and regulatory duties that apply to real estate brokers in the UAE, including anti-money laundering and customer due diligence requirements, and requests from competent authorities.",
+          "To keep the website secure, prevent misuse and improve its performance.",
+          "To send you marketing messages, only where you have agreed to receive them.",
+        ],
+        after: "Where the law requires it, we rely on your consent. Other grounds we may rely on include performing a contract or taking steps at your request, complying with a legal obligation, and our legitimate interests in running and protecting our business, always balanced against your rights.",
+      },
+      {
+        title: "Cookies and similar technologies",
+        body: [
+          "This website does not currently use advertising or tracking cookies. Our chat window may store a small note in your browser session so that it does not greet you repeatedly. If we add analytics or marketing tools in the future, we will ask for your consent where required and update this policy.",
+          "The map on our Contact page is provided by Google Maps. When it loads, Google may receive technical data and set its own cookies, under Google's privacy policy.",
+        ],
+        list: [] as string[],
+      },
+      {
+        title: "Who we share data with",
+        body: ["We do not sell your personal data. We share it only where needed, and only with:"],
+        list: [
+          "Our team members and consultants who deal with your request.",
+          "Property developers, banks and other parties directly involved in a transaction you decide to proceed with.",
+          "Service providers that support us, such as website hosting, email delivery and communication tools, who may process data only on our instructions.",
+          "Government and regulatory bodies, such as the Dubai Land Department and the Real Estate Regulatory Agency, and law-enforcement or judicial authorities, when we are required by law.",
+        ],
+        after: "If you choose to contact us through WhatsApp, your messages are also handled by WhatsApp under its own terms.",
+      },
+      {
+        title: "Transfers outside the UAE",
+        body: ["Some of our service providers may store or process data on servers outside the UAE. Where this happens, we take steps to make sure your data stays protected, in line with applicable UAE law."],
+        list: [] as string[],
+      },
+      {
+        title: "How long we keep your data",
+        body: ["We keep personal data only for as long as needed for the purpose it was collected for, to meet legal and record-keeping duties that apply to real estate brokers, and to handle any claims. Job applications are kept for a limited period for recruitment and are then deleted, unless you ask us to keep them for future openings. When data is no longer needed, we delete or anonymise it."],
+        list: [] as string[],
+      },
+      {
+        title: "How we protect your data",
+        body: ["We use reasonable technical and organisational measures to protect personal data against loss, misuse and unauthorised access, including encrypted connections (HTTPS), access limited to staff who need it, and checks on the service providers we use. No online system is completely secure, so please avoid sending sensitive documents unless we have asked for them."],
+        list: [] as string[],
+      },
+      {
+        title: "Your rights",
+        body: ["Under UAE data protection law you may have the right to:"],
+        list: [
+          "Know what personal data we hold about you and obtain a copy.",
+          "Ask us to correct data that is inaccurate or incomplete.",
+          "Ask us to delete your data or restrict how we use it, where the law allows.",
+          "Object to the use of your data for marketing, or withdraw a consent you gave earlier.",
+          "Request that your data be transferred to another provider, where applicable.",
+        ],
+        after: "To use any of these rights, contact us using the details below. We may need to confirm your identity first, and we will reply within the period required by law. You also have the right to complain to the UAE Data Office if you believe your data has been mishandled.",
+      },
+      {
+        title: "Marketing messages",
+        body: ["We contact people about our services by phone, WhatsApp, email or SMS only in line with UAE law, and where you have given consent or asked us to. You can opt out at any time by replying STOP, using the unsubscribe link or telling us directly, and we will then stop sending marketing messages."],
+        list: [] as string[],
+      },
+      {
+        title: "Children",
+        body: ["This website is intended for adults. We do not knowingly collect personal data from anyone under 18. If you think a child has given us personal data, please contact us and we will delete it."],
+        list: [] as string[],
+      },
+      {
+        title: "Links to other websites",
+        body: ["Our website links to other sites, including the official websites of developers and our social media pages. We are not responsible for their content or privacy practices, so please read their policies."],
+        list: [] as string[],
+      },
+      {
+        title: "Changes to this policy",
+        body: ["We may update this policy from time to time. The latest version is always on this page, with the date of the last update shown at the top."],
+        list: [] as string[],
+      },
+      {
+        title: "Contact us",
+        body: ["For any question about this policy or your personal data, please contact us:"],
+        list: [] as string[],
+      },
+    ],
+  },
   legal: {
     eyebrow: "Legal",
     privacyTitle: "Privacy Policy",
