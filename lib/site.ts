@@ -215,7 +215,7 @@ export const ceo = {
   honorific: "Mr.",
   title: "Founder & CEO",
   email: "avaid@ifindrealestates.com",
-  photo: "/team/avaid-lateef-v3.webp",
+  photo: "/team/avaid-lateef-v4.webp",
   message: [
     "With over 8 years of real estate experience in Dubai and internationally, Mr. Avaid Lateef leads iFind Real Estate LLC with a clear vision: to deliver personalized, high-value property solutions with excellence and integrity.",
     "His global perspective, deep market knowledge, and client-first approach have established the company as a trusted name in Dubai's real estate sector.",
