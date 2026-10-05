@@ -9,8 +9,8 @@ export default function OfficeMap({ className = "" }: { className?: string }) {
   const { lang, dict } = useI18n();
   const q = encodeURIComponent(QUERY);
   return (
-    <div className={className}>
-      <div className="relative aspect-[5/3] overflow-hidden border border-gold-500/50 bg-char">
+    <div className={`flex flex-col ${className}`}>
+      <div className="relative min-h-[20rem] flex-1 overflow-hidden border border-gold-500/50 bg-char">
         <iframe
           title={dict.contact.mapTitle}
           src={`https://www.google.com/maps?q=${q}&hl=${lang}&z=16&output=embed`}
