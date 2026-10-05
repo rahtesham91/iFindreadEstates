@@ -28,8 +28,11 @@ html[lang="ar"] * {
   letter-spacing: 0 !important;
   text-transform: none !important;
 }
-html[lang="ar"] .h-display {
-  line-height: 1.35;
+html[lang="ar"] :is(.h-display, .t-hero, .t-h1, .t-h2, .t-h3, .t-h4) {
+  line-height: 1.4;
+}
+html[lang="ar"] :is(.t-body, .t-lede, .t-small) {
+  line-height: 1.9;
 }
 * {
   font-style: normal !important;
@@ -77,6 +80,34 @@ body {
   }
   .h-display {
     @apply font-serif font-medium leading-[1.1] tracking-[-0.01em];
+  }
+  /* Type scale used on every page: headings in the serif face, all running text in the sans face. */
+  .t-hero {
+    @apply font-serif font-medium leading-[1.08] tracking-[-0.01em] text-5xl sm:text-6xl lg:text-7xl;
+  }
+  .t-h1 {
+    @apply font-serif font-medium leading-[1.12] tracking-[-0.01em] text-4xl sm:text-5xl lg:text-[3.5rem];
+  }
+  .t-h2 {
+    @apply font-serif font-medium leading-[1.15] tracking-[-0.01em] text-3xl sm:text-4xl;
+  }
+  .t-h3 {
+    @apply font-serif font-medium leading-snug text-2xl;
+  }
+  .t-h4 {
+    @apply font-serif font-medium leading-snug text-xl;
+  }
+  .t-lede {
+    @apply font-sans text-lg leading-relaxed text-mute sm:text-xl;
+  }
+  .t-body {
+    @apply font-sans text-base leading-[1.8] text-mute;
+  }
+  .t-small {
+    @apply font-sans text-sm leading-relaxed text-mute;
+  }
+  .t-figure {
+    @apply font-serif font-medium leading-none text-5xl sm:text-6xl;
   }
   .gold-rule {
     @apply h-px w-16 bg-gold-500;

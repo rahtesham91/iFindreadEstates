@@ -102,7 +102,7 @@ export default async function Page({ params }: P) {
             <div>
               <Ornament className="mb-6" />
               <p className="eyebrow mb-4">{person.role}</p>
-              <h1 className="h-display text-5xl sm:text-6xl lg:text-7xl">{person.name}</h1>
+              <h1 className="t-h1">{person.name}</h1>
               <div className="gold-rule mt-7" />
 
               {bio && (

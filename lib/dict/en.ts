@@ -241,6 +241,7 @@ export const en = {
       "At iFind, your success is our priority. We don't just find you a property. We help you build a prosperous future.",
     ],
     mdButton: "Meet the Full Team",
+    mdProfile: "About the Managing Director",
     purposeEyebrow: "Purpose",
     purposeTitle: "Our vision and mission",
     visionLabel: "Our Vision",

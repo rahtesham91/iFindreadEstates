@@ -54,7 +54,7 @@ export default function TeamCard({ member, compact = false, priority = false }: 
 
       {/* Details */}
       <div className={`flex flex-1 flex-col ${compact ? "px-4 pb-4 pt-3 sm:px-5 sm:pb-5" : "px-6 pb-6 pt-4"}`}>
-        <h3 className={`font-serif leading-tight ${compact ? "text-xl sm:text-2xl" : "text-[1.7rem]"}`}><LocLink href={`/team/${member.slug}`} className="transition-colors hover:text-gold-400">{person.name}</LocLink></h3>
+        <h3 className={`t-h3 ${compact ? "!text-xl sm:!text-2xl" : ""}`}><LocLink href={`/team/${member.slug}`} className="transition-colors hover:text-gold-400">{person.name}</LocLink></h3>
         <p className={`mt-2 font-medium uppercase text-gold-400 ${compact ? "" : "sm:min-h-[2.6rem]"} ${compact ? "text-[0.62rem] tracking-[0.16em] sm:text-[0.68rem] sm:tracking-luxe" : "text-[0.7rem] tracking-luxe"}`}>{person.role}</p>
         <div className="mt-4 h-px w-full bg-gradient-to-r rtl:bg-gradient-to-l from-gold-500/70 via-line to-transparent" />
 

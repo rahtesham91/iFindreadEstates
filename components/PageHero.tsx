@@ -9,9 +9,9 @@ export default function PageHero({ eyebrow, title, text, imageLabel }: Props) {
       <div className="absolute inset-0 -z-10 bg-gradient-to-r rtl:bg-gradient-to-l from-ink via-ink/85 to-ink/40" />
       <div className="container-page py-24 sm:py-32 lg:py-40">
         <p className="eyebrow mb-5">{eyebrow}</p>
-        <h1 className="h-display max-w-3xl text-5xl sm:text-6xl lg:text-7xl">{title}</h1>
+        <h1 className="t-h1 max-w-3xl">{title}</h1>
         <div className="gold-rule mt-8" />
-        <p className="mt-8 max-w-xl text-lg leading-relaxed text-ivory/80">{text}</p>
+        <p className="t-lede mt-8 max-w-xl">{text}</p>
       </div>
     </section>
   );

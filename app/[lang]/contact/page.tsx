@@ -45,9 +45,9 @@ export default async function Page({ params }: P) {
         <div aria-hidden="true" className="absolute inset-0 -z-10" style={{ background: "radial-gradient(56rem 24rem at 12% 0%, rgb(var(--c-gold-500) / 0.14), transparent 62%)" }} />
         <div className="container-page py-14 sm:py-24">
           <p className="eyebrow mb-5">{c.eyebrow}</p>
-          <h1 className="h-display max-w-3xl text-5xl sm:text-6xl lg:text-7xl">{c.h1}</h1>
+          <h1 className="t-h1 max-w-3xl">{c.h1}</h1>
           <div className="gold-rule mt-8" />
-          <p className="mt-8 max-w-xl text-lg leading-relaxed text-mute">{c.lede}</p>
+          <p className="t-lede mt-8 max-w-xl">{c.lede}</p>
         </div>
       </section>
 
@@ -75,7 +75,7 @@ export default async function Page({ params }: P) {
 
           <div className="mt-8 grid items-stretch gap-8 lg:grid-cols-2">
             <div className="border border-line bg-char p-7 sm:p-10">
-              <h2 className="font-serif text-3xl">{c.formTitle}</h2>
+              <h2 className="t-h2">{c.formTitle}</h2>
               <div className="gold-rule mb-8 mt-4" />
               <InquiryForm />
             </div>

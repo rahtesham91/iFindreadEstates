@@ -37,7 +37,7 @@ export default function InquiryForm({ defaultInterest = "" }: { defaultInterest?
   if (status === "done") {
     return (
       <div className="border border-gold-500/60 bg-char p-10 text-center" role="status">
-        <p className="h-display text-3xl text-gold-300">{f.thankTitle}</p>
+        <p className="t-h2 text-gold-400">{f.thankTitle}</p>
         <p className="mx-auto mt-4 max-w-sm text-mute">
           {f.thankText}
         </p>

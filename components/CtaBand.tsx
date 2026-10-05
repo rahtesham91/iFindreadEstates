@@ -11,7 +11,7 @@ export default function CtaBand() {
       <div className="container-page flex flex-col items-start justify-between gap-8 py-16 sm:py-20 lg:flex-row lg:items-center">
         <div>
           <p className="eyebrow mb-4">{dict.cta.eyebrow}</p>
-          <h2 className="h-display text-4xl sm:text-5xl">
+          <h2 className="t-h2">
             {first}
             <br />
             <span className="text-gold-400">{second}</span>

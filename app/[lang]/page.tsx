@@ -21,7 +21,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#14110d]/90 via-[#14110d]/60 via-[55%] to-[#14110d]/30 sm:bg-gradient-to-r sm:rtl:bg-gradient-to-l sm:from-[#14110d]/80 sm:via-[#14110d]/45 sm:to-[#14110d]/15" />
         <div className="container-page pb-14 pt-12 sm:py-32">
           <p className="eyebrow mb-4 !text-[#E3BF73] sm:mb-6">{h.eyebrow}</p>
-          <h1 className="h-display max-w-4xl text-white text-[3.1rem] leading-[1.02] sm:text-7xl lg:text-[6.5rem]">
+          <h1 className="t-hero max-w-4xl text-white">
             {first}
             <br />
             <span className="text-[#E3BF73]">{second}</span>
@@ -38,7 +38,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       {/* Services */}
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24">
         <div className="container-page">
           <SectionHeading
             eyebrow={h.servicesEyebrow}
@@ -49,9 +49,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             {services.map((s, i) => (
               <LocLink key={s.slug} href={s.href} className="group relative flex min-h-[18rem] flex-col justify-between bg-ink p-9 transition-colors hover:bg-panel sm:p-12">
                 <div>
-                  <span className="font-serif text-5xl text-gold-500/70">{String(i + 1).padStart(2, "0")}</span>
-                  <h3 className="mt-6 font-serif text-3xl sm:text-4xl">{d.services[i].title}</h3>
-                  <p className="mt-4 max-w-md text-[0.95rem] leading-relaxed text-mute">{d.services[i].short}</p>
+                  <span className="t-h2 text-gold-500/70">{String(i + 1).padStart(2, "0")}</span>
+                  <h3 className="t-h3 mt-5">{d.services[i].title}</h3>
+                  <p className="t-body mt-3 max-w-md">{d.services[i].short}</p>
                 </div>
                 <span className="mt-10 inline-flex items-center gap-3 text-[0.75rem] font-semibold uppercase tracking-[0.18em] text-gold-400 transition-all group-hover:gap-5 group-hover:text-gold-300">
                   {d.common.learnMore}
@@ -64,7 +64,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       {/* Why */}
-      <section className="border-y border-line bg-char py-24 sm:py-32">
+      <section className="border-y border-line bg-char py-16 sm:py-24">
         <div className="container-page grid gap-16 lg:grid-cols-[1fr_1.2fr] lg:items-center">
           <div className="relative aspect-[4/5] overflow-hidden border border-gold-500/50"><Image src="/home/why-interior.webp" alt={h.alt.why} fill quality={85} sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" /></div>
           <div>
@@ -72,8 +72,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             <dl className="mt-12 grid gap-10 sm:grid-cols-2">
               {h.why.map((w) => (
                 <div key={w.title} className="border-t border-gold-500/60 pt-5">
-                  <dt className="font-serif text-2xl">{w.title}</dt>
-                  <dd className="mt-3 text-sm leading-relaxed text-mute">{w.text}</dd>
+                  <dt className="t-h3">{w.title}</dt>
+                  <dd className="t-small mt-3">{w.text}</dd>
                 </div>
               ))}
             </dl>
@@ -82,7 +82,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       {/* Developers */}
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24">
         <div className="container-page">
           <SectionHeading eyebrow={d.developers.eyebrow} title={d.developers.homeTitle} align="center" />
           <div className="mt-12 sm:mt-16">
@@ -95,7 +95,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       {/* Investors */}
-      <section className="border-y border-line bg-char py-24 sm:py-32">
+      <section className="border-y border-line bg-char py-16 sm:py-24">
         <div className="container-page grid gap-16 lg:grid-cols-2 lg:items-center">
           <div>
             <SectionHeading
@@ -110,15 +110,15 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       {/* Process */}
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24">
         <div className="container-page">
           <SectionHeading eyebrow={h.processEyebrow} title={h.processTitle} align="center" />
           <ol className="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
             {d.steps.map((s, i) => (
               <li key={s.title} className="border-t border-gold-500/60 pt-6">
-                <span className="font-serif text-5xl text-gold-500/80">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="mt-3 font-serif text-2xl">{d.services[i].title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-mute">{s.text}</p>
+                <span className="t-h2 text-gold-500/80">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="t-h3 mt-3">{d.services[i].title}</h3>
+                <p className="t-small mt-3">{s.text}</p>
               </li>
             ))}
           </ol>
@@ -126,7 +126,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       {/* Team preview */}
-      <section className="border-t border-line bg-char py-16 sm:py-28">
+      <section className="border-t border-line bg-char py-16 sm:py-24">
         <div className="container-page">
           <SectionHeading eyebrow={h.teamEyebrow} title={h.teamTitle} />
           <ul className="mt-12 grid grid-cols-2 gap-x-4 gap-y-10 sm:mt-16 sm:gap-x-8 lg:grid-cols-4">

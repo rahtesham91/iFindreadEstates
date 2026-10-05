@@ -25,17 +25,17 @@ export default async function Page({ params }: P) {
         <div className="container-page py-14 sm:py-28">
           <Ornament className="mb-7" />
           <p className="eyebrow mb-5">{c.eyebrow}</p>
-          <h1 className="h-display max-w-4xl text-5xl sm:text-7xl lg:text-8xl">{c.pageTitle}</h1>
+          <h1 className="t-h1 max-w-4xl">{c.pageTitle}</h1>
           <div className="gold-rule mt-8" />
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-mute">{c.intro}</p>
+          <p className="t-lede mt-8 max-w-2xl">{c.intro}</p>
         </div>
       </section>
 
-      <section className="py-16 sm:py-28">
+      <section className="py-16 sm:py-24">
         <div className="container-page">
           <Reveal>
             <div className="mb-10 flex items-end gap-6 sm:mb-14">
-              <h2 className="font-serif text-3xl sm:text-4xl">{fill(c.count, { n: developers.length })}</h2>
+              <h2 className="t-h2">{fill(c.count, { n: developers.length })}</h2>
               <div className="mb-2 h-px flex-1 bg-line" />
             </div>
           </Reveal>
