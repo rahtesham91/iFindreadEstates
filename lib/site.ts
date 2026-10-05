@@ -5,7 +5,7 @@ export const site = {
   brand: "iFind",
   legalName: "iFind Real Estate LLC",
   tagline: "Finding Value. Building Trust.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://ifind.example",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://ifindrealestate.vercel.app",
   phone: "+971 50 984 3209",
   landline: "+971 4 835 1268",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "971509843209",

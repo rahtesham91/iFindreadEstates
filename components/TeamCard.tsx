@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { TeamMember, memberContact } from "@/lib/site";
-import { useI18n } from "./I18nProvider";
+import { LocLink, useI18n } from "./I18nProvider";
 import { fill } from "@/lib/dict";
 
 type Props = { member: TeamMember; compact?: boolean; priority?: boolean };
@@ -31,7 +31,7 @@ export default function TeamCard({ member, compact = false, priority = false }: 
   return (
     <article className="group flex h-full flex-col border border-line bg-char transition-all duration-500 hover:-translate-y-1 hover:border-gold-500/70 hover:shadow-[0_25px_60px_-25px_rgb(var(--c-gold-500)/0.45)]">
       {/* Photo */}
-      <div className="relative aspect-[4/5] overflow-hidden bg-white">
+      <LocLink href={`/team/${member.slug}`} aria-label={person.name} tabIndex={-1} className="relative block aspect-[4/5] overflow-hidden bg-white">
         {member.photo ? (
           <Image
             src={member.photo}
@@ -50,11 +50,11 @@ export default function TeamCard({ member, compact = false, priority = false }: 
           </div>
         )}
         <div className="pointer-events-none absolute inset-0 border-b-2 border-gold-500/0 transition-colors duration-500 group-hover:border-gold-400/80" />
-      </div>
+      </LocLink>
 
       {/* Details */}
       <div className={`flex flex-1 flex-col ${compact ? "px-4 pb-4 pt-3 sm:px-5 sm:pb-5" : "px-6 pb-6 pt-4"}`}>
-        <h3 className={`font-serif leading-tight ${compact ? "text-xl sm:text-2xl" : "text-[1.7rem]"}`}>{person.name}</h3>
+        <h3 className={`font-serif leading-tight ${compact ? "text-xl sm:text-2xl" : "text-[1.7rem]"}`}><LocLink href={`/team/${member.slug}`} className="transition-colors hover:text-gold-400">{person.name}</LocLink></h3>
         <p className={`mt-2 font-medium uppercase text-gold-400 ${compact ? "" : "sm:min-h-[2.6rem]"} ${compact ? "text-[0.62rem] tracking-[0.16em] sm:text-[0.68rem] sm:tracking-luxe" : "text-[0.7rem] tracking-luxe"}`}>{person.role}</p>
         <div className="mt-4 h-px w-full bg-gradient-to-r rtl:bg-gradient-to-l from-gold-500/70 via-line to-transparent" />
 

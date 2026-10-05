@@ -123,6 +123,20 @@ export const ar: Dict = {
   team: {
     brn: "رقم الوسيط (BRN)",
     languages: "اللغات",
+    languageNames: { English: "الإنجليزية", Urdu: "الأردية", Hindi: "الهندية", Punjabi: "البنجابية", Pashtu: "البشتو", Arabic: "العربية" },
+    profile: {
+      breadcrumb: "فريقنا",
+      mobile: "الخط المباشر",
+      email: "البريد الإلكتروني",
+      callName: "اتصل بـ {name}",
+      whatsappName: "راسل {name} عبر واتساب",
+      back: "العودة إلى الفريق",
+      about: "نبذة عن {name}",
+      metaTitle: "{name}، {role} | آي فايند للعقارات دبي",
+      metaDescription: "{name} هو {role} في آي فايند للعقارات ذ.م.م، دبي. تحدّث مع {name} حول العقارات قيد الإنشاء والجاهزة والفاخرة والإيجارات والأراضي والمباني والفنادق في الإمارات.",
+      photoAlt: "{name}، {role} في آي فايند للعقارات",
+    },
+    bios: {},
   },
   people: {
     "abid-khan": { name: "عابد خان", role: "المدير العام" },

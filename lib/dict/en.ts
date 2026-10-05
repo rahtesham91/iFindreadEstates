@@ -124,6 +124,20 @@ export const en = {
   team: {
     brn: "BRN",
     languages: "Languages",
+    languageNames: { English: "English", Urdu: "Urdu", Hindi: "Hindi", Punjabi: "Punjabi", Pashtu: "Pashto", Arabic: "Arabic" } as Record<string, string>,
+    profile: {
+      breadcrumb: "Our Team",
+      mobile: "Direct line",
+      email: "Email",
+      callName: "Call {name}",
+      whatsappName: "WhatsApp {name}",
+      back: "Back to the team",
+      about: "About {name}",
+      metaTitle: "{name}, {role} | iFind Real Estate Dubai",
+      metaDescription: "{name} is {role} at iFind Real Estate LLC, Dubai. Speak with {name} about off-plan, ready and luxury property, rentals, land, buildings and hotels in the UAE.",
+      photoAlt: "{name}, {role} at iFind Real Estate",
+    },
+    bios: {} as Record<string, string>, // to be supplied by the company, one profile at a time
   },
   people: {
     "abid-khan": { name: "Abid Khan", role: "Managing Director" },
