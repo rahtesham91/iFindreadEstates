@@ -14,5 +14,5 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
 export default async function Page({ params }: P) {
   const { lang } = await params;
   const p = getDict(lang as Lang).servicePages.offPlan;
-  return <ServicePage {...p} featureImage="/services/offplan-feature.webp" heroImage="/services/offplan-hero.webp" closing={p.closing ?? undefined} />;
+  return <ServicePage {...p} featureImage="/services/offplan-feature-v2.webp" heroImage="/services/offplan-hero-v2.webp" closing={p.closing ?? undefined} />;
 }

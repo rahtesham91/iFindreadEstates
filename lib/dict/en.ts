@@ -300,8 +300,8 @@ export const en = {
       eyebrow: "Off-Plan",
       title: "Off-Plan Properties",
       intro: "Early access to new launches from Dubai's established developers, explained clearly before you commit.",
-      heroAlt: "Modern waterfront residence at golden hour",
-      featureAlt: "Aerial view of a new waterfront development in Dubai",
+      heroAlt: "Villas under construction at a new Dubai development site",
+      featureAlt: "High-rise towers under construction in Dubai at sunset",
       sectionTitle: "Buy early, with clear eyes",
       sectionText:
         "Off-plan can offer attractive entry points, but every project has its own payment plan, timeline and risk profile. We help you compare launches side by side and understand exactly what you are signing.",
