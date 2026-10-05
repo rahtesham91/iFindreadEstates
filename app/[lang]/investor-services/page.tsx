@@ -14,5 +14,5 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
 export default async function Page({ params }: P) {
   const { lang } = await params;
   const p = getDict(lang as Lang).servicePages.investors;
-  return <ServicePage {...p} closing={p.closing ?? undefined} />;
+  return <ServicePage {...p} featureImage="/services/investors-meeting.webp" closing={p.closing ?? undefined} />;
 }

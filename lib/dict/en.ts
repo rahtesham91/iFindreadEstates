@@ -384,6 +384,7 @@ export const en = {
       title: "Investor Services",
       intro: "Finding, evaluating and closing real estate investments in Dubai and across the UAE, for local and international investors.",
       imageLabel: "Investors hero: Dubai financial district at night",
+      featureAlt: "A consultant advising an investor in a Dubai office with a view of the skyline",
       sectionTitle: "Invest with clarity, not guesswork",
       sectionText:
         "We help you identify opportunities that match your capital and goals, explain the numbers plainly, and carry the deal through to completion. We do not promise returns. We give you the facts so you can decide.",

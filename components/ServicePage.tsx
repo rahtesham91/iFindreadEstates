@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import PageHero from "./PageHero";
 import Placeholder from "./Placeholder";
 import SectionHeading from "./SectionHeading";
@@ -17,9 +18,11 @@ type Props = {
   sectionText: string;
   offers: { title: string; text: string }[];
   closing?: { title: string; text: string };
+  featureImage?: string;
+  featureAlt?: string;
 };
 
-export default function ServicePage({ eyebrow, title, intro, imageLabel, sectionTitle, sectionText, offers, closing }: Props) {
+export default function ServicePage({ eyebrow, title, intro, imageLabel, sectionTitle, sectionText, offers, closing, featureImage, featureAlt }: Props) {
   const { dict } = useI18n();
   const sp = dict.servicePage;
   return (
@@ -37,7 +40,13 @@ export default function ServicePage({ eyebrow, title, intro, imageLabel, section
               </a>
             </div>
           </div>
-          <Placeholder label={fill(dict.placeholder.featureImage, { title })} size="1200 x 900" className="aspect-[4/3]" />
+          {featureImage ? (
+            <div className="relative aspect-[4/3] overflow-hidden border border-gold-500/50">
+              <Image src={featureImage} alt={featureAlt ?? title} fill quality={85} sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+            </div>
+          ) : (
+            <Placeholder label={fill(dict.placeholder.featureImage, { title })} size="1200 x 900" className="aspect-[4/3]" />
+          )}
         </div>
       </section>
 
