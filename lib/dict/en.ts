@@ -146,7 +146,7 @@ export const en = {
     "ehtesham-nazir": { name: "Ehtesham Nazir", role: "Digital Marketing Manager" },
     "dario-ceglia": { name: "Dario Ceglia", role: "Property Consultant" },
     "ishtiaq-ahmed": { name: "Ishtiaq Ahmed", role: "Property Consultant – Secondary Market" },
-    "waqar-shah": { name: "Waqar Shah", role: "Sales Consultant" },
+    "shah-waqar": { name: "Shah Waqar", role: "Sales Consultant" },
     "fayyaz-khan": { name: "Fayyaz Khan", role: "Public Relations Officer (PRO)" },
     "essam-nabil": { name: "Essam Nabil", role: "Senior Sales Executive" },
   } as Record<string, { name: string; role: string }>,

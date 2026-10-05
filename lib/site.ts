@@ -125,7 +125,7 @@ export const memberContact = (m: TeamMember, waText: string) => {
 };
 
 // Team names and photos from the company's previous website. The bios and languages are kept here for later use but are not
-// shown on the cards. Some designations below (Waqar, Essam, Dario) are placeholders until the company confirms them.
+// shown on the cards. Some designations below (Shah Waqar, Essam, Dario) are placeholders until the company confirms them.
 export const team: TeamMember[] = [
   {
     slug: "abid-khan",
@@ -183,14 +183,14 @@ export const team: TeamMember[] = [
     phone: "+971 56 550 4547",
   },
   {
-    slug: "waqar-shah",
-    name: "Waqar Shah",
+    slug: "shah-waqar",
+    name: "Shah Waqar",
     role: "Sales Consultant",
-    photo: "/team/waqar-shah-v3.webp",
+    photo: "/team/shah-waqar-v4.webp",
     languages: ["English", "Urdu", "Pashtu", "Punjabi"],
     email: "waqar@ifindrealestates.com",
     phone: "+971 58 543 3007",
-    bio: "Waqar Shah is a real estate expert in Dubai's off-plan market, with 2 years of experience and an IT background since 2014. He offers smart, tech-driven investment guidance. Known for integrity and clear communication, he supports a diverse clientele. Whether you're a buyer or investor, Waqar helps you unlock top opportunities.",
+    bio: "Shah Waqar is a real estate expert in Dubai's off-plan market, with 2 years of experience and an IT background since 2014. He offers smart, tech-driven investment guidance. Known for integrity and clear communication, he supports a diverse clientele. Whether you're a buyer or investor, Waqar helps you unlock top opportunities.",
   },
   {
     slug: "fayyaz-khan",
