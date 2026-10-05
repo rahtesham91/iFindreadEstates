@@ -125,7 +125,7 @@ export const memberContact = (m: TeamMember, waText: string) => {
 };
 
 // Team names and photos from the company's previous website. The bios and languages are kept here for later use but are not
-// shown on the cards. Some designations below (Shah Waqar, Essam, Dario) are placeholders until the company confirms them.
+// shown on the cards.
 export const team: TeamMember[] = [
   {
     slug: "abid-khan",
@@ -167,7 +167,7 @@ export const team: TeamMember[] = [
   {
     slug: "dario-ceglia",
     name: "Dario Ceglia",
-    role: "Property Consultant", // placeholder designation until confirmed
+    role: "Real Estate Consultant",
     photo: "/team/dario-ceglia-v5.webp",
     brn: "100955",
     email: "dario@ifindrealestates.com",
@@ -176,7 +176,7 @@ export const team: TeamMember[] = [
   {
     slug: "ishtiaq-ahmed",
     name: "Ishtiaq Ahmed",
-    role: "Property Consultant – Secondary Market",
+    role: "Real Estate Consultant",
     photo: "/team/ishtiaq-ahmed-v3.webp",
     languages: ["English", "Hindi", "Urdu", "Punjabi"],
     email: "ishtiaq@ifindrealestates.com",
@@ -185,7 +185,7 @@ export const team: TeamMember[] = [
   {
     slug: "shah-waqar",
     name: "Shah Waqar",
-    role: "Sales Consultant",
+    role: "Real Estate Consultant",
     photo: "/team/shah-waqar-v4.webp",
     languages: ["English", "Urdu", "Pashtu", "Punjabi"],
     email: "waqar@ifindrealestates.com",
@@ -203,7 +203,7 @@ export const team: TeamMember[] = [
   {
     slug: "essam-nabil",
     name: "Essam Nabil",
-    role: "Senior Sales Executive",
+    role: "Real Estate Consultant",
     photo: "/team/essam-nabil-v3.webp",
     languages: ["Arabic", "English"],
     email: "essam@ifindrealestates.com",
