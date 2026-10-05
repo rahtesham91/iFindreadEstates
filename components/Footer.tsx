@@ -12,6 +12,7 @@ export default function Footer() {
     { label: dict.nav.investors, href: "/investor-services" },
     { label: dict.nav.about, href: "/about" },
     { label: dict.nav.team, href: "/team" },
+    { label: dict.nav.careers, href: "/careers" },
     { label: dict.nav.contact, href: "/contact" },
   ];
   return (
