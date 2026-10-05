@@ -4,16 +4,17 @@ import { Cairo, Manrope, Noto_Naskh_Arabic, Playfair_Display } from "next/font/g
 import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
+import ChatLoader from "@/components/ChatLoader";
 import { I18nProvider } from "@/components/I18nProvider";
 import { site } from "@/lib/site";
 import { getDict } from "@/lib/dict";
 import { isLang, locales, localize, type Lang } from "@/lib/i18n";
 
-const serifEn = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-serif-en", display: "swap" });
-const sansEn = Manrope({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-sans-en", display: "swap" });
-const serifAr = Noto_Naskh_Arabic({ subsets: ["arabic"], weight: ["400", "500", "600", "700"], variable: "--font-serif-ar", display: "swap" });
-const sansAr = Cairo({ subsets: ["arabic", "latin"], weight: ["400", "500", "600", "700"], variable: "--font-sans-ar", display: "swap" });
+// Variable fonts (one file each). The Arabic pair is not preloaded, so English visitors never download it.
+const serifEn = Playfair_Display({ subsets: ["latin"], variable: "--font-serif-en", display: "swap" });
+const sansEn = Manrope({ subsets: ["latin"], variable: "--font-sans-en", display: "swap" });
+const serifAr = Noto_Naskh_Arabic({ subsets: ["arabic"], variable: "--font-serif-ar", display: "swap", preload: false });
+const sansAr = Cairo({ subsets: ["arabic", "latin"], variable: "--font-sans-ar", display: "swap", preload: false });
 
 export const dynamicParams = false;
 export const generateStaticParams = () => locales.map((lang) => ({ lang }));
@@ -64,7 +65,7 @@ export default async function RootLayout({ children, params }: { children: React
           <Header />
           <main id="main">{children}</main>
           <Footer />
-          <ChatWidget />
+          <ChatLoader />
         </I18nProvider>
       </body>
     </html>

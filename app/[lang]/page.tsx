@@ -17,7 +17,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
     <>
       {/* Hero */}
       <section className="relative isolate flex min-h-[38rem] items-end overflow-hidden pt-20 sm:min-h-[100svh] sm:items-center">
-        <Image src="/home/hero-villa.webp" alt={h.alt.hero} fill priority quality={85} sizes="100vw" className="-z-20 object-cover object-[35%_center] sm:object-center" />
+        <Image src="/home/hero-villa.webp" alt={h.alt.hero} fill priority fetchPriority="high" quality={75} sizes="100vw" className="-z-20 object-cover object-[35%_center] sm:object-center" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#14110d]/90 via-[#14110d]/60 via-[55%] to-[#14110d]/30 sm:bg-gradient-to-r sm:rtl:bg-gradient-to-l sm:from-[#14110d]/80 sm:via-[#14110d]/45 sm:to-[#14110d]/15" />
         <div className="container-page pb-14 pt-12 sm:py-32">
           <p className="eyebrow mb-4 !text-[#E3BF73] sm:mb-6">{h.eyebrow}</p>
