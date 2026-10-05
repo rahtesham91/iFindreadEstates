@@ -50,7 +50,7 @@ const jsonLd = {
   email: site.email,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Office 1810, Churchill Tower, Business Bay",
+    streetAddress: "Office No. 1810, Churchill Tower, Business Bay",
     addressLocality: "Dubai",
     addressCountry: "AE",
   },

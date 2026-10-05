@@ -10,7 +10,7 @@ export const site = {
   landline: "+971 4 835 1268",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "971509843209",
   email: "info@ifindrealestates.com",
-  address: "Office 1810, Churchill Tower, Business Bay, Dubai, UAE",
+  address: "Office No. 1810, Churchill Tower, Business Bay, Dubai, UAE",
   orn: "ORN: 45937",
   social: [
     { label: "Instagram", href: "#" },
