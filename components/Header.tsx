@@ -58,7 +58,7 @@ export default function Header() {
       <div
         aria-hidden="true"
         className={`absolute inset-0 transition-colors duration-300 ${
-          scrolled || open ? "border-b border-line bg-ink/95 backdrop-blur" : "bg-gradient-to-b from-ink/80 to-transparent"
+          scrolled || open ? "border-b border-line bg-ink/95 backdrop-blur" : "bg-gradient-to-b from-ink/95 to-ink/85"
         }`}
       />
       <div className="container-page relative flex h-20 items-center justify-between">

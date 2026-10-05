@@ -18,21 +18,21 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       {/* Hero */}
       <section className="relative isolate flex min-h-[38rem] items-end overflow-hidden pt-20 sm:min-h-[100svh] sm:items-center">
         <Image src="/home/hero-villa.webp" alt={h.alt.hero} fill priority quality={85} sizes="100vw" className="-z-20 object-cover object-[35%_center] sm:object-center" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/85 via-[55%] to-transparent sm:bg-gradient-to-r sm:rtl:bg-gradient-to-l sm:from-ink/95 sm:via-ink/55 sm:to-transparent" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#14110d]/90 via-[#14110d]/60 via-[55%] to-[#14110d]/30 sm:bg-gradient-to-r sm:rtl:bg-gradient-to-l sm:from-[#14110d]/80 sm:via-[#14110d]/45 sm:to-[#14110d]/15" />
         <div className="container-page pb-14 pt-12 sm:py-32">
-          <p className="eyebrow mb-4 sm:mb-6">{h.eyebrow}</p>
-          <h1 className="h-display max-w-4xl text-[3.1rem] leading-[1.02] sm:text-7xl lg:text-[6.5rem]">
+          <p className="eyebrow mb-4 !text-[#E3BF73] sm:mb-6">{h.eyebrow}</p>
+          <h1 className="h-display max-w-4xl text-white text-[3.1rem] leading-[1.02] sm:text-7xl lg:text-[6.5rem]">
             {first}
             <br />
-            <span className="text-gold-400">{second}</span>
+            <span className="text-[#E3BF73]">{second}</span>
           </h1>
-          <div className="gold-rule mt-6 sm:mt-10" />
-          <p className="mt-5 max-w-xl text-[0.72rem] uppercase leading-relaxed tracking-[0.16em] text-ivory/75 sm:mt-8 sm:text-sm sm:tracking-[0.2em]">
+          <div className="gold-rule mt-6 !bg-[#E3BF73] sm:mt-10" />
+          <p className="mt-5 max-w-xl text-[0.72rem] uppercase leading-relaxed tracking-[0.16em] text-white/85 sm:mt-8 sm:text-sm sm:tracking-[0.2em]">
             {h.keywords.join(" · ")}
           </p>
           <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-12 sm:flex sm:gap-4">
             <LocLink href="/contact" className="btn-gold !px-3 sm:!px-7">{d.common.enquireNow}</LocLink>
-            <a href={whatsappLink(d.wa.general)} target="_blank" rel="noopener noreferrer" className="btn-ghost !px-3 sm:!px-7">{d.common.whatsappUs}</a>
+            <a href={whatsappLink(d.wa.general)} target="_blank" rel="noopener noreferrer" className="btn-ghost !border-white/70 !text-white hover:!border-[#E3BF73] hover:!text-[#E3BF73] !px-3 sm:!px-7">{d.common.whatsappUs}</a>
           </div>
         </div>
       </section>
