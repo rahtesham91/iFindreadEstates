@@ -13,7 +13,8 @@ type Props = {
   eyebrow: string;
   title: string;
   intro: string;
-  imageLabel: string;
+  heroImage?: string;
+  heroAlt?: string;
   sectionTitle: string;
   sectionText: string;
   offers: { title: string; text: string }[];
@@ -22,12 +23,12 @@ type Props = {
   featureAlt?: string;
 };
 
-export default function ServicePage({ eyebrow, title, intro, imageLabel, sectionTitle, sectionText, offers, closing, featureImage, featureAlt }: Props) {
+export default function ServicePage({ eyebrow, title, intro, heroImage, heroAlt, sectionTitle, sectionText, offers, closing, featureImage, featureAlt }: Props) {
   const { dict } = useI18n();
   const sp = dict.servicePage;
   return (
     <>
-      <PageHero eyebrow={eyebrow} title={title} text={intro} imageLabel={imageLabel} />
+      <PageHero eyebrow={eyebrow} title={title} text={intro} image={heroImage} imageAlt={heroAlt} />
 
       <section className="py-16 sm:py-24">
         <div className="container-page grid gap-16 lg:grid-cols-[1fr_1.1fr] lg:items-center">

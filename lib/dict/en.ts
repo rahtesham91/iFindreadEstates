@@ -300,7 +300,8 @@ export const en = {
       eyebrow: "Off-Plan",
       title: "Off-Plan Properties",
       intro: "Early access to new launches from Dubai's established developers, explained clearly before you commit.",
-      imageLabel: "Off-plan hero: Dubai skyline with new developments",
+      heroAlt: "Modern waterfront residence at golden hour",
+      featureAlt: "Aerial view of a new waterfront development in Dubai",
       sectionTitle: "Buy early, with clear eyes",
       sectionText:
         "Off-plan can offer attractive entry points, but every project has its own payment plan, timeline and risk profile. We help you compare launches side by side and understand exactly what you are signing.",
@@ -320,7 +321,8 @@ export const en = {
       eyebrow: "Ready & Luxury",
       title: "Ready & Luxury Properties",
       intro: "From well-priced everyday homes to signature residences in Dubai's most sought-after addresses.",
-      imageLabel: "Luxury hero: premium villa or penthouse interior",
+      heroAlt: "Luxury waterfront villa with a pool at sunset",
+      featureAlt: "Luxury interior with a glass and marble staircase",
       sectionTitle: "Find the right home, at the right value",
       sectionText:
         "Whether you want a practical apartment or a landmark penthouse, we work from your brief and show you what is genuinely worth your attention, not simply what is available.",
@@ -340,7 +342,8 @@ export const en = {
       eyebrow: "Rentals & Leasing",
       title: "Rentals & Leasing",
       intro: "Residential and commercial leasing for tenants and landlords, handled with clarity and discretion.",
-      imageLabel: "Rentals hero: bright modern apartment interior",
+      heroAlt: "Modern residence with a terrace and pool",
+      featureAlt: "Terrace lounge of a modern Dubai home",
       sectionTitle: "The right tenant. The right place.",
       sectionText:
         "We connect landlords with reliable tenants and tenants with properties that suit their needs and budget, and we keep the process straightforward from viewing to signing.",
@@ -360,7 +363,8 @@ export const en = {
       eyebrow: "Land, Buildings & Hotels",
       title: "Land, Buildings & Hotels",
       intro: "Plots, joint ventures and complex commercial deals across the UAE, including opportunities beyond it.",
-      imageLabel: "Land hero: aerial view of plots or development site",
+      heroAlt: "Dubai skyline at sunset",
+      featureAlt: "High-rise balcony with a view of the Burj Khalifa",
       sectionTitle: "Complex deals, handled with experience",
       sectionText:
         "Land and large assets need careful structuring. We work on single plots and multiple plots, joint ventures, and transactions involving warehouses, buildings and hotels. We source, evaluate and negotiate on your behalf.",
@@ -383,7 +387,6 @@ export const en = {
       eyebrow: "Investor Services",
       title: "Investor Services",
       intro: "Finding, evaluating and closing real estate investments in Dubai and across the UAE, for local and international investors.",
-      imageLabel: "Investors hero: Dubai financial district at night",
       featureAlt: "A consultant advising an investor in a Dubai office with a view of the skyline",
       sectionTitle: "Invest with clarity, not guesswork",
       sectionText:
