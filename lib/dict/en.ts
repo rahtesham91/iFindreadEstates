@@ -376,6 +376,40 @@ export const en = {
         { title: "Hotels and Hospitality", text: "Hotel and hospitality assets for qualified buyers and sellers." },
         { title: "Warehouses", text: "Industrial and logistics properties for sale or lease." },
       ],
+      sections: [
+        {
+          eyebrow: "Buildings",
+          title: "Whole buildings, bought and sold with care",
+          text: "Buildings are significant assets and need careful evaluation. We handle whole-building acquisitions and sales for investors and end users, from first introduction to completion.",
+          points: [
+            { title: "Whole-Building Acquisitions", text: "Sourcing and evaluating buildings that match your brief." },
+            { title: "Building Sales", text: "Positioning and negotiation for owners who want to sell." },
+            { title: "Warehouses", text: "Industrial and logistics properties for sale or lease." },
+          ],
+          alts: ["Waterfront high-rise towers in Dubai under a blue sky", "Dubai high-rise skyline with the Burj Khalifa"],
+        },
+        {
+          eyebrow: "Hotels",
+          title: "Hotels and hospitality assets",
+          text: "Hotel and hospitality assets for qualified buyers and sellers. We approach each opportunity with discretion, and tell you honestly what we can and cannot do.",
+          points: [
+            { title: "Hotels and Hospitality", text: "Hotel and hospitality assets for qualified buyers and sellers." },
+            { title: "Discreet Handling", text: "Confidential introductions and careful communication." },
+          ],
+          alts: ["Luxury hotel entrance with fountains at dusk"],
+        },
+        {
+          eyebrow: "Land",
+          title: "Plots and land across the UAE",
+          text: "Land needs careful structuring. We work on single plots and multiple plots, and on joint ventures between landowners and developers.",
+          points: [
+            { title: "Plot Sales and Purchases", text: "Residential, commercial and mixed-use land across the UAE." },
+            { title: "Multiple Plots", text: "Assembling or selling several plots together as a single transaction." },
+            { title: "Joint Ventures", text: "Introductions and deal structuring between landowners and developers." },
+          ],
+          alts: ["Open plots of land in Dubai with the city skyline behind", "Aerial map view of a master-planned plot area"],
+        },
+      ],
       closing: {
         title: "Looking outside the UAE?",
         text: "We can also discuss land opportunities beyond the UAE. Tell us what you are looking for and we will let you know honestly what we can do.",
