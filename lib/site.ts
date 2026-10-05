@@ -189,6 +189,14 @@ export const team: TeamMember[] = [
     bio: "Waqar Shah is a real estate expert in Dubai's off-plan market, with 2 years of experience and an IT background since 2014. He offers smart, tech-driven investment guidance. Known for integrity and clear communication, he supports a diverse clientele. Whether you're a buyer or investor, Waqar helps you unlock top opportunities.",
   },
   {
+    slug: "fayyaz-khan",
+    name: "Fayyaz Khan",
+    role: "Public Relations Officer (PRO)",
+    photo: "/team/fayyaz-khan-v4.webp",
+    email: "fayaz@ifindrealestates.com",
+    phone: "+971 55 744 7287",
+  },
+  {
     slug: "essam-nabil",
     name: "Essam Nabil",
     role: "Senior Sales Executive",
