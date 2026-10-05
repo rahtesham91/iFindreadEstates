@@ -159,7 +159,7 @@ export const team: TeamMember[] = [
     role: "Digital Marketing Manager",
     email: "ehtesham@ifindrealestates.com",
     phone: "+971 54 500 1576",
-    // photo: to be added when supplied
+    photo: "/team/ehtesham-nazir-v4.webp",
   },
   {
     slug: "dario-linus",
