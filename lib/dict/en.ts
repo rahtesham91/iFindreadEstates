@@ -214,7 +214,7 @@ export const en = {
     teamTitle: "The people behind iFind",
     teamButton: "Meet the Team",
     alt: {
-      hero: "Luxury waterfront villa with a pool at sunset",
+      hero: "Aerial view of Dubai skyscrapers",
       why: "Luxury interior with a glass and marble staircase",
       investors: "Dubai skyline and the Burj Khalifa at sunset",
     },
