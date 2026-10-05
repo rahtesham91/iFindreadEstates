@@ -131,7 +131,7 @@ export default function Home() {
       <section className="border-t border-line bg-char py-16 sm:py-28">
         <div className="container-page">
           <SectionHeading eyebrow="Our Team" title="The people behind iFind" />
-          <ul className="mt-12 grid grid-cols-2 gap-x-4 gap-y-10 sm:mt-16 sm:gap-x-8 lg:grid-cols-3">
+          <ul className="mt-12 grid grid-cols-2 gap-x-4 gap-y-10 sm:mt-16 sm:gap-x-8 lg:grid-cols-4">
             {leadership.map((m) => (
               <li key={m.slug}>
                 <TeamCard member={m} compact />

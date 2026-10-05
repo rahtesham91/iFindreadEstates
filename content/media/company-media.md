@@ -58,12 +58,9 @@ WordPress media library has 210 files; the 2016-2020 ones (about 110) belong to 
 | 2025-04-26 | Abid afridi – MD | 4166x6250 | https://ifindrealestates.com/wp-content/uploads/2025/04/Abid-afridi-MD.png | about |
 | 2025-04-26 | Shah Waqar Uddin (Essaam agent) | 4166x6250 | https://ifindrealestates.com/wp-content/uploads/2025/04/Shah-Waqar-Uddin-Essaam-agent.png | - |
 | 2025-04-26 | Avaid Lateef Founder & CEO | 4166x6250 | https://ifindrealestates.com/wp-content/uploads/2025/04/Avaid-Lateef-Founder-CEO.png | - |
-| 2025-04-26 | Ekatrina (Realestate Broker ) | 4166x6250 | https://ifindrealestates.com/wp-content/uploads/2025/04/Ekatrina-Realestate-Broker-.png | about |
 | 2025-04-28 | Esaam (Realestate Broker) | 4166x6250 | https://ifindrealestates.com/wp-content/uploads/2025/04/Esaam-Realestate-Broker.png | about |
 | 2025-04-28 | Muzamal Hameed (Sales Manager) | 4166x6250 | https://ifindrealestates.com/wp-content/uploads/2025/04/Muzamal-Hameed-Sales-Manager.png | about |
 | 2025-04-28 | image | 1913x1075 | https://ifindrealestates.com/wp-content/uploads/2025/04/image.png | - |
-| 2025-04-29 | Ekatrina | 6250x6250 | https://ifindrealestates.com/wp-content/uploads/2016/02/Ekatrina.png | - |
-| 2025-04-29 | Ekatrina | 6250x6250 | https://ifindrealestates.com/wp-content/uploads/2016/02/Ekatrina-1.png | agent/brittany-watkins, agents-2, board |
 | 2025-04-29 | Shah Waqar | 6250x6250 | https://ifindrealestates.com/wp-content/uploads/2016/02/Shah-Waqar.png | agent/michelle-ramirez, agents-2, board |
 | 2025-04-29 | Esaam | 6250x6250 | https://ifindrealestates.com/wp-content/uploads/2016/02/Esaam-.png | agent/vincent-fuller, agents-2, board |
 | 2025-04-29 | download (2) | 275x183 | https://ifindrealestates.com/wp-content/uploads/2025/04/download-2.jpeg | - |

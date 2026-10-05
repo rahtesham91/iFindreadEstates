@@ -124,7 +124,7 @@ export const memberContact = (m: TeamMember) => {
 };
 
 // Team names and photos from the company's previous website. The bios and languages are kept here for later use but are not
-// shown on the cards. Some designations below (Waqar, Ekaterina, Essam, Dario) are placeholders until the company confirms them.
+// shown on the cards. Some designations below (Waqar, Essam, Dario) are placeholders until the company confirms them.
 export const team: TeamMember[] = [
   {
     slug: "abid-khan",
@@ -154,6 +154,14 @@ export const team: TeamMember[] = [
     bio: "Muzamal Hameed is a skilled Sales Manager dedicated to helping clients find the perfect property. With strong market knowledge and a client-focused approach, he ensures smooth and successful real estate transactions.",
   },
   {
+    slug: "ehtesham-nazir",
+    name: "Ehtesham Nazir",
+    role: "Digital Marketing Manager",
+    email: "ehtesham@ifindrealestates.com",
+    phone: "+971 54 500 1576",
+    // photo: to be added when supplied
+  },
+  {
     slug: "dario-linus",
     name: "Dario Linus",
     role: "Property Consultant", // placeholder designation until confirmed
@@ -179,14 +187,6 @@ export const team: TeamMember[] = [
     bio: "Waqar Shah is a real estate expert in Dubai's off-plan market, with 2 years of experience and an IT background since 2014. He offers smart, tech-driven investment guidance. Known for integrity and clear communication, he supports a diverse clientele. Whether you're a buyer or investor, Waqar helps you unlock top opportunities.",
   },
   {
-    slug: "ekaterina",
-    name: "Ekaterina",
-    role: "Property Consultant",
-    photo: "/team/ekaterina-v3.webp",
-    languages: ["Russian", "Spanish", "English"],
-    bio: "Originally a professional figure skater with 9 years of experience and participation in national championships in Russia, Ekaterina brings the same discipline, precision, and drive to her career in Dubai real estate. She now helps clients navigate the Dubai property market with the dedication of a true athlete.",
-  },
-  {
     slug: "essam-nabil",
     name: "Essam Nabil",
     role: "Senior Sales Executive",
@@ -197,7 +197,7 @@ export const team: TeamMember[] = [
   },
 ];
 
-export const leadership = team.slice(0, 3);
+export const leadership = team.slice(0, 4);
 
 // Founder & CEO: wording from the company's previous website, with the company name updated.
 export const ceo = {

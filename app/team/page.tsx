@@ -55,7 +55,7 @@ export default function Page() {
             <h2 className="font-serif text-3xl sm:text-4xl">Leadership</h2>
             <div className="mb-2 h-px flex-1 bg-line" />
           </div>
-          <ul className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
             {leadership.map((m, i) => (
               <li key={m.slug}>
                 <TeamCard member={m} priority={i < 2} />
@@ -71,7 +71,7 @@ export default function Page() {
             <h2 className="font-serif text-3xl sm:text-4xl">Specialists &amp; Support</h2>
             <div className="mb-2 h-px flex-1 bg-line" />
           </div>
-          <ul className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
             {specialists.map((m) => (
               <li key={m.slug}>
                 <TeamCard member={m} />

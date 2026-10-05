@@ -23,10 +23,6 @@ Waqar Shah is a real estate expert in Dubai’s off-plan market, with 2 years of
 
 Farwa Khan brings extensive expertise in both real estate sales and operations, specializing in both off-plan and secondary market sales. With a focus on client satisfaction and smooth transactions, she is dedicated to helping clients find the right properties while driving business growth. Fluent in English, Urdu, and Hindi.
 
-## Ekaterina
-**Realestate Expert**
-
-Originally a professional figure skater with 9 years of experience and participation in national championships in Russia, Ekaterina brings the same discipline, precision, and drive to her career in Dubai real estate. Fluent in Russian, Spanish, and English, she now helps clients navigate the Dubai property market with the dedication of a true athlete.
 
 ## ESSAM NABIL
 **Realestate Expert**
@@ -39,10 +35,6 @@ Property Consultant with a strong hospitality background, specialized in guiding
 
 The old site also has Houzez 'agent' pages for four people. Their licence numbers, phone numbers, languages, service areas and reviews are theme demo data and are NOT included.
 
-### Ekatrina
-Originally a professional figure skater with 9 years of experience and participation in national championships in Russia, Ekaterina brings the same discipline, precision, and drive to her career in Dubai real estate. Fluent in Russian, Spanish, and English, she now helps clients navigate the Dubai property market with the dedication of a true athlete.
-
-Profile page: https://ifindrealestates.com/agent/brittany-watkins/
 
 ### ESSAM NABIL
 Property Consultant with a strong hospitality background, specialized in guiding clients through every step of the real estate journey whether buying, selling, or investing. He is Fluent in Arabic and English, provide strategic advice, transparent communication, and tailored property solutions to meet each client’s unique needs.
