@@ -43,7 +43,7 @@ export default async function Page({ params }: P) {
             {a.heroH1a} <span className="text-gold-400">{a.heroH1b}</span>
           </h1>
           <div className="gold-rule mt-7" />
-          <p className="t-lede mt-7 max-w-2xl">{a.lede}</p>
+          <p className="t-body mt-7 max-w-2xl">{a.lede}</p>
         </div>
       </section>
 
@@ -65,14 +65,14 @@ export default async function Page({ params }: P) {
                 <div className="gold-rule mt-6" />
               </figcaption>
               <blockquote className="mt-7 space-y-5">
-                <p className="t-lede !text-ivory">{c.messageA}</p>
+                <p className="t-body !text-ivory">{c.messageA}</p>
                 <p className="t-body">{c.messageB}</p>
               </blockquote>
-              <p className="mt-8 border-t border-line pt-6 text-sm font-medium text-gold-400">
+              <p className="mt-8 border-t border-line pt-6 text-base font-medium text-gold-400">
                 {c.full}
-                <span className="block pt-1 text-xs font-normal text-mute">{c.signatureLine}</span>
+                <span className="block pt-1 text-base font-normal text-mute">{c.signatureLine}</span>
               </p>
-              <a href={`mailto:${ceo.email}`} dir="ltr" className="ltr-text mt-3 text-sm text-mute transition-colors hover:text-gold-400">{ceo.email}</a>
+              <a href={`mailto:${ceo.email}`} dir="ltr" className="ltr-text mt-3 text-base text-mute transition-colors hover:text-gold-400">{ceo.email}</a>
             </figure>
           </Reveal>
         </div>
@@ -84,7 +84,7 @@ export default async function Page({ params }: P) {
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 100} className="px-2 py-10 text-center sm:px-8 sm:py-14">
               <dt className="t-figure text-gold-400">{s.value}</dt>
-              <dd className="t-small mx-auto mt-4 max-w-[16rem]">{s.label}</dd>
+              <dd className="t-body mx-auto mt-4 max-w-[16rem]">{s.label}</dd>
             </Reveal>
           ))}
         </dl>
@@ -97,17 +97,13 @@ export default async function Page({ params }: P) {
             <p className="eyebrow mb-4">{a.whoEyebrow}</p>
             <h2 className="t-h2">{a.whoTitle}</h2>
             <div className="gold-rule mt-6" />
-            <div className="mt-8 border-s border-gold-500/60 ps-5">
-              <p className="text-sm font-medium text-gold-400">{d.orn}</p>
-              <p className="t-small mt-2">{d.address}</p>
-            </div>
           </Reveal>
           <Reveal delay={150} className="space-y-5">
             {a.intro.map((p, i) => (
-              <p key={i} className={i === 0 ? "t-lede !text-ivory" : "t-body"}>
-                {p}
-              </p>
+              <p key={i} className="t-body">{p}</p>
             ))}
+            <p className="pt-2 text-base font-medium text-gold-400">{a.signoff}</p>
+            <p className="t-body border-t border-line pt-5">{a.whoMeta}</p>
           </Reveal>
         </div>
       </section>
@@ -142,11 +138,11 @@ export default async function Page({ params }: P) {
           </Reveal>
           <Reveal delay={150} className="space-y-5">
             {a.visionText.map((t, i) => (
-              <p key={i} className={i === 0 ? "t-lede !text-ivory" : i === a.visionText.length - 1 ? "t-body border-s-2 border-gold-500/70 ps-5 !text-ivory/90" : "t-body"}>
+              <p key={i} className={i === a.visionText.length - 1 ? "t-body border-s-2 border-gold-500/70 ps-5 !text-ivory/90" : "t-body"}>
                 {t}
               </p>
             ))}
-            <p className="pt-2 text-sm font-medium text-gold-400">{a.signoff}</p>
+            <p className="pt-2 text-base font-medium text-gold-400">{a.signoff}</p>
           </Reveal>
         </div>
       </section>
@@ -161,11 +157,11 @@ export default async function Page({ params }: P) {
           </Reveal>
           <Reveal delay={150} className="space-y-5">
             {a.missionText.map((t, i) => (
-              <p key={i} className={i === 0 ? "t-lede !text-ivory" : i === a.missionText.length - 1 ? "t-body border-s-2 border-gold-500/70 ps-5 !text-ivory/90" : "t-body"}>
+              <p key={i} className={i === a.missionText.length - 1 ? "t-body border-s-2 border-gold-500/70 ps-5 !text-ivory/90" : "t-body"}>
                 {t}
               </p>
             ))}
-            <p className="pt-2 text-sm font-medium text-gold-400">{a.signoff}</p>
+            <p className="pt-2 text-base font-medium text-gold-400">{a.signoff}</p>
           </Reveal>
         </div>
       </section>
@@ -184,7 +180,7 @@ export default async function Page({ params }: P) {
                 <div className="border-t border-gold-500/60 pt-5">
                   <span className="t-h4 text-gold-500">{String(i + 1).padStart(2, "0")}</span>
                   <dt className="t-h3 mt-2">{v.title}</dt>
-                  <dd className="t-small mt-3">{v.text}</dd>
+                  <dd className="t-body mt-3">{v.text}</dd>
                 </div>
               </Reveal>
             ))}
@@ -205,7 +201,7 @@ export default async function Page({ params }: P) {
               <li key={s.slug} className="bg-ink">
                 <LocLink href={s.href} className="group block h-full p-8 transition-colors hover:bg-panel">
                   <h3 className="t-h3 transition-colors group-hover:text-gold-400">{d.services[i].title}</h3>
-                  <p className="t-small mt-3">{d.services[i].short}</p>
+                  <p className="t-body mt-3">{d.services[i].short}</p>
                 </LocLink>
               </li>
             ))}
