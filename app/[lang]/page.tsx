@@ -66,12 +66,12 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       {/* Why */}
-      <section className="border-y border-line bg-char py-16 sm:py-24">
-        <div className="container-page grid gap-16 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+      <section className="pb-14 pt-2 sm:border-y sm:border-line sm:bg-char sm:py-24">
+        <div className="container-page grid gap-8 sm:gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center lg:gap-16">
           <div className="relative aspect-[3/2] overflow-hidden border border-gold-500/50"><Image src="/home/why-skyline.webp" alt={h.alt.why} fill quality={85} sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" /></div>
           <div>
             <SectionHeading eyebrow={h.whyEyebrow} title={h.whyTitle} />
-            <dl className="mt-12 grid gap-10 sm:grid-cols-2">
+            <dl className="mt-8 grid gap-8 sm:mt-12 sm:grid-cols-2 sm:gap-10">
               {h.why.map((w) => (
                 <div key={w.title} className="border-t border-gold-500/60 pt-5">
                   <dt className="t-h3">{w.title}</dt>
@@ -97,7 +97,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       </section>
 
       {/* Investors */}
-      <section className="border-y border-line bg-char py-16 sm:py-24">
+      <section className="py-14 sm:border-y sm:border-line sm:bg-char sm:py-24">
         <div className="container-page grid gap-16 lg:grid-cols-2 lg:items-center">
           <div>
             <SectionHeading
