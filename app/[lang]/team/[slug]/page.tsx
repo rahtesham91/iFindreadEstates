@@ -108,7 +108,7 @@ export default async function Page({ params }: P) {
 
               {bio && (
                 <section aria-label={fill(t.profile.about, v)} className="mt-7">
-                  <div className="max-w-2xl space-y-4">{bio.map((b) => <p key={b} className="t-body">{b}</p>)}</div>
+                  <div className="max-w-2xl space-y-4 border border-line bg-char p-5 sm:p-7">{bio.map((b) => <p key={b} className="t-body t-justify">{b}</p>)}</div>
                 </section>
               )}
 

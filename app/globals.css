@@ -103,6 +103,13 @@ body {
   .t-body {
     @apply font-sans text-base leading-[1.8] text-mute;
   }
+  /* Long text blocks: even left and right edges, hyphenated so lines stay evenly filled. */
+  .t-justify {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
   .t-small {
     @apply font-sans text-sm leading-relaxed text-mute;
   }

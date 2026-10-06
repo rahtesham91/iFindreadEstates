@@ -65,8 +65,8 @@ export default async function Page({ params }: P) {
                 <div className="gold-rule mt-6" />
               </figcaption>
               <blockquote className="mt-7 space-y-5">
-                <p className="t-body !text-ivory">{c.messageA}</p>
-                <p className="t-body">{c.messageB}</p>
+                <p className="t-body t-justify !text-ivory">{c.messageA}</p>
+                <p className="t-body t-justify">{c.messageB}</p>
               </blockquote>
               <p className="mt-8 border-t border-line pt-6 text-base font-medium text-gold-400">
                 {c.full}
@@ -100,7 +100,7 @@ export default async function Page({ params }: P) {
           </Reveal>
           <Reveal delay={150} className="space-y-5">
             {a.intro.map((p, i) => (
-              <p key={i} className="t-body">{p}</p>
+              <p key={i} className="t-body t-justify">{p}</p>
             ))}
             <p className="pt-2 text-base font-medium text-gold-400">{a.signoff}</p>
             <p className="t-body border-t border-line pt-5">{a.whoMeta}</p>
@@ -118,7 +118,7 @@ export default async function Page({ params }: P) {
               {mdp.name.split(" ")[0]} <span className="text-gold-400">{mdp.name.split(" ").slice(1).join(" ")}</span>
             </h2>
             <div className="gold-rule mt-6" />
-            <p className="t-body mt-7">{d.mdBio}</p>
+            <p className="t-body t-justify mt-7">{d.mdBio}</p>
             <LocLink href="/team/abid-khan" className="btn-ghost mt-8">{a.mdProfile}</LocLink>
             <LocLink href="/team" className="btn-ghost mt-3 sm:ms-3">{a.mdButton}</LocLink>
           </Reveal>
@@ -138,7 +138,7 @@ export default async function Page({ params }: P) {
           </Reveal>
           <Reveal delay={150} className="space-y-5">
             {a.visionText.map((t, i) => (
-              <p key={i} className={i === a.visionText.length - 1 ? "t-body border-s-2 border-gold-500/70 ps-5 !text-ivory/90" : "t-body"}>
+              <p key={i} className={i === a.visionText.length - 1 ? "t-body t-justify border-s-2 border-gold-500/70 ps-5 !text-ivory/90" : "t-body t-justify"}>
                 {t}
               </p>
             ))}
@@ -157,7 +157,7 @@ export default async function Page({ params }: P) {
           </Reveal>
           <Reveal delay={150} className="space-y-5">
             {a.missionText.map((t, i) => (
-              <p key={i} className={i === a.missionText.length - 1 ? "t-body border-s-2 border-gold-500/70 ps-5 !text-ivory/90" : "t-body"}>
+              <p key={i} className={i === a.missionText.length - 1 ? "t-body t-justify border-s-2 border-gold-500/70 ps-5 !text-ivory/90" : "t-body t-justify"}>
                 {t}
               </p>
             ))}
