@@ -470,6 +470,123 @@ export const en = {
     },
     "partnersEyebrow": "Our Developer Partners"
   },
+  ehteshamPage: {
+    "metaTitle": "Ehtesham Nazir, Digital Marketing Manager | Performance Marketing & Digital Growth",
+    "metaDescription": "Ehtesham Nazir is a senior performance marketing and digital growth leader with 10 years engineering paid media, SEO and AI automation into predictable pipeline. Digital Marketing Manager at iFind Real Estate, Dubai.",
+    "eyebrow": "Senior Performance Marketing & Digital Growth Leader",
+    "h1": "Performance marketing, engineered.",
+    "lede": "I am Ehtesham Nazir — a senior digital growth leader with 10 years engineering performance marketing, SEO and AI automation into predictable pipeline for operators in real estate, technology and fintech.",
+    "cta": "Book a strategy call",
+    "ctaWhatsApp": "Message me on WhatsApp",
+    "portfolio": "View my portfolio",
+    "ticker": [
+      "Real Estate",
+      "Technology",
+      "AI Automation",
+      "Fintech",
+      "Performance Media",
+      "SEO"
+    ],
+    "stats": [
+      {
+        "value": "10",
+        "label": "Years in digital marketing"
+      },
+      {
+        "value": "7",
+        "label": "Core disciplines"
+      },
+      {
+        "value": "4",
+        "label": "Roles across Dubai and Pakistan"
+      }
+    ],
+    "about": {
+      "eyebrow": "01 — About",
+      "title": "A growth operator, not a generalist.",
+      "paragraphs": [
+        "For over nine years I have built and led performance programs for operators competing in the most demanding verticals online — real estate, technology and AI-first products.",
+        "Today I lead digital growth at iFind Real Estate in Dubai, owning performance media, SEO, lifecycle, AI automation and analytics. Before that I led acquisition and marketing for international digital brands and for a B2B technology business in the UAE.",
+        "Founders and executive teams come to me when paid channels have plateaued, the funnel is leaking, or reporting no longer answers the questions the board is asking. I rebuild the growth engine, lead the team through it, and hand back a system that compounds."
+      ]
+    },
+    "expertise": {
+      "eyebrow": "02 — Core Expertise",
+      "title": "Seven disciplines. One accountable practice.",
+      "lead": "Strategy to execution, media to team leadership — every discipline reports to the same P&L.",
+      "items": [
+        {
+          "title": "Performance Marketing",
+          "text": "Full-funnel paid media across Google, Meta, programmatic and native — engineered for CAC, LTV and payback, not impressions."
+        },
+        {
+          "title": "SEO & Organic Growth",
+          "text": "Technical SEO, content architecture and topical authority for competitive verticals where ranking is a moat, not a bonus."
+        },
+        {
+          "title": "Lead Generation",
+          "text": "Predictable pipeline built on qualified intent, landing-page conversion science and lifecycle nurture across every touchpoint."
+        },
+        {
+          "title": "AI Automation",
+          "text": "Marketing operations powered by LLMs, agents and workflow automation — scaling output without scaling headcount."
+        },
+        {
+          "title": "Digital Growth Strategy",
+          "text": "Market entry, positioning and go-to-market plans for real estate and technology brands scaling into MENA and beyond."
+        },
+        {
+          "title": "Analytics & Attribution",
+          "text": "GA4, server-side tracking, warehouse-first reporting and incrementality testing so leadership sees the truth, not the dashboard."
+        },
+        {
+          "title": "Team Leadership",
+          "text": "Building and mentoring cross-functional growth teams — media buyers, SEO specialists, designers and analysts — inside the operator."
+        }
+      ],
+      "cardTitle": "Let’s build your growth engine.",
+      "cardText": "Tell me where growth has stalled and I will show you where to start."
+    },
+    "track": {
+      "eyebrow": "03 — Track record",
+      "title": "Ten years of compounding practice.",
+      "lead": "A track record built inside the operators — not consulting from the outside.",
+      "roles": [
+        {
+          "period": "Present",
+          "title": "Digital Marketing Manager",
+          "company": "iFind Real Estate LLC · Dubai, UAE",
+          "text": "Leading digital growth for a Dubai real estate brokerage — Google Ads, Meta, SEO, CRM and lead-generation funnels engineered for qualified property inquiries."
+        },
+        {
+          "period": "Jan 2022 — Mar 2026",
+          "title": "Senior AI & Digital Marketing Manager",
+          "company": "International digital brands · Dubai, UAE",
+          "text": "Owned performance marketing, SEO, lifecycle and AI automation across international brands. Full accountability for paid, organic, analytics and the growth team."
+        },
+        {
+          "period": "Aug 2019 — Jan 2022",
+          "title": "SEO Manager",
+          "company": "One World IT Rental Middle East LLC · Dubai, UAE",
+          "text": "Drove digital strategy for a B2B technology rental business — SEO-led demand, paid search, landing-page CRO and analytics infrastructure supporting enterprise sales."
+        },
+        {
+          "period": "Aug 2016 — Aug 2019",
+          "title": "SEO Executive",
+          "company": "United Sol · Islamabad, Pakistan",
+          "text": "Delivered technical SEO, analytics and web work for early-stage operators — the foundation of the growth practice today."
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "04 — Let’s talk",
+      "title": "Where is your growth stalling?",
+      "text": "Whether paid channels have plateaued, the funnel is leaking or reporting no longer answers the right questions — start a conversation.",
+      "call": "Call",
+      "email": "Email"
+    },
+    "photoAlt": "Ehtesham Nazir, Digital Marketing Manager at iFind Real Estate"
+  },
   offplanPage: {
     "metaTitle": "Off-Plan Properties in Dubai: Invest with the Right Advice | iFind Real Estate",
     "metaDescription": "Off-plan investment in Dubai guided by comparison across developers: project and unit selection, payment plans, reservation to SPA, escrow framework, handover and after-handover support.",

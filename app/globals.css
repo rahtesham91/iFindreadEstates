@@ -158,3 +158,17 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Scrolling ticker (used on Ehtesham Nazir's profile) */
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+}
+[dir="rtl"] .ticker-track {
+  animation-direction: reverse;
+}

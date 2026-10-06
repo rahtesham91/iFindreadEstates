@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Ornament from "@/components/Ornament";
 import PortraitFrame from "@/components/PortraitFrame";
 import CtaBand from "@/components/CtaBand";
+import EhteshamProfile from "@/components/EhteshamProfile";
 import { LocLink } from "@/components/I18nProvider";
 import { site, team, memberContact } from "@/lib/site";
 import { getDict, fill } from "@/lib/dict";
@@ -20,8 +21,9 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
   const person = d.people[slug];
   const v = { name: person.name, role: person.role };
   const path = `/team/${slug}`;
-  const title = fill(d.team.profile.metaTitle, v);
-  const description = fill(d.team.profile.metaDescription, v);
+  const custom = slug === "ehtesham-nazir";
+  const title = custom ? d.ehteshamPage.metaTitle : fill(d.team.profile.metaTitle, v);
+  const description = custom ? d.ehteshamPage.metaDescription : fill(d.team.profile.metaDescription, v);
   return {
     title: { absolute: title },
     description,
@@ -53,6 +55,16 @@ export default async function Page({ params }: P) {
   const specs = t.specializations[slug];
   const phone = m.phone ?? site.phone;
   const url = `${site.url}${localize(lang, `/team/${slug}`)}`;
+
+  if (slug === "ehtesham-nazir") {
+    return (
+      <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([{ "@context": "https://schema.org", "@type": "Person", name: m.name, jobTitle: m.role, image: m.photo ? `${site.url}${m.photo}` : undefined, email: m.email, telephone: phone, url, sameAs: ["https://iamehtesham.com/"], worksFor: { "@type": "RealEstateAgent", name: site.legalName, url: site.url } }]) }} />
+        <EhteshamProfile d={d} />
+        <CtaBand />
+      </>
+    );
+  }
 
   const jsonLd = [
     {
