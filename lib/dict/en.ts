@@ -313,6 +313,85 @@ export const en = {
     mapTitle: "iFind Real Estate office location on Google Maps",
     openMap: "Open in Google Maps",
   },
+  developersPage: {
+    "metaTitle": "Developer Properties in Dubai: Compare Developers & Projects | iFind Real Estate",
+    "metaDescription": "Compare Dubai developers and projects by price, location, payment plan, yield and handover before you buy. iFind brokers represent your requirements first.",
+    "eyebrow": "Developer Properties",
+    "h1": "Your Budget. Your Goals. The Right Dubai Property.",
+    "intro": [
+      "With hundreds of projects and multiple developers competing across Dubai, choosing the right property should not be based on one project presentation alone.",
+      "At iFind Real Estate LLC, we work as professional real estate brokers representing the client's requirements first.",
+      "Tell us your budget, preferred payment structure, investment timeline and objectives, and our team evaluates suitable opportunities across multiple developers and projects in the Dubai market."
+    ],
+    "inputsLabel": "Tell us your",
+    "inputs": [
+      "Budget",
+      "Preferred payment structure",
+      "Investment timeline",
+      "Objectives"
+    ],
+    "compare": {
+      "eyebrow": "Our Method",
+      "title": "We Compare Before We Recommend",
+      "lead": "Instead of presenting you with only one developer or one project, we compare relevant options based on factors such as:",
+      "items": [
+        "Property price and overall value",
+        "Location and future development potential",
+        "Developer track record",
+        "Payment plans and financing considerations",
+        "Expected rental demand and potential yield",
+        "Capital appreciation potential",
+        "Project quality, amenities and positioning",
+        "Handover timeline",
+        "Service charges and other relevant ownership costs",
+        "Exit and resale considerations"
+      ],
+      "after": "Based on this analysis, we shortlist the opportunities that best match your budget, risk profile and investment objectives."
+    },
+    "advice": {
+      "eyebrow": "Your Advisor",
+      "title": "Investment Advice Built Around You",
+      "paragraphs": [
+        "A property that works for one investor may not necessarily be right for another.",
+        "Whether your objective is rental income, long-term capital appreciation, a flexible payment plan, portfolio diversification or purchasing a future home, our brokers help you understand the available choices before you make a commitment.",
+        "Where appropriate, we can also compare different unit types, communities and developers to help identify opportunities with stronger potential based on current market information and your individual requirements."
+      ],
+      "tagsLabel": "Your objective may be",
+      "tags": [
+        "Rental income",
+        "Long-term capital appreciation",
+        "A flexible payment plan",
+        "Portfolio diversification",
+        "Purchasing a future home"
+      ]
+    },
+    "role": {
+      "eyebrow": "Our Role",
+      "title": "We Don't Just Sell a Project. We Help You Choose the Right One.",
+      "paragraphs": [
+        "Our role is to simplify the Dubai property market for you.",
+        "From understanding your requirements and comparing developers to project selection, negotiation, booking and transaction coordination, iFind Real Estate provides professional guidance throughout your investment journey."
+      ],
+      "stepsLabel": "Your journey with iFind",
+      "steps": [
+        "Understanding your requirements",
+        "Comparing developers",
+        "Project selection",
+        "Negotiation",
+        "Booking",
+        "Transaction coordination"
+      ]
+    },
+    "statement": [
+      "Because a good investment decision isn't about buying what's being promoted the most.",
+      "It's about finding what makes the most sense for you."
+    ],
+    "closing": {
+      "company": "iFind Real Estate LLC",
+      "tagline": "Compare Better. Choose Smarter. Invest with Confidence."
+    },
+    "partnersEyebrow": "Our Developer Partners"
+  },
   landPage: {
     "metaTitle": "Land, Buildings & Private Investment Assets in Dubai | iFind Real Estate",
     "metaDescription": "Private and off-market sale and acquisition of buildings, hotels, land, villas and investment assets in Dubai, coordinated from strategy and due diligence to final transfer under DLD and RERA requirements.",
