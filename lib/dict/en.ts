@@ -313,6 +313,438 @@ export const en = {
     mapTitle: "iFind Real Estate office location on Google Maps",
     openMap: "Open in Google Maps",
   },
+  landPage: {
+    "metaTitle": "Land, Buildings & Private Investment Assets in Dubai | iFind Real Estate",
+    "metaDescription": "Private and off-market sale and acquisition of buildings, hotels, land, villas and investment assets in Dubai, coordinated from strategy and due diligence to final transfer under DLD and RERA requirements.",
+    "eyebrow": "Land, Buildings & Private Investment Assets",
+    "h1": "Private Access. Serious Capital. Complete Execution.",
+    "statement": "Some real estate assets should not be marketed to everyone.",
+    "intro": [
+      "At iFind Real Estate LLC, our Land & Buildings division is designed for owners and investors dealing with substantial real estate assets — including residential and commercial buildings, investment properties, hotels and hospitality assets, villas and villa portfolios, development plots, commercial land and other high-value real estate opportunities across Dubai.",
+      "Through our established relationships with private investors, family offices, high-net-worth individuals, institutional buyers, developers and investment groups in the UAE and internationally, we create a direct connection between serious assets and serious capital.",
+      "Our role extends beyond introducing a buyer and seller. We coordinate the transaction from initial strategy and commercial assessment through negotiations, due diligence, documentation and final transfer, working within the applicable Dubai Land Department and RERA framework."
+    ],
+    "owners": {
+      "eyebrow": "For Property Owners",
+      "challenge": {
+        "title": "Selling a Major Asset Without Exposing It to the Entire Market",
+        "lead": [
+          "Selling a building, hotel, land parcel or substantial investment asset is very different from selling a conventional residential property.",
+          "For many owners, widespread advertising is neither necessary nor desirable."
+        ],
+        "kind": "list",
+        "label": "An owner may want to:",
+        "items": [
+          "Maintain complete discretion around the proposed sale.",
+          "Avoid unnecessary exposure across multiple property portals.",
+          "Protect tenants, employees, operators or existing commercial relationships.",
+          "Avoid circulating sensitive financial and property information publicly.",
+          "Reach genuine investors rather than receiving unqualified enquiries.",
+          "Establish the right market positioning before approaching buyers.",
+          "Negotiate with parties who have the financial capacity to complete.",
+          "Manage complex legal, commercial and transaction documentation professionally."
+        ],
+        "after": [] as string[]
+      },
+      "solution": {
+        "title": "Private & Targeted Asset Disposal",
+        "lead": [
+          "At iFind, selected assets can be handled through a confidential, targeted sale process rather than broad public-market exposure.",
+          "Subject to the owner's instructions and applicable regulatory requirements, we can introduce an asset directly to selected investors from our network without relying solely on mass-market property portals."
+        ],
+        "kind": "none",
+        "label": "",
+        "items": [] as string[],
+        "after": [] as string[]
+      },
+      "subs": [
+        {
+          "title": "Confidential Off-Market Positioning",
+          "lead": [
+            "For owners seeking discretion, we can structure the sale around controlled information distribution.",
+            "Instead of exposing sensitive information to the entire marketplace, detailed information may be shared progressively with appropriately qualified parties.",
+            "Where appropriate, this can include:"
+          ],
+          "kind": "flow",
+          "label": "",
+          "items": [
+            "Initial Opportunity",
+            "Buyer Qualification",
+            "NDA/Confidentiality",
+            "Financial Capability",
+            "Detailed Asset Information",
+            "Negotiation",
+            "Due Diligence",
+            "Contract",
+            "Transfer"
+          ],
+          "after": [
+            "This allows an owner to maintain greater control over who sees the asset, what information is disclosed and at what stage of the transaction."
+          ]
+        },
+        {
+          "title": "Access to Qualified Capital",
+          "lead": [
+            "Our network extends beyond conventional property enquiries.",
+            "iFind maintains relationships with investors and acquisition parties across Dubai and international markets, allowing us to connect suitable assets with:"
+          ],
+          "kind": "chips",
+          "label": "",
+          "items": [
+            "High-Net-Worth Individuals",
+            "Family Offices",
+            "Private Investors",
+            "Developers",
+            "Investment Groups",
+            "Corporate Buyers",
+            "Hospitality Investors",
+            "International Capital"
+          ],
+          "after": [
+            "Our objective is not to generate the highest number of enquiries.",
+            "Our objective is to identify the right buyer."
+          ]
+        },
+        {
+          "title": "Asset Positioning & Commercial Assessment",
+          "lead": [
+            "Before approaching the market, we work with the owner to understand the asset commercially.",
+            "Depending on the property, this may involve reviewing:"
+          ],
+          "kind": "chips",
+          "label": "",
+          "items": [
+            "Location & Land Value",
+            "Existing Rental Income",
+            "Occupancy",
+            "Lease Profile",
+            "Operating Performance",
+            "Development Potential",
+            "Plot & Built-Up Area",
+            "Permitted Use",
+            "Comparable Transactions",
+            "Existing Financing or Mortgage Position",
+            "Potential Buyer Profile",
+            "Indicative Investment Yield",
+            "Potential Exit Strategy"
+          ],
+          "after": [
+            "This allows the asset to be positioned intelligently rather than simply advertised."
+          ]
+        },
+        {
+          "title": "Negotiation & Deal Structuring",
+          "lead": [
+            "Large transactions frequently involve more than agreeing on a headline price.",
+            "Our team assists in coordinating commercial negotiations relating to transaction structure, payment terms, deposits, timelines, conditions precedent, existing leases, financing considerations and completion requirements.",
+            "Our focus is to protect the owner's commercial position while keeping the transaction realistic and executable."
+          ],
+          "kind": "none",
+          "label": "",
+          "items": [] as string[],
+          "after": [] as string[]
+        },
+        {
+          "title": "Documentation & Legal Coordination",
+          "lead": [
+            "High-value transactions require disciplined documentation.",
+            "Together with appropriately qualified legal and professional advisers where required, iFind can coordinate the transaction documentation process, including confidentiality arrangements, expressions of interest, letters of intent, brokerage documentation, memoranda of understanding, sale and purchase documentation and supporting transaction documents.",
+            "All brokerage, marketing, advertising and transfer activities are undertaken subject to the applicable Dubai regulatory requirements."
+          ],
+          "kind": "none",
+          "label": "",
+          "items": [] as string[],
+          "after": [] as string[]
+        }
+      ]
+    },
+    "investors": {
+      "eyebrow": "For Investors & Buyers",
+      "challenge": {
+        "title": "The Best Asset May Never Reach a Property Portal",
+        "lead": [
+          "Major investors often face a different problem.",
+          "They have capital available but finding the right asset at the right valuation with the right fundamentals can be difficult.",
+          "Many significant owners prefer discretion, and some investment opportunities may therefore be circulated privately rather than through broad public advertising.",
+          "That means conventional online searching alone may not provide a complete view of potential acquisition opportunities."
+        ],
+        "kind": "none",
+        "label": "",
+        "items": [] as string[],
+        "after": [] as string[]
+      },
+      "solution": {
+        "title": "Access Beyond the Conventional Market",
+        "lead": [
+          "iFind works to connect qualified investors with suitable on-market and privately introduced opportunities across Dubai.",
+          "Depending on availability and the investor's acquisition criteria, these may include:"
+        ],
+        "kind": "chips",
+        "label": "",
+        "items": [
+          "Whole Buildings",
+          "Commercial Buildings",
+          "Residential Buildings",
+          "Hotels & Hospitality Assets",
+          "Income-Producing Properties",
+          "Warehouses & Industrial Assets",
+          "Commercial & Residential Land",
+          "Development Plots",
+          "Villa Portfolios",
+          "Single High-Value Villas",
+          "Redevelopment Opportunities",
+          "Strategic Land Holdings"
+        ],
+        "after": [
+          "Rather than presenting an investor with every available property, our approach is to understand the investment mandate first and then identify opportunities that merit further consideration."
+        ]
+      }
+    },
+    "strategy": {
+      "eyebrow": "Investment Acquisition Strategy",
+      "title": "We Start With the Investor — Not the Property",
+      "mandate": {
+        "title": "",
+        "lead": [
+          "Before recommending an acquisition, we seek to understand:"
+        ],
+        "kind": "chips",
+        "label": "",
+        "items": [
+          "Available Capital",
+          "Target Asset Class",
+          "Preferred Location",
+          "Investment Horizon",
+          "Income Requirements",
+          "Target Yield",
+          "Capital Appreciation Objectives",
+          "Development Strategy",
+          "Risk Parameters",
+          "Financing Requirements",
+          "Preferred Exit Strategy"
+        ],
+        "after": [
+          "Once the mandate is understood, our team can source and evaluate suitable opportunities."
+        ]
+      },
+      "analysis": {
+        "title": "Commercial & Investment Analysis",
+        "lead": [
+          "An attractive asking price does not automatically make an attractive investment.",
+          "Depending on the nature of the asset and information available, we can assist investors in reviewing relevant commercial factors such as:"
+        ],
+        "kind": "chips",
+        "label": "",
+        "items": [
+          "Purchase Price",
+          "Price Per Square Foot",
+          "Land Value",
+          "Existing Rental Income",
+          "Occupancy",
+          "Operating Expenses",
+          "Service Charges",
+          "Net Operating Income",
+          "Indicative Yield",
+          "Comparable Market Transactions",
+          "Potential Development or Repositioning Opportunity",
+          "Estimated Holding Costs",
+          "Financing Considerations",
+          "Potential Exit Value"
+        ],
+        "after": [
+          "Our objective is to help the investor understand the commercial logic behind an acquisition before proceeding."
+        ]
+      }
+    },
+    "diligence": {
+      "eyebrow": "Due Diligence Before Acquisition",
+      "title": "Know What You Are Buying",
+      "body": {
+        "title": "",
+        "lead": [
+          "Before completing a substantial acquisition, appropriate due diligence is critical.",
+          "Depending on the transaction and asset type, iFind can coordinate with the relevant qualified professionals and authorities to assist with reviewing matters such as:"
+        ],
+        "kind": "chips",
+        "label": "",
+        "items": [
+          "Ownership & Title Documentation",
+          "Mortgage or Encumbrance Position",
+          "Property Information",
+          "Existing Tenancies and Lease Documentation",
+          "Developer or Community Requirements",
+          "Land and Planning Information",
+          "Asset Valuation",
+          "Corporate Seller Documentation",
+          "Property Income Information",
+          "Transaction Documentation",
+          "Required NOCs and Approvals",
+          "Transfer Requirements"
+        ],
+        "after": [
+          "For hotels, commercial buildings and other operating assets, additional financial, operational, corporate, technical or legal due diligence may be required and can be coordinated with the relevant professional advisers."
+        ]
+      }
+    },
+    "process": {
+      "eyebrow": "From Opportunity to Ownership",
+      "title": "One Point of Coordination",
+      "paragraphs": [
+        "A major acquisition can involve owners, buyers, brokers, lawyers, banks, valuers, consultants, developers, trustees and government authorities.",
+        "iFind acts as a central real estate transaction coordinator, helping keep the process organised from beginning to completion."
+      ],
+      "stepsTitle": "Our Acquisition Process",
+      "steps": [
+        {
+          "title": "Investor Mandate",
+          "text": "We understand exactly what the investor wants to acquire."
+        },
+        {
+          "title": "Asset Sourcing",
+          "text": "We identify suitable public and privately introduced opportunities."
+        },
+        {
+          "title": "Preliminary Analysis",
+          "text": "We assess the commercial fundamentals of shortlisted assets."
+        },
+        {
+          "title": "Confidential Access",
+          "text": "Where required, confidentiality documentation and controlled information sharing are coordinated."
+        },
+        {
+          "title": "Buyer Qualification",
+          "text": "Financial capability and transaction readiness may be established before sensitive information is released."
+        },
+        {
+          "title": "Negotiation",
+          "text": "We coordinate commercial discussions between buyer and seller."
+        },
+        {
+          "title": "Due Diligence",
+          "text": "Legal, property, financial and other relevant checks are coordinated with the appropriate professionals."
+        },
+        {
+          "title": "Transaction Documentation",
+          "text": "Required brokerage and sale documentation is prepared or coordinated in accordance with the applicable transaction requirements."
+        },
+        {
+          "title": "Transfer & Completion",
+          "text": "We coordinate the parties and relevant professionals through the required transfer and registration process."
+        },
+        {
+          "title": "Post-Acquisition Strategy",
+          "text": "Where required, we can assist with leasing, resale strategy or connect the investor with appropriately licensed property-management and professional service providers."
+        }
+      ]
+    },
+    "land": {
+      "eyebrow": "Land Acquisition & Development Opportunities",
+      "title": "Land Acquisition & Development Opportunities",
+      "body": {
+        "title": "",
+        "lead": [
+          "Land requires a different level of understanding.",
+          "The value of a plot is influenced not only by its location and size, but also by its permitted use, planning parameters, development potential, access, surrounding infrastructure and the economics of the proposed development.",
+          "For developers and sophisticated investors, iFind can assist with sourcing opportunities across appropriate categories such as:"
+        ],
+        "kind": "chips",
+        "label": "",
+        "items": [
+          "Residential Development Land",
+          "Commercial Land",
+          "Mixed-Use Opportunities",
+          "Villa Development Plots",
+          "Hospitality Sites",
+          "Strategic Investment Land",
+          "Selected Redevelopment Opportunities"
+        ],
+        "after": [
+          "Where specialist planning, engineering, valuation, legal or development advice is required, we coordinate with the appropriate qualified professionals so that the investor can evaluate the opportunity with the necessary information."
+        ]
+      }
+    },
+    "buildings": {
+      "eyebrow": "Buildings & Income-Producing Assets",
+      "title": "Buildings & Income-Producing Assets",
+      "body": {
+        "title": "",
+        "lead": [
+          "For investors focused on recurring income, iFind sources and evaluates selected completed investment assets.",
+          "Our approach considers not simply the property's headline yield, but the sustainability of the underlying income.",
+          "Where information is available, analysis may consider:"
+        ],
+        "kind": "chips",
+        "label": "",
+        "items": [
+          "Current Rent Roll",
+          "Occupancy",
+          "Lease Expiries",
+          "Operating Costs",
+          "Service Charges",
+          "Net Income",
+          "Tenant Concentration",
+          "Asset Condition",
+          "Market Rent Potential",
+          "Repositioning Potential",
+          "Exit Liquidity"
+        ],
+        "after": [
+          "The objective is to help investors distinguish between a property that merely appears attractive and an asset with a commercially sustainable investment case."
+        ]
+      }
+    },
+    "hotels": {
+      "eyebrow": "Hotels & Hospitality Assets",
+      "title": "Hotels & Hospitality Assets",
+      "paragraphs": [
+        "Hotel transactions require additional discretion and specialised commercial analysis.",
+        "iFind can privately connect hotel owners with suitable acquisition parties and assist investors in identifying hospitality opportunities in Dubai.",
+        "Depending on the transaction, the process may involve reviewing or coordinating analysis of the asset, location, operating structure, historical performance, occupancy, revenue information, operator arrangements and potential repositioning strategy, with specialist advisers engaged where appropriate.",
+        "Sensitive commercial information can be handled through a controlled due-diligence process rather than unnecessary public circulation."
+      ]
+    },
+    "why": {
+      "eyebrow": "Why iFind?",
+      "title": "Because Major Assets Require More Than Advertising.",
+      "paragraphs": [
+        "A portal can advertise a property.",
+        "A serious transaction requires relationships, discretion, commercial understanding, negotiation, documentation and execution.",
+        "At iFind Real Estate LLC, we bring these elements together.",
+        "For the seller, we provide a controlled route to qualified capital.",
+        "For the buyer, we provide access to carefully considered opportunities and a structured acquisition process.",
+        "For both sides, we work toward one objective:"
+      ],
+      "statement": "A Transparent, Professional and Executable Transaction."
+    },
+    "closing": {
+      "title": "Private Assets. Global Investors. Local Expertise.",
+      "text": "Whether you are an owner considering the confidential disposal of a major Dubai asset or an investor seeking your next acquisition, iFind provides a direct route from opportunity to transaction.",
+      "tags": [
+        "Land",
+        "Buildings",
+        "Hotels",
+        "Commercial Assets",
+        "Investment Properties",
+        "Villas",
+        "Development Opportunities",
+        "Private & Off-Market Transactions"
+      ]
+    },
+    "disclaimer": "All opportunities are subject to availability, owner authorisation, due diligence and applicable UAE and Dubai laws and regulations. References to returns, yields, valuations or investment performance are indicative assessments only and do not constitute a guarantee of future performance. Public advertising and marketing, where undertaken, remain subject to applicable DLD/RERA permits and requirements. Legal, financial, valuation, property-management and other regulated or specialist services are provided or coordinated through appropriately licensed or qualified professionals where required.",
+    "labels": {
+      "challenge": "The Challenge",
+      "solution": "The iFind Solution",
+      "imagesBuildings": [
+        "Waterfront high-rise towers in Dubai under a blue sky",
+        "Dubai high-rise skyline with the Burj Khalifa"
+      ],
+      "imageHotel": "Luxury hotel entrance with fountains at dusk",
+      "imagesLand": [
+        "Open plots of land in Dubai with the city skyline behind",
+        "Aerial map view of a master-planned plot area"
+      ]
+    }
+  },
   investorPage: {
     "metaTitle": "Investor Advisory & Investment Solutions in Dubai | iFind Real Estate",
     "metaDescription": "Investor advisory for Dubai real estate: investment strategy, financing coordination, due diligence, legal and contract support, end-to-end transaction management and portfolio review.",
