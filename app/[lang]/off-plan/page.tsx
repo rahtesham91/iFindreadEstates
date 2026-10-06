@@ -62,19 +62,25 @@ export default async function Page({ params }: P) {
   const p = d.offplanPage;
   return (
     <>
-      {/* Hero */}
+      {/* Hero: text on a clean background, photo as its own band (no text over the picture) */}
       <section className="relative isolate overflow-hidden border-b border-line pt-20">
-        <Image src="/services/offplan-hero-v2.webp" alt={p.imageAlts[0]} fill priority quality={80} sizes="100vw" className="-z-20 object-cover" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#14110d]/90 via-[#14110d]/65 to-[#14110d]/30 rtl:bg-gradient-to-l" />
-        <div className="container-page py-16 sm:py-28">
-          <p className="eyebrow mb-5 !text-[#E3BF73]">{p.eyebrow}</p>
-          <h1 className="t-h1 max-w-3xl text-white">{p.h1}</h1>
-          <div className="gold-rule mt-7 !bg-[#E3BF73]" />
-          <div className="mt-7 max-w-3xl space-y-4">
-            {p.intro.map((t) => (
-              <p key={t} className="t-body !text-white/85">{t}</p>
-            ))}
-            <p className="t-h3 !text-[#E3BF73]">{p.advice}</p>
+        <div aria-hidden="true" className="absolute inset-0 -z-10" style={{ background: "radial-gradient(56rem 26rem at 12% 0%, rgb(var(--c-gold-500) / 0.16), transparent 62%)" }} />
+        <div className="container-page py-14 sm:py-20">
+          <div className="grid gap-10 lg:grid-cols-[7fr_5fr] lg:gap-20">
+            <div>
+              <p className="eyebrow mb-5">{p.eyebrow}</p>
+              <h1 className="t-h1">{p.h1}</h1>
+              <div className="gold-rule mt-7" />
+            </div>
+            <div className="space-y-4 lg:pt-10">
+              {p.intro.map((t) => (
+                <p key={t} className="t-body t-justify">{t}</p>
+              ))}
+            </div>
+          </div>
+          <p className="t-h3 mt-10 border-s-2 border-gold-500/70 ps-5 text-gold-400">{p.advice}</p>
+          <div className="relative mt-10 aspect-[16/10] overflow-hidden border border-gold-500/50 sm:aspect-[21/9]">
+            <Image src="/services/offplan-hero-v2.webp" alt={p.imageAlts[0]} fill priority quality={85} sizes="(min-width: 1240px) 1180px, 100vw" className="object-cover" />
           </div>
         </div>
       </section>
