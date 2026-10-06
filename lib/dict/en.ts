@@ -313,6 +313,83 @@ export const en = {
     mapTitle: "iFind Real Estate office location on Google Maps",
     openMap: "Open in Google Maps",
   },
+  devLanding: {
+    "metaTitle": "{name} Properties in Dubai: Best Options for Your Budget | iFind Real Estate",
+    "metaDescription": "Interested in {name}? Tell iFind your budget and our brokers will compare the best {name} options and alternatives across Dubai for you. No obligation.",
+    "breadcrumb": "Developers",
+    "welcomeEyebrow": "Welcome",
+    "welcomeTitle": "Welcome to {name}",
+    "welcomeLead": "Thank you for your interest in {name}. Tell us your budget and we will find the best options for you.",
+    "pointsLabel": "What you get",
+    "points": [
+      {
+        "title": "Multiple options",
+        "text": "A shortlist of the best {name} opportunities that fit your budget, not a single brochure."
+      },
+      {
+        "title": "Honest comparison",
+        "text": "Price, payment plan, location, handover and value compared fairly, including alternatives where relevant."
+      },
+      {
+        "title": "Your interest first",
+        "text": "We are professional brokers and we represent your requirements first."
+      }
+    ],
+    "formEyebrow": "Free, no-obligation",
+    "formTitle": "Tell us your budget",
+    "formText": "Share your name, mobile number and budget, and we will come back to you on WhatsApp with the best options for you.",
+    "name": "Your name *",
+    "phone": "Mobile / WhatsApp number *",
+    "budget": "Your budget *",
+    "budgetPlaceholder": "Select your budget",
+    "budgets": [
+      {
+        "value": "Below AED 1 million",
+        "label": "Below AED 1 million"
+      },
+      {
+        "value": "AED 1 to 2 million",
+        "label": "AED 1 to 2 million"
+      },
+      {
+        "value": "AED 2 to 5 million",
+        "label": "AED 2 to 5 million"
+      },
+      {
+        "value": "AED 5 to 10 million",
+        "label": "AED 5 to 10 million"
+      },
+      {
+        "value": "Above AED 10 million",
+        "label": "Above AED 10 million"
+      }
+    ],
+    "note": "Anything else we should know? (optional)",
+    "submit": "Get My Best Options",
+    "sending": "Sending...",
+    "privacy": "We use your details only to contact you about your enquiry.",
+    "thankTitle": "Thank you, we have your details.",
+    "thankText": "One of our brokers will contact you on WhatsApp shortly with the best {name} options for your budget.",
+    "browse": "Browse all developers",
+    "stepsTitle": "How it works",
+    "steps": [
+      {
+        "title": "Share your budget",
+        "text": "Tell us your name, number and budget."
+      },
+      {
+        "title": "We search and compare",
+        "text": "We compare {name} projects and relevant alternatives."
+      },
+      {
+        "title": "You receive your options",
+        "text": "A broker sends your best options on WhatsApp."
+      }
+    ],
+    "disclaimer": "{name} and its logo belong to their respective owner and are shown to identify the developer. iFind Real Estate LLC is an independent real estate brokerage. Availability, prices and payment plans are subject to change and to the developer's confirmation.",
+    "waText": "Hello iFind, I am interested in {name} properties.",
+    "logoAlt": "{name} logo"
+  },
   developersPage: {
     "metaTitle": "Developer Properties in Dubai: Compare Developers & Projects | iFind Real Estate",
     "metaDescription": "Compare Dubai developers and projects by price, location, payment plan, yield and handover before you buy. iFind brokers represent your requirements first.",

@@ -11,6 +11,8 @@ type Payload = {
   source?: unknown;
   website?: unknown; // honeypot
   lang?: unknown;
+  budget?: unknown;
+  developer?: unknown;
 };
 
 const clean = (v: unknown, max: number) => (typeof v === "string" ? v.trim().slice(0, max) : "");
@@ -33,6 +35,8 @@ export async function POST(req: Request) {
     email: clean(body.email, 160),
     interest: clean(body.interest, 80),
     message: clean(body.message, 2000),
+    budget: clean(body.budget, 60),
+    developer: clean(body.developer, 60),
     source: clean(body.source, 40) || "form",
     language: ar ? "ar" : "en",
     receivedAt: new Date().toISOString(),
@@ -61,6 +65,8 @@ export async function POST(req: Request) {
       `Email: ${lead.email || "-"}`,
       `Interested in: ${lead.interest || "-"}`,
       `Source: ${lead.source}`,
+      `Developer: ${lead.developer || "-"}`,
+      `Budget: ${lead.budget || "-"}`,
       `Language: ${lead.language}`,
       "",
       lead.message || "(no message)",
@@ -74,7 +80,7 @@ export async function POST(req: Request) {
           from,
           to: to.split(",").map((s) => s.trim()),
           reply_to: lead.email || undefined,
-          subject: `New enquiry: ${lead.name} (${lead.interest || "General"})`,
+          subject: `New enquiry: ${lead.name} (${lead.developer ? lead.developer + " developer" : lead.interest || "General"})`,
           text,
         }),
       });

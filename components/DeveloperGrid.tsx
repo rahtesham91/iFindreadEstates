@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Developer, developers } from "@/lib/site";
-import { useI18n } from "./I18nProvider";
+import { LocLink, useI18n } from "./I18nProvider";
 import { fill } from "@/lib/dict";
 
 // Every card is the same size: a white logo plate with a single thin gold border and the name underneath.
@@ -13,14 +13,8 @@ export default function DeveloperGrid({ list = developers }: { list?: Developer[
     <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4">
       {list.map((d) => (
         <li key={d.slug}>
-          <a
-            href={d.url}
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            aria-label={fill(dict.developers.visit, { name: nm(d) })}
-            className="block"
-          >
-          <figure className="overflow-hidden border border-gold-500/50 bg-white transition-colors duration-300 hover:border-gold-500">
+          <LocLink href={`/developers/${d.slug}`} aria-label={fill(dict.devLanding.welcomeTitle, { name: nm(d) })} className="group block">
+          <figure className="overflow-hidden border border-gold-500/50 bg-white transition-colors duration-300 group-hover:border-gold-500">
             <Image
               src={`/developers/${d.slug}.webp`}
               alt={fill(dict.developers.logo, { name: nm(d) })}
@@ -34,7 +28,7 @@ export default function DeveloperGrid({ list = developers }: { list?: Developer[
               {nm(d)}
             </figcaption>
           </figure>
-          </a>
+          </LocLink>
         </li>
       ))}
     </ul>

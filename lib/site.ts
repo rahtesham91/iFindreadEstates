@@ -68,20 +68,20 @@ export const nav = [
 
 // Developer partners (names from the company's previous website). Each logo is an identical 800x480 card image
 // in /public/developers/<slug>.webp, edited from the logos supplied by the company.
-export type Developer = { slug: string; name: string; url: string }; // url = developer's official website only
+export type Developer = { slug: string; name: string };
 export const developers: Developer[] = [
-  { slug: "emaar", name: "Emaar", url: "https://www.emaar.com/en" },
-  { slug: "damac", name: "Damac", url: "https://www.damacproperties.com" },
-  { slug: "sobha", name: "Sobha", url: "https://sobharealty.com" },
-  { slug: "dubai-properties", name: "Dubai Properties", url: "https://www.dp.ae" },
-  { slug: "azizi", name: "Azizi", url: "https://www.azizidevelopments.com" },
-  { slug: "binghatti", name: "Binghatti", url: "https://www.binghatti.com" },
-  { slug: "danube", name: "Danube Properties", url: "https://danubeproperties.com" },
-  { slug: "nshama", name: "Nshama", url: "https://nshama.ae" },
-  { slug: "fakhruddin", name: "Fakhruddin Properties", url: "https://www.fakhruddinproperties.com" },
-  { slug: "bt-properties", name: "BT Properties", url: "https://btproperties.ae" },
-  { slug: "bnw", name: "BNW Developments", url: "https://bnw.ae/en" },
-  { slug: "reportage", name: "Reportage", url: "https://reportageuae.com" },
+  { slug: "emaar", name: "Emaar" },
+  { slug: "damac", name: "Damac" },
+  { slug: "sobha", name: "Sobha" },
+  { slug: "dubai-properties", name: "Dubai Properties" },
+  { slug: "azizi", name: "Azizi" },
+  { slug: "binghatti", name: "Binghatti" },
+  { slug: "danube", name: "Danube Properties" },
+  { slug: "nshama", name: "Nshama" },
+  { slug: "fakhruddin", name: "Fakhruddin Properties" },
+  { slug: "bt-properties", name: "BT Properties" },
+  { slug: "bnw", name: "BNW Developments" },
+  { slug: "reportage", name: "Reportage" },
 ];
 
 export const steps = [
