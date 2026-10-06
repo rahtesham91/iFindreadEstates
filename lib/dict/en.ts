@@ -470,6 +470,113 @@ export const en = {
     },
     "partnersEyebrow": "Our Developer Partners"
   },
+  readyPage: {
+    "metaTitle": "Ready & Luxury Properties in Dubai: Sell, Buy & Invest | iFind Real Estate",
+    "metaDescription": "Sell, buy or invest in ready and luxury properties in Dubai. Structured sales strategy, discreet off-market access to global buyers, and one point of contact from first consultation to transfer.",
+    "eyebrow": "Ready & Luxury Properties",
+    "h1": "A Smarter Way to Sell, Buy & Invest in Dubai",
+    "intro": [
+      "At iFind Real Estate LLC, we understand that every property requires a different strategy. A ready apartment or villa targeting the wider market cannot be marketed in the same way as an exclusive luxury residence designed for a highly selective buyer.",
+      "Our approach combines market knowledge, professional brokerage, strategic marketing and access to local and international buyers — providing a complete solution from the initial instruction to the successful completion of the transaction and beyond."
+    ],
+    "pillars": [
+      "Market knowledge",
+      "Professional brokerage",
+      "Strategic marketing",
+      "Local and international buyers"
+    ],
+    "sellers": {
+      "eyebrow": "For Sellers",
+      "title": "From Listing to Successful Sale",
+      "paragraphs": [
+        "Whether you are selling an apartment, villa, townhouse, penthouse or other ready property in Dubai, iFind provides a structured sales strategy based on the property's location, value, condition and target buyer.",
+        "For mid-market and mainstream properties, we can create a strong market presence through leading property portals such as Property Finder and dubizzle, including premium or high-visibility advertising where appropriate. All property marketing is carried out subject to the owner's authorization and applicable Dubai real estate advertising requirements.",
+        "Our team supports the seller throughout the process — from property evaluation and pricing strategy to Form A, marketing preparation, buyer enquiries, viewings, offer management, negotiation, documentation and coordination through to transfer and completion."
+      ],
+      "stepsLabel": "Your sale, step by step",
+      "steps": [
+        "Property evaluation",
+        "Pricing strategy",
+        "Form A",
+        "Marketing preparation",
+        "Buyer enquiries",
+        "Viewings",
+        "Offer management",
+        "Negotiation",
+        "Documentation",
+        "Transfer and completion"
+      ]
+    },
+    "luxury": {
+      "eyebrow": "Luxury Properties",
+      "title": "Discreet Access to Global Buyers",
+      "paragraphs": [
+        "Luxury real estate requires a different level of positioning.",
+        "For premium villas, penthouses, signature residences and other high-value properties, iFind can provide a more discreet and targeted approach rather than relying solely on public property portals.",
+        "Our dedicated marketing and brokerage team can professionally position selected properties and introduce them directly to our network of high-net-worth individuals, investors, family offices and qualified international buyers across key global markets.",
+        "Where privacy is important, we can pursue an off-market or discreet marketing strategy, subject to the owner's instructions and applicable regulatory requirements. This allows selected properties to be presented directly to relevant prospects without unnecessary mass-market exposure."
+      ],
+      "audienceLabel": "Our network",
+      "audience": [
+        "High-net-worth individuals",
+        "Investors",
+        "Family offices",
+        "Qualified international buyers"
+      ],
+      "statement": "Our objective is not simply to advertise a luxury property — it is to identify the right audience, position the asset correctly and create a professional route towards a successful transaction.",
+      "imageAlt": "Luxury waterfront villa with a pool at sunset"
+    },
+    "buyers": {
+      "eyebrow": "For Buyers",
+      "title": "One Point of Contact, Complete Support",
+      "paragraphs": [
+        "Buying a ready or luxury property in Dubai involves much more than finding an attractive listing.",
+        "At iFind Real Estate, we first understand the buyer's requirements, preferred locations, budget, lifestyle objectives and investment expectations. Our brokers then identify suitable opportunities from the market as well as selected properties available through our professional network.",
+        "For luxury and investment-focused buyers, our network can also provide access to selected off-market and privately marketed opportunities that may not be widely promoted through conventional property portals.",
+        "Once the right property is identified, our team assists with the transaction process — including negotiations, relevant RERA forms, documentation coordination, MOU/Form F process where applicable, NOC and transfer coordination, and communication with the relevant parties until completion."
+      ],
+      "understandLabel": "We start by understanding",
+      "understand": [
+        "Your requirements",
+        "Preferred locations",
+        "Budget",
+        "Lifestyle objectives",
+        "Investment expectations"
+      ],
+      "supportLabel": "We then assist with",
+      "support": [
+        "Negotiations",
+        "Relevant RERA forms",
+        "Documentation coordination",
+        "MOU / Form F process where applicable",
+        "NOC and transfer coordination",
+        "Communication with the relevant parties until completion"
+      ]
+    },
+    "journey": {
+      "eyebrow": "Our Journey with You",
+      "title": "From Search to Transfer — and Beyond",
+      "paragraphs": [
+        "Dubai property transactions can involve multiple parties, documents, approvals and procedures. As professional real estate brokers, our role is to make that journey as organized and convenient as possible for both buyers and sellers.",
+        "From the first consultation and Form A through marketing, negotiations, transaction documentation and closing, iFind coordinates the brokerage process in accordance with applicable Dubai Land Department (DLD) and RERA requirements."
+      ],
+      "after": {
+        "title": "Our relationship does not end at transfer.",
+        "text": "Through our after-sales support, we remain available to assist clients with property-related coordination and connect them with relevant professional services where required."
+      }
+    },
+    "closing": {
+      "title": "One Property. One Strategy. One Trusted Partner.",
+      "text": "Whether you are selling a ready apartment, privately marketing a luxury residence, searching for your next home or acquiring a premium investment, iFind Real Estate provides one professional point of contact throughout the journey.",
+      "tags": [
+        "Ready Properties",
+        "Luxury Residences",
+        "Private Opportunities",
+        "Professional Execution"
+      ],
+      "signoff": "iFind Real Estate LLC — Finding Value. Building Trust."
+    }
+  },
   landPage: {
     "metaTitle": "Land, Buildings & Private Investment Assets in Dubai | iFind Real Estate",
     "metaDescription": "Private and off-market sale and acquisition of buildings, hotels, land, villas and investment assets in Dubai, coordinated from strategy and due diligence to final transfer under DLD and RERA requirements.",
