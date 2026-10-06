@@ -470,6 +470,159 @@ export const en = {
     },
     "partnersEyebrow": "Our Developer Partners"
   },
+  offplanPage: {
+    "metaTitle": "Off-Plan Properties in Dubai: Invest with the Right Advice | iFind Real Estate",
+    "metaDescription": "Off-plan investment in Dubai guided by comparison across developers: project and unit selection, payment plans, reservation to SPA, escrow framework, handover and after-handover support.",
+    "eyebrow": "Off-Plan Properties",
+    "h1": "Invest in the Future — With the Right Advice Today",
+    "intro": [
+      "Buying an off-plan property can be one of the most attractive ways to enter Dubai's real estate market — but choosing the right project, developer and unit requires more than simply selecting a property from a brochure.",
+      "Unlike a ready property, an off-plan investment is a commitment to something that is still being developed. The decision therefore needs to consider not only today's price, but also the developer, location, master community, payment plan, construction timeline, unit selection, future supply, expected demand, end-user appeal and long-term investment potential."
+    ],
+    "advice": "This is where professional advice matters.",
+    "why": {
+      "eyebrow": "The Opportunity",
+      "title": "Why Invest in Off-Plan?",
+      "paragraphs": [
+        "Off-plan properties can provide investors and future homeowners with access to newly launched developments, modern communities and flexible payment structures.",
+        "Depending on the project and individual circumstances, an off-plan purchase may offer:"
+      ],
+      "items": [
+        "Attractive launch-stage pricing",
+        "Flexible or construction-linked payment plans",
+        "Access to newly released units and preferred layouts",
+        "Potential capital appreciation during the development period",
+        "Modern amenities and contemporary property specifications",
+        "Opportunities in emerging and developing communities",
+        "The ability to plan an investment over a longer payment horizon"
+      ],
+      "after": [
+        "However, not every off-plan project is the right investment — and not every attractive payment plan represents the best opportunity.",
+        "The right property depends on the buyer."
+      ]
+    },
+    "choose": {
+      "eyebrow": "Why iFind",
+      "title": "Why Choose iFind Real Estate for Off-Plan?",
+      "paragraphs": [
+        "At iFind Real Estate LLC, we do not believe in simply selling the project that is being launched today.",
+        "We believe in finding the project that makes sense for you.",
+        "iFind Real Estate is an official channel partner with more than 100 developers, giving our clients access to a broad range of off-plan opportunities across Dubai.",
+        "This allows our advisors to compare projects across multiple developers rather than limiting a client to a single developer or development."
+      ],
+      "startLabel": "We begin with your",
+      "start": [
+        "Budget",
+        "Investment objective",
+        "Preferred location",
+        "Payment capacity",
+        "Property type",
+        "Expected holding period",
+        "Personal requirements"
+      ],
+      "after": "We then compare suitable opportunities and help you understand which project may better align with your objectives."
+    },
+    "compare": {
+      "eyebrow": "Our Method",
+      "title": "We Compare Before We Recommend",
+      "lead": "A beautiful presentation does not necessarily make a great investment. Our advisors assess relevant factors such as:",
+      "factors": [
+        {
+          "title": "Developer Profile & Track Record",
+          "text": "We consider the developer, previous projects, delivery history and overall market positioning."
+        },
+        {
+          "title": "Location & Future Potential",
+          "text": "We assess connectivity, surrounding infrastructure, community development, future supply and the characteristics that may influence long-term demand."
+        },
+        {
+          "title": "Price & Market Positioning",
+          "text": "We compare the project's pricing and offering with relevant alternatives to help determine whether the opportunity makes commercial sense."
+        },
+        {
+          "title": "Payment Plan",
+          "text": "A payment plan should fit your financial position — not force your financial position to fit the project. We help clients understand the payment structure, construction-linked or scheduled instalments, applicable fees and financial commitments associated with the purchase."
+        },
+        {
+          "title": "Unit Selection",
+          "text": "Within the same project, two units can have very different investment characteristics. Layout, floor, orientation, view, size, positioning and future resale or rental appeal can all matter. Our role is to help you select not only the right project, but also the right unit within that project."
+        }
+      ]
+    },
+    "spa": {
+      "eyebrow": "The Transaction",
+      "title": "From Reservation to SPA",
+      "paragraphs": [
+        "Once the appropriate property has been selected, our team guides you through the transaction process, including the reservation and booking stages and coordination of the Sale and Purchase Agreement (SPA).",
+        "We help clients understand the commercial terms and key property information before proceeding and coordinate with the developer throughout the purchase process.",
+        "Where appropriate, buyers should obtain independent legal, financial or tax advice on matters requiring specialist professional advice."
+      ],
+      "stepsLabel": "The purchase path",
+      "steps": [
+        "Property selection",
+        "Reservation and booking",
+        "Sale and Purchase Agreement (SPA)"
+      ]
+    },
+    "framework": {
+      "eyebrow": "The Regulated Framework",
+      "title": "Understanding Dubai's Off-Plan Framework",
+      "paragraphs": [
+        "Dubai's off-plan market operates within a regulated framework.",
+        "As part of a responsible purchase process, relevant matters can include confirming the project's registration and status, the developer's authorization, the project's designated escrow account and the applicable registration requirements.",
+        "Buyer payments for off-plan projects are subject to Dubai's project escrow framework, and off-plan transactions are registered through the applicable Dubai Land Department systems and procedures.",
+        "At iFind Real Estate, we help our clients navigate these requirements and understand the documentation and transaction journey before making a commitment."
+      ],
+      "checksLabel": "A responsible purchase can include confirming",
+      "checks": [
+        "The project's registration and status",
+        "The developer's authorization",
+        "The project's designated escrow account",
+        "The applicable registration requirements"
+      ]
+    },
+    "handover": {
+      "eyebrow": "After the SPA",
+      "title": "From Purchase to Handover",
+      "paragraphs": [
+        "Our relationship does not have to end when the SPA is signed.",
+        "Throughout the development period, we can remain a point of contact between our client and the developer, assisting with relevant communications, payment-plan coordination and project-related updates.",
+        "As the project approaches completion, we can also guide clients through the applicable handover process, final payment requirements, inspection or snagging coordination where applicable, and the transition toward ownership and occupancy, subject to the developer's procedures and applicable regulations.",
+        "And once the property is handed over, iFind can continue supporting the owner.",
+        "Whether your objective is to move into the property, lease it, hold it as a long-term investment or consider a future resale, our team can assist with the next stage of your real estate journey."
+      ],
+      "optionsLabel": "After handover, you may choose to",
+      "options": [
+        "Move into the property",
+        "Lease it",
+        "Hold it as a long-term investment",
+        "Consider a future resale"
+      ]
+    },
+    "final": {
+      "eyebrow": "Why iFind?",
+      "title": "Compare Before You Commit",
+      "paragraphs": [
+        "Because buying off-plan should not be about choosing the project with the biggest advertisement.",
+        "It should be about choosing the right developer, right project, right location, right unit and right payment structure — for the right buyer.",
+        "With access to 100+ developer partnerships, extensive knowledge of Dubai's real estate market and a client-first advisory approach, iFind Real Estate gives investors the ability to compare before they commit."
+      ],
+      "chips": [
+        "Right developer",
+        "Right project",
+        "Right location",
+        "Right unit",
+        "Right payment structure"
+      ],
+      "statement": "One Market. Hundreds of Projects. One Decision That Needs to Be Right.",
+      "company": "iFind Real Estate LLC",
+      "tagline": "Finding Value. Building Trust."
+    },
+    "imageAlts": [
+      "Villas under construction at a new Dubai development site",
+      "High-rise towers under construction in Dubai at sunset"
+    ]
+  },
   rentalsPage: {
     "metaTitle": "Rental & Leasing in Dubai: Search, Ejari, DEWA & Move-In | iFind Real Estate",
     "metaDescription": "Rent or lease residential and commercial property in Dubai with iFind. Property search, viewings, negotiation, tenancy contract and Ejari, DEWA and move-in support, renewal and move-out.",
