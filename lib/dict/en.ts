@@ -470,6 +470,115 @@ export const en = {
     },
     "partnersEyebrow": "Our Developer Partners"
   },
+  rentalsPage: {
+    "metaTitle": "Rental & Leasing in Dubai: Search, Ejari, DEWA & Move-In | iFind Real Estate",
+    "metaDescription": "Rent or lease residential and commercial property in Dubai with iFind. Property search, viewings, negotiation, tenancy contract and Ejari, DEWA and move-in support, renewal and move-out.",
+    "eyebrow": "Rental & Leasing",
+    "h1": "From Property Search to Move-In — We Handle the Journey",
+    "intro": [
+      "At iFind Real Estate LLC, we make renting and leasing property in Dubai simple, transparent and professionally managed. Whether you are looking for a residential apartment, villa, commercial office, retail space or another leasing opportunity, our experienced brokers support you throughout the process.",
+      "We begin by understanding your budget, preferred location, property requirements and lifestyle or business needs. Instead of presenting random options, we shortlist suitable properties from the market and arrange convenient viewings, helping you compare each option before making a decision."
+    ],
+    "types": [
+      "Residential apartment",
+      "Villa",
+      "Commercial office",
+      "Retail space",
+      "Other leasing opportunity"
+    ],
+    "typesLabel": "We help you lease",
+    "stages": [
+      {
+        "eyebrow": "Viewings & Negotiation",
+        "title": "Viewings, Negotiation & Deal Closing",
+        "paragraphs": [
+          "Once you identify the right property, our broker assists with the negotiation between tenant and landlord, including the rental value, payment terms, number of cheques, security deposit, commencement date and other agreed tenancy conditions.",
+          "Our objective is to create a clear and efficient transaction while protecting the interests of all parties and ensuring that the leasing process follows the applicable requirements and procedures in Dubai."
+        ],
+        "label": "Negotiation covers",
+        "points": [
+          "Rental value",
+          "Payment terms",
+          "Number of cheques",
+          "Security deposit",
+          "Commencement date",
+          "Other agreed tenancy conditions"
+        ]
+      },
+      {
+        "eyebrow": "Contract & Registration",
+        "title": "Tenancy Contract & Ejari Assistance",
+        "paragraphs": [
+          "After the terms are agreed, we assist with preparing and coordinating the tenancy documentation and guide you through the Ejari registration process in accordance with the applicable Dubai Land Department requirements.",
+          "Our team helps ensure that the required information and documentation are properly organized so that the transition from agreed offer to registered tenancy is as smooth as possible."
+        ],
+        "label": "",
+        "points": [] as string[]
+      },
+      {
+        "eyebrow": "Moving In",
+        "title": "DEWA & Move-In Support",
+        "paragraphs": [
+          "Our service does not end when the tenancy contract is signed.",
+          "Once the tenancy is registered, we can guide tenants through the next steps required for occupying the property, including DEWA electricity and water activation, building or community move-in procedures, access requirements and other relevant handover formalities.",
+          "Where applicable, we also coordinate between the tenant, landlord, property management and building management to help make the move-in process easier and more organized."
+        ],
+        "label": "Move-in support includes",
+        "points": [
+          "DEWA electricity and water activation",
+          "Building or community move-in procedures",
+          "Access requirements",
+          "Other relevant handover formalities"
+        ]
+      },
+      {
+        "eyebrow": "Moving Out",
+        "title": "Move-Out & End-of-Tenancy Support",
+        "paragraphs": [
+          "When a tenancy comes to an end, our team can also guide tenants and landlords through the relevant move-out procedures, property handover, utility-related formalities, key return and tenancy closure requirements, subject to the tenancy agreement and applicable regulations."
+        ],
+        "label": "Support includes",
+        "points": [
+          "Move-out procedures",
+          "Property handover",
+          "Utility-related formalities",
+          "Key return",
+          "Tenancy closure requirements"
+        ]
+      },
+      {
+        "eyebrow": "Renewal",
+        "title": "Renewal & Rental Advisory",
+        "paragraphs": [
+          "Our relationship with our clients continues throughout the tenancy.",
+          "As the contract approaches expiry, iFind Real Estate can assist with renewal discussions, rental negotiations and the preparation and coordination of renewal documentation.",
+          "Where rental terms are being reconsidered, we help our clients understand the applicable Dubai rental framework and guide both landlords and tenants toward a transparent and properly documented renewal."
+        ],
+        "label": "Renewal support includes",
+        "points": [
+          "Renewal discussions",
+          "Rental negotiations",
+          "Renewal documentation"
+        ]
+      }
+    ],
+    "journeyLabel": "The rental journey",
+    "journey": [
+      "Search",
+      "View",
+      "Negotiate",
+      "Lease",
+      "Register",
+      "Move In",
+      "Renew"
+    ],
+    "closing": {
+      "title": "Complete Rental Support. One Trusted Team.",
+      "text": "From your first property search to your final move-in — and from annual renewal to eventual move-out — iFind Real Estate is there throughout the rental journey.",
+      "signoff": "iFind Real Estate LLC — Finding Value. Building Trust."
+    },
+    "imageAlt": "Modern residence with a terrace and pool"
+  },
   readyPage: {
     "metaTitle": "Ready & Luxury Properties in Dubai: Sell, Buy & Invest | iFind Real Estate",
     "metaDescription": "Sell, buy or invest in ready and luxury properties in Dubai. Structured sales strategy, discreet off-market access to global buyers, and one point of contact from first consultation to transfer.",
