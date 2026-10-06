@@ -313,6 +313,157 @@ export const en = {
     mapTitle: "iFind Real Estate office location on Google Maps",
     openMap: "Open in Google Maps",
   },
+  investorPage: {
+    "metaTitle": "Investor Advisory & Investment Solutions in Dubai | iFind Real Estate",
+    "metaDescription": "Investor advisory for Dubai real estate: investment strategy, financing coordination, due diligence, legal and contract support, end-to-end transaction management and portfolio review.",
+    "eyebrow": "Investor Advisory & Investment Solutions",
+    "h1": "Strategic Property Investment. Structured for Long-Term Value.",
+    "intro": [
+      "At iFind Real Estate LLC, we provide investors with a comprehensive approach to Dubai real estate — combining market intelligence, property sourcing, financing coordination, transaction structuring, legal support and portfolio strategy under one trusted platform.",
+      "Our objective is simple: to help our clients deploy their capital intelligently, understand the risks behind every opportunity and make well-informed property decisions with complete transparency."
+    ],
+    "strategy": {
+      "title": "Investment Strategy & Capital Planning",
+      "paragraphs": [
+        "Every investor has different objectives. Whether the priority is capital appreciation, rental income, portfolio diversification, commercial assets, land acquisition or long-term wealth creation, our team evaluates each opportunity around the investor’s individual strategy."
+      ],
+      "lead": "We assist with:",
+      "items": [
+        {
+          "title": "Capital Allocation Strategy",
+          "text": "Identifying how available investment capital can be allocated across suitable real estate opportunities."
+        },
+        {
+          "title": "ROI & Yield Analysis",
+          "text": "Assessing expected rental yield, acquisition costs, service charges, potential appreciation and overall investment performance."
+        },
+        {
+          "title": "Cash Flow Assessment",
+          "text": "Evaluating projected income, holding costs and financing obligations before acquisition."
+        },
+        {
+          "title": "Portfolio Diversification",
+          "text": "Identifying opportunities across residential, commercial, land and selected off-plan or income-generating assets."
+        },
+        {
+          "title": "Exit Strategy Planning",
+          "text": "Considering liquidity, resale potential and investment horizon from the beginning of the transaction."
+        }
+      ]
+    },
+    "financing": {
+      "title": "Financing & Mortgage Coordination",
+      "paragraphs": [
+        "For investors seeking leverage, iFind assists in coordinating with appropriately licensed banks, mortgage providers and financial institutions to identify suitable financing options.",
+        "Our team can support the process through Loan-to-Value (LTV) assessment, Debt Burden Ratio (DBR) considerations, down-payment planning, property valuation coordination, mortgage documentation and transaction completion, subject to the eligibility criteria and final approval of the relevant financial institution.",
+        "We help investors understand the financial structure of a transaction before committing capital — including the potential impact of financing costs on cash flow and investment returns."
+      ],
+      "pointsLabel": "Support includes",
+      "points": [
+        "Loan-to-Value (LTV) assessment",
+        "Debt Burden Ratio (DBR) considerations",
+        "Down-payment planning",
+        "Property valuation coordination",
+        "Mortgage documentation",
+        "Transaction completion"
+      ]
+    },
+    "diligence": {
+      "title": "Acquisition & Due Diligence",
+      "paragraphs": [
+        "A successful investment begins before the purchase.",
+        "Our team conducts transaction-level assessment and coordinates appropriate due diligence covering the property, developer, ownership documentation, pricing, comparable transactions, payment structure and relevant transaction requirements.",
+        "For off-plan investments, we also assist investors in reviewing key project information and the applicable registration and payment framework."
+      ],
+      "pointsLabel": "Due diligence covers",
+      "points": [
+        "Property",
+        "Developer",
+        "Ownership documentation",
+        "Pricing",
+        "Comparable transactions",
+        "Payment structure",
+        "Relevant transaction requirements"
+      ]
+    },
+    "legal": {
+      "title": "Legal & Contractual Support",
+      "paragraphs": [
+        "Through our legal support network, investors can receive assistance throughout the contractual process, including the preparation, coordination and review of transaction-related documentation.",
+        "Depending on the transaction, this may include sale and purchase documentation, reservation documents, MOUs, NDAs, commission agreements, corporate acquisition documentation and other property-related agreements.",
+        "Our focus is to ensure that investors understand the commercial terms, obligations and transaction structure before proceeding."
+      ],
+      "pointsLabel": "Documentation may include",
+      "points": [
+        "Sale and purchase documentation",
+        "Reservation documents",
+        "MOUs",
+        "NDAs",
+        "Commission agreements",
+        "Corporate acquisition documentation",
+        "Other property-related agreements"
+      ]
+    },
+    "transaction": {
+      "title": "End-to-End Transaction Management",
+      "paragraphs": [
+        "From identifying an opportunity to completing the acquisition, iFind coordinates the entire property transaction.",
+        "We assist with property sourcing, negotiations, documentation, financing coordination, valuation, developer or seller communication, conveyancing coordination, DLD-related procedures and final transfer or registration.",
+        "For international investors, our team can also coordinate the transaction remotely where legally permissible and subject to the required documentation and authorisations."
+      ],
+      "stepsLabel": "The process",
+      "steps": [
+        "Property sourcing",
+        "Negotiations",
+        "Documentation",
+        "Financing coordination",
+        "Valuation",
+        "Developer or seller communication",
+        "Conveyancing coordination",
+        "DLD-related procedures",
+        "Final transfer or registration"
+      ]
+    },
+    "portfolio": {
+      "title": "Portfolio Review & Ongoing Property Strategy",
+      "paragraphs": [
+        "Our relationship with investors does not have to end when a property is purchased.",
+        "We can periodically review a client's real estate portfolio, market positioning, rental performance and emerging opportunities to help identify whether the strategy should be to hold, lease, acquire, diversify or exit an asset."
+      ],
+      "pointsLabel": "Strategy options",
+      "points": [
+        "Hold",
+        "Lease",
+        "Acquire",
+        "Diversify",
+        "Exit"
+      ]
+    },
+    "advice": {
+      "title": "Independent Thinking. Transparent Advice.",
+      "paragraphs": [
+        "At iFind, we believe an investor should never be pushed into a transaction simply because a property is available.",
+        "If we believe an opportunity does not fit the investor's objectives, risk profile or financial structure, we say so.",
+        "Our priority is not simply to close a transaction. It is to build long-term relationships through transparency, disciplined analysis and responsible real estate advice."
+      ],
+      "imageAlt": "A consultant advising an investor in a Dubai office with a view of the skyline"
+    },
+    "closing": {
+      "title": "Your Capital. Your Strategy. Our Expertise.",
+      "text": "From your first investment in Dubai to building a diversified real estate portfolio, iFind Real Estate LLC provides the market access, transaction expertise and professional support required to invest with greater clarity and confidence.",
+      "tags": [
+        "Property Sourcing",
+        "Investment Analysis",
+        "Financing Coordination",
+        "Due Diligence",
+        "Legal & Contract Support",
+        "Acquisition",
+        "Portfolio Strategy",
+        "Exit Planning"
+      ]
+    },
+    "disclaimer": "All property investments are subject to market risk. Financing is subject to the eligibility criteria, terms and approval of licensed banks or financial institutions. iFind Real Estate LLC provides real estate brokerage and transaction-related services within the scope of its applicable licences and coordinates legal, financing and other regulated professional services through appropriately qualified or licensed service providers where required."
+  },
   careers: {
     metaTitle: "Careers at iFind Real Estate | Join Our Dubai Team",
     metaDescription: "Apply for a career at iFind Real Estate LLC in Business Bay, Dubai. Send your CV for real estate consultant, sales, leasing, marketing, operations and administration roles.",
