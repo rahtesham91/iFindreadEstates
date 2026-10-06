@@ -49,7 +49,8 @@ export default async function Page({ params }: P) {
   const person = d.people[slug];
   const v = { name: person.name, role: person.role };
   const { tel, wa } = memberContact(m, fill(d.wa.person, { name: person.name }));
-  const bio = t.bios[slug];
+  const bio = t.bios[slug] ?? (slug === "abid-khan" ? [d.mdBio] : undefined);
+  const specs = t.specializations[slug];
   const phone = m.phone ?? site.phone;
   const url = `${site.url}${localize(lang, `/team/${slug}`)}`;
 
@@ -107,8 +108,19 @@ export default async function Page({ params }: P) {
 
               {bio && (
                 <section aria-label={fill(t.profile.about, v)} className="mt-7">
-                  <p className="max-w-2xl text-base leading-[1.9] text-mute sm:text-lg">{bio}</p>
+                  <div className="max-w-2xl space-y-4">{bio.map((b) => <p key={b} className="t-body">{b}</p>)}</div>
                 </section>
+              )}
+
+              {specs && (
+                <div className="mt-6 max-w-2xl">
+                  <p className="eyebrow mb-3">{t.profile.specialization}</p>
+                  <ul className="flex flex-wrap gap-2">
+                    {specs.map((sp) => (
+                      <li key={sp} className="border border-gold-500/50 px-3 py-1.5 text-sm text-ivory">{sp}</li>
+                    ))}
+                  </ul>
+                </div>
               )}
 
               <dl className="mt-8 max-w-2xl border-b border-line">

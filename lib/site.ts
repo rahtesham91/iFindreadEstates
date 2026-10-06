@@ -150,11 +150,13 @@ export const team: TeamMember[] = [
   {
     slug: "muzamal-hameed",
     name: "Muzamal Hameed",
-    role: "Sales Manager",
+    role: "Sales Manager – Secondary Market",
     photo: "/team/muzamal-hameed-v3.webp",
     email: "muzamal@ifindrealestates.com",
     phone: "+971 52 173 9547",
     bio: "Muzamal Hameed is a skilled Sales Manager dedicated to helping clients find the perfect property. With strong market knowledge and a client-focused approach, he ensures smooth and successful real estate transactions.",
+    brn: "84779",
+    languages: ["English", "Urdu", "Hindi"],
   },
   {
     slug: "ehtesham-nazir",
@@ -172,11 +174,12 @@ export const team: TeamMember[] = [
     brn: "100955",
     email: "dario@ifindrealestates.com",
     phone: "+971 58 517 1717",
+    languages: ["Italian", "English", "Farsi", "French", "German"],
   },
   {
     slug: "ishtiaq-ahmed",
     name: "Ishtiaq Ahmed",
-    role: "Real Estate Consultant",
+    role: "Property Consultant – Secondary Market",
     photo: "/team/ishtiaq-ahmed-v3.webp",
     languages: ["English", "Hindi", "Urdu", "Punjabi"],
     email: "ishtiaq@ifindrealestates.com",
@@ -185,7 +188,7 @@ export const team: TeamMember[] = [
   {
     slug: "shah-waqar",
     name: "Shah Waqar",
-    role: "Real Estate Consultant",
+    role: "Business Specialist | Real Estate Professional",
     photo: "/team/shah-waqar-v4.webp",
     languages: ["English", "Urdu", "Pashtu", "Punjabi"],
     email: "waqar@ifindrealestates.com",
@@ -203,12 +206,13 @@ export const team: TeamMember[] = [
   {
     slug: "essam-nabil",
     name: "Essam Nabil",
-    role: "Real Estate Consultant",
+    role: "Property Consultant",
     photo: "/team/essam-nabil-v3.webp",
-    languages: ["Arabic", "English"],
+    languages: ["Arabic", "English", "French", "Italian"],
     email: "essam@ifindrealestates.com",
     phone: "+971 58 578 4659",
     bio: "Property Consultant with a strong hospitality background, specialized in guiding clients through every step of the real estate journey, whether buying, selling, or investing. He provides strategic advice, transparent communication, and tailored property solutions to meet each client's unique needs.",
+    brn: "85735",
   },
 ];
 
