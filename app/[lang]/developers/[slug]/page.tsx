@@ -62,8 +62,8 @@ export default async function Page({ params }: P) {
               <div className="w-56 overflow-hidden border border-gold-500/50 bg-white sm:w-72">
                 <Image src={`/developers/${slug}.webp`} alt={fill(t.logoAlt, v)} width={800} height={480} quality={95} priority sizes="288px" className="block h-auto w-full" />
               </div>
-              <p className="eyebrow mb-4 mt-9">{t.welcomeEyebrow}</p>
-              <h1 className="t-hero">{fill(t.welcomeTitle, v)}</h1>
+              <p className="eyebrow mb-4 mt-9">{fill(t.welcomeEyebrow, v)}</p>
+              <h1 className="t-h1">{fill(t.welcomeTitle, v)}</h1>
               <div className="gold-rule mt-7" />
               <p className="t-lede mt-7 max-w-xl">{fill(t.welcomeLead, v)}</p>
 
@@ -82,7 +82,7 @@ export default async function Page({ params }: P) {
               <p className="eyebrow mb-3">{t.formEyebrow}</p>
               <h2 className="t-h2">{t.formTitle}</h2>
               <div className="gold-rule mt-5" />
-              <p className="t-body mb-7 mt-5">{t.formText}</p>
+              <p className="t-body mb-7 mt-5">{fill(t.formText, v)}</p>
               <DeveloperLeadForm slug={slug} name={name} />
             </div>
           </div>

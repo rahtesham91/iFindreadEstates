@@ -314,30 +314,30 @@ export const en = {
     openMap: "Open in Google Maps",
   },
   devLanding: {
-    "metaTitle": "{name} Properties in Dubai: Best Options for Your Budget | iFind Real Estate",
+    "metaTitle": "{name} Properties in Dubai: Your Private Shortlist | iFind Real Estate",
     "metaDescription": "Interested in {name}? Tell iFind your budget and our brokers will compare the best {name} options and alternatives across Dubai for you. No obligation.",
     "breadcrumb": "Developers",
-    "welcomeEyebrow": "Welcome",
-    "welcomeTitle": "Welcome to {name}",
-    "welcomeLead": "Thank you for your interest in {name}. Tell us your budget and we will find the best options for you.",
+    "welcomeEyebrow": "{name} · Priority Service",
+    "welcomeTitle": "Your Best {name} Options, Handpicked for You.",
+    "welcomeLead": "You are one step away from a personal shortlist. Share your budget and one of our brokers will prepare the strongest {name} opportunities for you, and compare alternatives so you can choose with confidence.",
     "pointsLabel": "What you get",
     "points": [
       {
-        "title": "Multiple options",
-        "text": "A shortlist of the best {name} opportunities that fit your budget, not a single brochure."
+        "title": "Handpicked for you",
+        "text": "A personal shortlist of {name} opportunities that fit your budget and goals."
       },
       {
-        "title": "Honest comparison",
-        "text": "Price, payment plan, location, handover and value compared fairly, including alternatives where relevant."
+        "title": "Compared, not just presented",
+        "text": "Price, payment plan, location, handover and value weighed fairly, with alternatives where relevant."
       },
       {
-        "title": "Your interest first",
-        "text": "We are professional brokers and we represent your requirements first."
+        "title": "A dedicated broker",
+        "text": "One broker who knows your requirements and puts your interest first."
       }
     ],
-    "formEyebrow": "Free, no-obligation",
-    "formTitle": "Tell us your budget",
-    "formText": "Share your name, mobile number and budget, and we will come back to you on WhatsApp with the best options for you.",
+    "formEyebrow": "Priority request · No obligation",
+    "formTitle": "Request Your Private Shortlist",
+    "formText": "Tell us your budget and your broker will send your best {name} options on WhatsApp.",
     "name": "Your name *",
     "phone": "Mobile / WhatsApp number *",
     "budget": "Your budget *",
@@ -365,31 +365,32 @@ export const en = {
       }
     ],
     "note": "Anything else we should know? (optional)",
-    "submit": "Get My Best Options",
+    "submit": "Request My Shortlist",
     "sending": "Sending...",
     "privacy": "We use your details only to contact you about your enquiry.",
-    "thankTitle": "Thank you, we have your details.",
-    "thankText": "One of our brokers will contact you on WhatsApp shortly with the best {name} options for your budget.",
+    "thankTitle": "Your request is received.",
+    "thankText": "Your dedicated broker will contact you personally on WhatsApp with the best {name} options for your budget.",
     "browse": "Browse all developers",
-    "stepsTitle": "How it works",
+    "stepsTitle": "What happens next",
     "steps": [
       {
-        "title": "Share your budget",
-        "text": "Tell us your name, number and budget."
+        "title": "You share your budget",
+        "text": "Your name, number and budget are all we need."
       },
       {
-        "title": "We search and compare",
-        "text": "We compare {name} projects and relevant alternatives."
+        "title": "We compare for you",
+        "text": "Your broker reviews {name} projects and relevant alternatives."
       },
       {
-        "title": "You receive your options",
-        "text": "A broker sends your best options on WhatsApp."
+        "title": "You receive your shortlist",
+        "text": "Your best options arrive on WhatsApp, ready to discuss."
       }
     ],
     "disclaimer": "{name} and its logo belong to their respective owner and are shown to identify the developer. iFind Real Estate LLC is an independent real estate brokerage. Availability, prices and payment plans are subject to change and to the developer's confirmation.",
     "waText": "Hello iFind, I am interested in {name} properties.",
     "logoAlt": "{name} logo"
   },
+
   developersPage: {
     "metaTitle": "Developer Properties in Dubai: Compare Developers & Projects | iFind Real Estate",
     "metaDescription": "Compare Dubai developers and projects by price, location, payment plan, yield and handover before you buy. iFind brokers represent your requirements first.",
