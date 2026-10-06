@@ -68,7 +68,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       {/* Why */}
       <section className="border-y border-line bg-char py-16 sm:py-24">
         <div className="container-page grid gap-16 lg:grid-cols-[1fr_1.2fr] lg:items-center">
-          <div className="relative aspect-[4/5] overflow-hidden border border-gold-500/50"><Image src="/home/why-interior.webp" alt={h.alt.why} fill quality={85} sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" /></div>
+          <div className="relative aspect-[3/2] overflow-hidden border border-gold-500/50"><Image src="/home/why-skyline.webp" alt={h.alt.why} fill quality={85} sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" /></div>
           <div>
             <SectionHeading eyebrow={h.whyEyebrow} title={h.whyTitle} />
             <dl className="mt-12 grid gap-10 sm:grid-cols-2">

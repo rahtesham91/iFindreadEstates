@@ -228,7 +228,7 @@ export const en = {
     teamButton: "Meet the Team",
     alt: {
       hero: "Aerial view of Dubai skyscrapers",
-      why: "Luxury interior with a glass and marble staircase",
+      why: "Dubai skyline at sunset with development plots, offices and a waterfront hotel",
       investors: "Dubai skyline and the Burj Khalifa at sunset",
     },
   },
