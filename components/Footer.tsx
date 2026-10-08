@@ -22,6 +22,14 @@ export default function Footer() {
           <LocLink href="/" aria-label={dict.nav.home}>
             <Logo variant="stacked" className="h-auto w-44" />
           </LocLink>
+          <a
+            href="/downloads/iFind-Real-Estate-Company-Profile.pdf"
+            download
+            className="btn-ghost mt-6 gap-3 !px-5 !py-3"
+          >
+            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14" /></svg>
+            {dict.about.profileButton}
+          </a>
         </div>
 
         <div>
