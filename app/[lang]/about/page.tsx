@@ -44,15 +44,6 @@ export default async function Page({ params }: P) {
           </h1>
           <div className="gold-rule mt-7" />
           <p className="t-body mt-7 max-w-2xl">{a.lede}</p>
-          <a
-            href="/downloads/iFind-Real-Estate-Company-Profile.pdf"
-            download
-            className="btn-gold mt-8 gap-3"
-          >
-            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14" /></svg>
-            {a.profileButton}
-          </a>
-          <p className="t-small mt-3">{a.profileMeta}</p>
         </div>
       </section>
 
@@ -84,6 +75,20 @@ export default async function Page({ params }: P) {
               <a href={`mailto:${ceo.email}`} dir="ltr" className="ltr-text mt-3 text-base text-mute transition-colors hover:text-gold-400">{ceo.email}</a>
             </figure>
           </Reveal>
+        </div>
+      </section>
+
+      {/* Company profile download, directly under the CEO section */}
+      <section className="border-b border-line py-10 sm:py-12">
+        <div className="container-page flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+          <div>
+            <p className="eyebrow mb-2">{a.profileTitle}</p>
+            <p className="t-small">{a.profileMeta}</p>
+          </div>
+          <a href="/downloads/iFind-Real-Estate-Company-Profile.pdf" download className="btn-gold gap-3">
+            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14" /></svg>
+            {a.profileButton}
+          </a>
         </div>
       </section>
 
