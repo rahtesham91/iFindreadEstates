@@ -3,6 +3,7 @@ import InquiryForm from "@/components/InquiryForm";
 import OfficeMap from "@/components/OfficeMap";
 import Reveal from "@/components/Reveal";
 import { site, whatsappLink } from "@/lib/site";
+import { alternatesFor } from "@/lib/seo";
 import { getDict } from "@/lib/dict";
 import { isLang, type Lang } from "@/lib/i18n";
 
@@ -11,7 +12,7 @@ type P = { params: Promise<{ lang: string }> };
 export async function generateMetadata({ params }: P): Promise<Metadata> {
   const { lang } = await params;
   const c = getDict(isLang(lang) ? lang : "en").contact;
-  return { title: c.title, description: c.description };
+  return { title: { absolute: getDict(isLang(lang) ? lang : "en").seo.contact.title }, description: c.description, alternates: alternatesFor(isLang(lang) ? lang : "en", "/contact") };
 }
 
 const icon = {

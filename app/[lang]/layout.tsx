@@ -28,7 +28,17 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: { default: d.meta.siteTitle, template: d.meta.titleTemplate },
     description: d.meta.description,
     alternates: { languages: { en: localize("en", "/"), ar: localize("ar", "/") } },
-    openGraph: { title: d.meta.siteTitle, siteName: d.legalName, type: "website", locale: d.meta.ogLocale },
+    openGraph: {
+      title: d.meta.siteTitle,
+      description: d.meta.description,
+      siteName: d.legalName,
+      type: "website",
+      locale: d.meta.ogLocale,
+      images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: d.legalName }],
+    },
+    twitter: { card: "summary_large_image", title: d.meta.siteTitle, description: d.meta.description, images: ["/og-default.jpg"] },
+    robots: { index: true, follow: true },
+    verification: { google: "j2HPBm97cyzS7IszpLG-le2hc5mpocHZ1H6VSz0zpxU" },
     icons: { icon: "/icon.svg" },
   };
 }
@@ -49,6 +59,9 @@ export default async function RootLayout({ children, params }: { children: React
     telephone: [site.phone, site.landline],
     email: site.email,
     inLanguage: lang,
+    logo: `${site.url}/brand/logo-original.png`,
+    image: `${site.url}/og-default.jpg`,
+    sameAs: site.social.map((x) => x.href),
     address: { "@type": "PostalAddress", streetAddress: d.streetAddress, addressLocality: lang === "ar" ? "دبي" : "Dubai", addressCountry: "AE" },
   };
   return (

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CtaBand from "@/components/CtaBand";
 import { LocLink } from "@/components/I18nProvider";
+import { alternatesFor } from "@/lib/seo";
 import { getDict } from "@/lib/dict";
 import { isLang, type Lang } from "@/lib/i18n";
 import Ornament from "@/components/Ornament";
@@ -13,7 +14,7 @@ type P = { params: Promise<{ lang: string }> };
 export async function generateMetadata({ params }: P): Promise<Metadata> {
   const { lang } = await params;
   const t = getDict(isLang(lang) ? lang : "en").teamPage;
-  return { title: t.title, description: t.description };
+  return { title: { absolute: getDict(isLang(lang) ? lang : "en").seo.team.title }, description: t.description, alternates: alternatesFor(isLang(lang) ? lang : "en", "/team") };
 }
 
 const specialists = team.slice(leadership.length);

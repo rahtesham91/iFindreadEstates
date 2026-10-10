@@ -1,6 +1,8 @@
 import { LocLink } from "@/components/I18nProvider";
 import { getDict } from "@/lib/dict";
-import type { Lang } from "@/lib/i18n";
+import { isLang, type Lang } from "@/lib/i18n";
+import { alternatesFor } from "@/lib/seo";
+import type { Metadata } from "next";
 import Image from "next/image";
 import HeroVideo from "@/components/HeroVideo";
 import TeamCard from "@/components/TeamCard";
@@ -8,6 +10,13 @@ import DeveloperGrid from "@/components/DeveloperGrid";
 import SectionHeading from "@/components/SectionHeading";
 import CtaBand from "@/components/CtaBand";
 import { leadership, services, whatsappLink } from "@/lib/site";
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const l: Lang = isLang(lang) ? lang : "en";
+  const s = getDict(l).seo.home;
+  return { title: { absolute: s.title }, description: s.description, alternates: alternatesFor(l, "/"), openGraph: { title: s.title, description: s.description, url: l === "ar" ? "/ar" : "/", siteName: getDict(l).legalName, type: "website", images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: getDict(l).legalName }] } };
+}
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
