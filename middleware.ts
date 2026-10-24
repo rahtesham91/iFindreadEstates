@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 // English pages live at /<path> (served from app/[lang] as "en"); Arabic pages at /ar/<path>.
-const PRIMARY_HOST = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.ifindrealestates.com").host;
+const PRIMARY_HOST = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://ifindrealestates.com").host;
 // Hosts that must 301 to the primary domain so Google only indexes one address.
 const REDIRECT_HOSTS = new Set([
   "ifindrealestate.vercel.app",
