@@ -16,11 +16,19 @@ export function middleware(req: NextRequest) {
     const to = new URL(req.nextUrl.pathname + req.nextUrl.search, `https://${PRIMARY_HOST}`);
     return NextResponse.redirect(to, 301);
   }
+  // Any other address (Vercel preview/branch URLs, etc.) stays usable but is kept out of Google.
+  const offPrimary = host !== PRIMARY_HOST && !host.startsWith("localhost");
   const { pathname } = req.nextUrl;
-  if (pathname === "/ar" || pathname.startsWith("/ar/")) return NextResponse.next();
-  const url = req.nextUrl.clone();
-  url.pathname = `/en${pathname === "/" ? "" : pathname}`;
-  return NextResponse.rewrite(url);
+  let res: NextResponse;
+  if (pathname === "/ar" || pathname.startsWith("/ar/")) {
+    res = NextResponse.next();
+  } else {
+    const url = req.nextUrl.clone();
+    url.pathname = `/en${pathname === "/" ? "" : pathname}`;
+    res = NextResponse.rewrite(url);
+  }
+  if (offPrimary) res.headers.set("X-Robots-Tag", "noindex, nofollow");
+  return res;
 }
 
 export const config = {

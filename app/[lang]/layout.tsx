@@ -39,7 +39,16 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     twitter: { card: "summary_large_image", title: d.meta.siteTitle, description: d.meta.description, images: ["/og-default.jpg"] },
     robots: { index: true, follow: true },
     verification: { google: "j2HPBm97cyzS7IszpLG-le2hc5mpocHZ1H6VSz0zpxU" },
-    icons: { icon: "/icon.svg" },
+    applicationName: "iFind Real Estate",
+    icons: {
+      icon: [
+        { url: "/favicon.ico", sizes: "48x48" },
+        { url: "/icon-48.png", type: "image/png", sizes: "48x48" },
+        { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+        { url: "/icon.svg", type: "image/svg+xml" },
+      ],
+      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+    },
   };
 }
 
@@ -52,17 +61,37 @@ export default async function RootLayout({ children, params }: { children: React
   const d = getDict(lang);
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    name: d.legalName,
-    slogan: d.tagline,
-    url: site.url,
-    telephone: [site.phone, site.landline],
-    email: site.email,
-    inLanguage: lang,
-    logo: `${site.url}/brand/logo-original.png`,
-    image: `${site.url}/og-default.jpg`,
-    sameAs: site.social.map((x) => x.href),
-    address: { "@type": "PostalAddress", streetAddress: d.streetAddress, addressLocality: lang === "ar" ? "دبي" : "Dubai", addressCountry: "AE" },
+    "@graph": [
+      {
+        // Tells Google the site's own name, so results show "iFind Real Estate" instead of the hosting provider.
+        "@type": "WebSite",
+        "@id": `${site.url}/#website`,
+        name: "iFind Real Estate",
+        alternateName: ["iFind", "iFind Real Estate LLC", "iFind Real Estate Dubai"],
+        url: site.url,
+        inLanguage: ["en", "ar"],
+        publisher: { "@id": `${site.url}/#organization` },
+      },
+      {
+        "@type": "RealEstateAgent",
+        "@id": `${site.url}/#organization`,
+        name: d.legalName,
+        alternateName: "iFind Real Estate",
+        slogan: d.tagline,
+        url: site.url,
+        telephone: [site.phone, site.landline],
+        email: site.email,
+        inLanguage: lang,
+        logo: `${site.url}/brand/logo-original.png`,
+        image: `${site.url}/og-default.jpg`,
+        sameAs: site.social.map((x) => x.href),
+        areaServed: [
+          { "@type": "City", name: "Dubai" },
+          { "@type": "Country", name: "United Arab Emirates" },
+        ],
+        address: { "@type": "PostalAddress", streetAddress: d.streetAddress, addressLocality: lang === "ar" ? "دبي" : "Dubai", addressCountry: "AE" },
+      },
+    ],
   };
   return (
     <html lang={d.htmlLang} dir={d.dir} className={`${serifEn.variable} ${sansEn.variable} ${serifAr.variable} ${sansAr.variable}`}>
