@@ -140,7 +140,7 @@ export const en = {
       photoAlt: "{name}, {role} at iFind Real Estate",
     },
     bios: {
-      "dario-ceglia": ["Dario worked in Monte Carlo’s real estate market from 2015 to 2019 before moving to Dubai in 2020. At iFind Real Estate, he focuses on residential properties and commercial opportunities with long-term growth potential.", "Fluent in Italian, English, Farsi, French, and German, he offers personalized advice to international clients."],
+      "dario-c": ["Dario worked in Monte Carlo’s real estate market from 2015 to 2019 before moving to Dubai in 2020. At iFind Real Estate, he focuses on residential properties and commercial opportunities with long-term growth potential.", "Fluent in Italian, English, Farsi, French, and German, he offers personalized advice to international clients."],
       "farwa-khan": ["With a strong focus on Dubai’s commercial real estate market, Farwa specializes in helping businesses, investors, and property owners navigate commercial Lease & sales opportunities across key business districts.", "As Commercial Sales Manager at I Find Real Estate LLC, she focuses on commercial offices and investment opportunities, providing clients with market insights, property selection, negotiation support, and end-to-end guidance throughout the transaction."],
       "ishtiaq-ahmed": ["Specialized in secondary sales and leasing across JBR, Dubai Marina, JLT, Downtown Dubai, and Business Bay. Helping property owners, buyers, tenants, and investors with property listings, market analysis, negotiations, and successful transactions."],
       "essam-nabil": ["With over 7 years of experience in Dubai’s real estate market. Specializes in properties across Meydan and Dubai Creek Harbour. He supports property owners, buyers, tenants, and investors with professional property listings, accurate market analysis, strong negotiations, and smooth, successful transactions."],
@@ -157,7 +157,7 @@ export const en = {
     "farwa-khan": { name: "Farwa Khan", role: "Commercial Sales Manager" },
     "muzamal-hameed": { name: "Muzamal Hameed", role: "Sales Manager – Secondary Market" },
     "ehtesham-nazir": { name: "Ehtesham Nazir", role: "Digital Marketing Manager" },
-    "dario-ceglia": { name: "Dario Ceglia", role: "Real Estate Consultant" },
+    "dario-c": { name: "Dario C.", role: "Real Estate Consultant" },
     "ishtiaq-ahmed": { name: "Ishtiaq Ahmed", role: "Property Consultant – Secondary Market" },
     "shah-waqar": { name: "Shah Waqar", role: "Business Specialist | Real Estate Professional" },
     "fayyaz-khan": { name: "Fayyaz Khan", role: "Public Relations Officer (PRO)" },

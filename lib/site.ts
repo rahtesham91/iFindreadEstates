@@ -167,10 +167,10 @@ export const team: TeamMember[] = [
     photo: "/team/ehtesham-nazir-v4.webp",
   },
   {
-    slug: "dario-ceglia",
-    name: "Dario Ceglia",
+    slug: "dario-c",
+    name: "Dario C.",
     role: "Real Estate Consultant",
-    photo: "/team/dario-ceglia-v5.webp",
+    photo: "/team/dario-c-v5.webp",
     brn: "100955",
     email: "dario@ifindrealestates.com",
     phone: "+971 58 517 1717",
