@@ -5,6 +5,8 @@ const nextConfig = {
   async redirects() {
     // The old profile URL (before the surname was corrected) keeps working.
     return [
+      { source: "/team/ehtesham-nazir", destination: "/team", permanent: true },
+      { source: "/ar/team/ehtesham-nazir", destination: "/ar/team", permanent: true },
       { source: "/team/dario-linus", destination: "/team/dario-c", permanent: true },
       { source: "/team/dario-ceglia", destination: "/team/dario-c", permanent: true },
       { source: "/ar/team/dario-ceglia", destination: "/ar/team/dario-c", permanent: true },

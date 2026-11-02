@@ -140,7 +140,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <section className="border-t border-line bg-char py-16 sm:py-24">
         <div className="container-page">
           <SectionHeading eyebrow={h.teamEyebrow} title={h.teamTitle} />
-          <ul className="mt-12 grid grid-cols-2 gap-x-4 gap-y-10 sm:mt-16 sm:gap-x-8 lg:grid-cols-4">
+          <ul className="mt-12 grid grid-cols-1 gap-x-4 gap-y-10 sm:mt-16 sm:grid-cols-3 sm:gap-x-8">
             {leadership.map((m) => (
               <li key={m.slug}>
                 <TeamCard member={m} compact />

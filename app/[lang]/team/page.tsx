@@ -64,7 +64,7 @@ export default async function Page({ params }: P) {
             <h2 className="t-h2">{t.leadership}</h2>
             <div className="mb-2 h-px flex-1 bg-line" />
           </div>
-          <ul className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="grid gap-x-8 gap-y-14 sm:grid-cols-3">
             {leadership.map((m, i) => (
               <li key={m.slug}>
                 <TeamCard member={m} priority={i < 2} />

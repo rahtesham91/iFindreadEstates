@@ -159,14 +159,6 @@ export const team: TeamMember[] = [
     languages: ["English", "Urdu", "Hindi"],
   },
   {
-    slug: "ehtesham-nazir",
-    name: "Ehtesham Nazir",
-    role: "Digital Marketing Manager",
-    email: "ehtesham@ifindrealestates.com",
-    phone: "+971 54 500 1576",
-    photo: "/team/ehtesham-nazir-v4.webp",
-  },
-  {
     slug: "dario-c",
     name: "Dario C.",
     role: "Real Estate Consultant",
@@ -216,7 +208,7 @@ export const team: TeamMember[] = [
   },
 ];
 
-export const leadership = team.slice(0, 4);
+export const leadership = team.slice(0, 3);
 
 // Founder & CEO: wording from the company's previous website, with the company name updated.
 export const ceo = {

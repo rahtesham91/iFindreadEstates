@@ -156,7 +156,6 @@ export const en = {
     "abid-khan": { name: "Abid Khan", role: "Managing Director" },
     "farwa-khan": { name: "Farwa Khan", role: "Commercial Sales Manager" },
     "muzamal-hameed": { name: "Muzamal Hameed", role: "Sales Manager – Secondary Market" },
-    "ehtesham-nazir": { name: "Ehtesham Nazir", role: "Digital Marketing Manager" },
     "dario-c": { name: "Dario C.", role: "Real Estate Consultant" },
     "ishtiaq-ahmed": { name: "Ishtiaq Ahmed", role: "Property Consultant – Secondary Market" },
     "shah-waqar": { name: "Shah Waqar", role: "Business Specialist | Real Estate Professional" },
@@ -488,52 +487,6 @@ export const en = {
       "title": "Contact iFind Real Estate | Business Bay, Dubai"
     }
   },
-  ehteshamPage: {
-    "metaTitle": "Ehtesham Nazir | Digital Marketing Manager | iFind",
-    "metaDescription": "Ehtesham Nazir, Digital Marketing Manager at iFind Real Estate, Dubai. 10 years in performance marketing, SEO, lead generation and AI automation.",
-    "eyebrow": "Digital Marketing Manager",
-    "h1": "Performance marketing, engineered.",
-    "lede": "10 years in performance marketing, SEO and AI automation. At iFind, I turn digital marketing into qualified property enquiries.",
-    "cta": "Book a strategy call",
-    "ctaWhatsApp": "Message me on WhatsApp",
-    "portfolio": "View my portfolio",
-    "skills": {
-      "eyebrow": "Skills",
-      "title": "What I do for iFind",
-      "items": [
-        {
-          "title": "Performance Marketing",
-          "text": "Google Ads and Meta campaigns built for qualified property leads."
-        },
-        {
-          "title": "SEO & Organic Growth",
-          "text": "Technical SEO and content that rank for Dubai property searches."
-        },
-        {
-          "title": "Lead Generation",
-          "text": "Landing pages and funnels that turn enquiries into viewings."
-        },
-        {
-          "title": "AI Automation",
-          "text": "Faster lead follow-up and smarter marketing workflows."
-        },
-        {
-          "title": "Analytics & Tracking",
-          "text": "GA4 and attribution, so every dirham spent is measured."
-        },
-        {
-          "title": "Digital Growth Strategy",
-          "text": "Positioning and go-to-market plans for real estate brands."
-        }
-      ]
-    },
-    "contact": {
-      "call": "Call",
-      "email": "Email"
-    },
-    "photoAlt": "Ehtesham Nazir, Digital Marketing Manager at iFind Real Estate"
-  },
-
   offplanPage: {
     "metaTitle": "Off-Plan Properties in Dubai | iFind Real Estate",
     "metaDescription": "Off-plan investment in Dubai guided by comparison across developers: project and unit selection, payment plans, reservation to SPA, escrow framework, handover and after-handover support.",
